@@ -1,0 +1,8 @@
+# Plan A — LangGraph Cyclic State Machine
+# Core LangGraph + OpenAI client for the fixer LLM.
+
+langgraph>=0.3
+langchain>=0.3
+langchain-core>=0.3
+openai>=1.0
+python-dotenv>=1.0

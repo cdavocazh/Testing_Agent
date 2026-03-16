@@ -1,0 +1,948 @@
+{
+  "timestamp": "2026-03-12T15:24:33.369721",
+  "commands": [
+    "macro",
+    "bonds",
+    "stress",
+    "latecycle",
+    "consumer",
+    "housing",
+    "labor",
+    "graham_NVDA",
+    "valuation",
+    "vixanalysis"
+  ],
+  "summary": {
+    "total_checks": 52,
+    "passed": 38,
+    "failed": 14,
+    "rate": "73.1%",
+    "critical_failures": 7,
+    "by_category": {
+      "accuracy": {
+        "total": 28,
+        "passed": 18,
+        "failed": 10
+      },
+      "coherence": {
+        "total": 13,
+        "passed": 11,
+        "failed": 2
+      },
+      "grounding": {
+        "total": 8,
+        "passed": 6,
+        "failed": 2
+      },
+      "llm_judge": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "by_command": {
+      "bonds": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0
+      },
+      "stress": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "latecycle": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "consumer": {
+        "total": 3,
+        "passed": 1,
+        "failed": 2
+      },
+      "housing": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "labor": {
+        "total": 4,
+        "passed": 2,
+        "failed": 2
+      },
+      "graham": {
+        "total": 5,
+        "passed": 3,
+        "failed": 2
+      },
+      "valuation": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2
+      },
+      "vixanalysis": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "macro": {
+        "total": 5,
+        "passed": 2,
+        "failed": 3
+      },
+      "cross-command": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0
+      },
+      "macro_bonds_stress": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "consumer_housing_labor": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "graham_valuation_vix": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "elapsed": "100.8s"
+  },
+  "failures": [
+    {
+      "check_id": "SA-04",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Initial claims interpretation units correct",
+      "passed": false,
+      "detail": "Interpretation: 'Initial claims at 213000K'. BUG: 213000K should be 213K",
+      "expected": "213K",
+      "actual": "Initial claims at 213000K",
+      "severity": "high"
+    },
+    {
+      "check_id": "CON-01",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Consumer composite = weighted avg of available components",
+      "passed": false,
+      "detail": "Weighted avg: 3.13, Reported: 6.87 (3/4 components)",
+      "expected": 3.13,
+      "actual": 6.87,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-02",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Credit growth velocity data available",
+      "passed": false,
+      "detail": "MISSING \u2014 key consumer metric unavailable",
+      "expected": "available",
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "HA-02",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Price dynamics data available",
+      "passed": false,
+      "detail": "MISSING \u2014 Case-Shiller data unavailable",
+      "expected": "available",
+      "actual": "data_unavailable",
+      "severity": "high"
+    },
+    {
+      "check_id": "LB-02",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Productivity vs ULC data available",
+      "passed": false,
+      "detail": "Productivity: None, ULC: None. MISSING \u2014 core labor metric",
+      "expected": "both available",
+      "actual": "prod=None, ulc=None",
+      "severity": "high"
+    },
+    {
+      "check_id": "LB-03",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Core CPI YoY in plausible range",
+      "passed": false,
+      "detail": "Core CPI YoY: -8.22%. SUSPICIOUS",
+      "expected": "[-5, 15]",
+      "actual": -8.22,
+      "severity": "critical"
+    },
+    {
+      "check_id": "GA-02",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Margin of Safety = (GN - Price) / Price \u00d7 100",
+      "passed": false,
+      "detail": "Expected -84.61%, got -549.77%",
+      "expected": -84.61,
+      "actual": -549.77,
+      "severity": "high"
+    },
+    {
+      "check_id": "GA-04",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Graham data freshness (latest quarter)",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2. STALE",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "VA-01",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "Yardeni valuation produces results",
+      "passed": false,
+      "detail": "Assessment: 'insufficient_data'. MISSING \u2014 CPI data required",
+      "expected": "has results",
+      "actual": "insufficient_data",
+      "severity": "critical"
+    },
+    {
+      "check_id": "VA-02",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "CPI YoY available for valuation frameworks",
+      "passed": false,
+      "detail": "CPI YoY: None. MISSING \u2014 blocks Rule of 20/24",
+      "expected": "available",
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC-11",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Core CPI YoY plausible (-5% to 15%)",
+      "passed": false,
+      "detail": "Core CPI YoY: -8.22%. IMPLAUSIBLE \u2014 -8.22% core CPI never happens in normal economy",
+      "expected": "[-5, 15]",
+      "actual": -8.22,
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC-12",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Core PCE value plausibility",
+      "passed": false,
+      "detail": "Core PCE YoY: 0.28%. Evidence: 'Core PCE YoY = 0.28'. SUSPICIOUS \u2014 0.28% Core PCE YoY is implausibly low",
+      "expected": "> 1% or plausible",
+      "actual": 0.28,
+      "severity": "critical"
+    },
+    {
+      "check_id": "GR-01",
+      "category": "grounding",
+      "command": "macro",
+      "check_name": "Inflation 'cooling' \u2194 trend direction",
+      "passed": false,
+      "detail": "Classification: 'cooling', Trend: 'rising'. CONTRADICTION: cooling but rising trend",
+      "expected": "consistent",
+      "actual": "cooling + rising",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GR-03",
+      "category": "grounding",
+      "command": "latecycle",
+      "check_name": "Late-cycle confidence label clarity",
+      "passed": false,
+      "detail": "Count: 3/13, Confidence: 'late-early warning'. CONFUSING: late-early warning is ambiguous",
+      "expected": "clear label",
+      "actual": "late-early warning",
+      "severity": "medium"
+    }
+  ],
+  "all_checks": [
+    {
+      "check_id": "MA-01",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "2s10s spread = 10Y - 2Y",
+      "passed": true,
+      "detail": "Expected 0.59, got 0.57",
+      "expected": 0.59,
+      "actual": 0.57,
+      "severity": "high"
+    },
+    {
+      "check_id": "MA-02",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "Term premium = nominal - real - breakeven",
+      "passed": true,
+      "detail": "Expected 0.01, got 0.01",
+      "expected": 0.01,
+      "actual": 0.01,
+      "severity": "high"
+    },
+    {
+      "check_id": "MA-03",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "HY OAS bps = pct \u00d7 100",
+      "passed": true,
+      "detail": "Expected 313, got 313",
+      "expected": 313,
+      "actual": 313,
+      "severity": "medium"
+    },
+    {
+      "check_id": "MA-04",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "IG OAS bps = pct \u00d7 100",
+      "passed": true,
+      "detail": "Expected 84, got 84",
+      "expected": 84,
+      "actual": 84,
+      "severity": "medium"
+    },
+    {
+      "check_id": "MA-05",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "HY-IG differential = HY bps - IG bps",
+      "passed": true,
+      "detail": "Expected 229, got 229",
+      "expected": 229,
+      "actual": 229,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SA-01",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Composite score = weighted sum of component scores",
+      "passed": true,
+      "detail": "Weighted sum: 3.90, Reported: 4.0",
+      "expected": 3.9,
+      "actual": 4.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "SA-02",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "All stress component scores in [0, 10]",
+      "passed": true,
+      "detail": "All OK",
+      "expected": "all [0,10]",
+      "actual": "OK",
+      "severity": "medium"
+    },
+    {
+      "check_id": "SA-03",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Component weights sum to ~1.0",
+      "passed": true,
+      "detail": "Total weight: 0.9999999999999999",
+      "expected": 1.0,
+      "actual": 1.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SA-04",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Initial claims interpretation units correct",
+      "passed": false,
+      "detail": "Interpretation: 'Initial claims at 213000K'. BUG: 213000K should be 213K",
+      "expected": "213K",
+      "actual": "Initial claims at 213000K",
+      "severity": "high"
+    },
+    {
+      "check_id": "LA-01",
+      "category": "accuracy",
+      "command": "latecycle",
+      "check_name": "Reported count matches actual firing signals",
+      "passed": true,
+      "detail": "Reported: 3, Actual firing: 3",
+      "expected": 3,
+      "actual": 3,
+      "severity": "high"
+    },
+    {
+      "check_id": "LA-02",
+      "category": "accuracy",
+      "command": "latecycle",
+      "check_name": "Reported total matches signals list length",
+      "passed": true,
+      "detail": "Reported: 13, List length: 13",
+      "expected": 13,
+      "actual": 13,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-01",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Consumer composite = weighted avg of available components",
+      "passed": false,
+      "detail": "Weighted avg: 3.13, Reported: 6.87 (3/4 components)",
+      "expected": 3.13,
+      "actual": 6.87,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-02",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Credit growth velocity data available",
+      "passed": false,
+      "detail": "MISSING \u2014 key consumer metric unavailable",
+      "expected": "available",
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "HA-01",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Permits/starts ratio = permits / starts",
+      "passed": true,
+      "detail": "Expected 1.03, got 1.03",
+      "expected": 1.03,
+      "actual": 1.03,
+      "severity": "medium"
+    },
+    {
+      "check_id": "HA-02",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Price dynamics data available",
+      "passed": false,
+      "detail": "MISSING \u2014 Case-Shiller data unavailable",
+      "expected": "available",
+      "actual": "data_unavailable",
+      "severity": "high"
+    },
+    {
+      "check_id": "LB-01",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Hires/layoffs ratio = hires / layoffs",
+      "passed": true,
+      "detail": "Expected 3.0, got 3.0",
+      "expected": 3.0,
+      "actual": 3.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LB-02",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Productivity vs ULC data available",
+      "passed": false,
+      "detail": "Productivity: None, ULC: None. MISSING \u2014 core labor metric",
+      "expected": "both available",
+      "actual": "prod=None, ulc=None",
+      "severity": "high"
+    },
+    {
+      "check_id": "LB-03",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Core CPI YoY in plausible range",
+      "passed": false,
+      "detail": "Core CPI YoY: -8.22%. SUSPICIOUS",
+      "expected": "[-5, 15]",
+      "actual": -8.22,
+      "severity": "critical"
+    },
+    {
+      "check_id": "GA-01",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Graham Number = sqrt(22.5 \u00d7 EPS \u00d7 BVPS)",
+      "passed": true,
+      "detail": "Expected 28.63, got 28.63",
+      "expected": 28.63,
+      "actual": 28.63,
+      "severity": "high"
+    },
+    {
+      "check_id": "GA-02",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Margin of Safety = (GN - Price) / Price \u00d7 100",
+      "passed": false,
+      "detail": "Expected -84.61%, got -549.77%",
+      "expected": -84.61,
+      "actual": -549.77,
+      "severity": "high"
+    },
+    {
+      "check_id": "GA-03",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "P/E \u00d7 P/B product",
+      "passed": true,
+      "detail": "Expected 949.49, got 949.49",
+      "expected": 949.49,
+      "actual": 949.49,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GA-04",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Graham data freshness (latest quarter)",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2. STALE",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GA-05",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Price/NCAV = current_price / ncav_per_share",
+      "passed": true,
+      "detail": "Expected 12.27, got 12.27",
+      "expected": 12.27,
+      "actual": 12.27,
+      "severity": "medium"
+    },
+    {
+      "check_id": "VA-01",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "Yardeni valuation produces results",
+      "passed": false,
+      "detail": "Assessment: 'insufficient_data'. MISSING \u2014 CPI data required",
+      "expected": "has results",
+      "actual": "insufficient_data",
+      "severity": "critical"
+    },
+    {
+      "check_id": "VA-02",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "CPI YoY available for valuation frameworks",
+      "passed": false,
+      "detail": "CPI YoY: None. MISSING \u2014 blocks Rule of 20/24",
+      "expected": "available",
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "VX-01",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "VIX tier matches value",
+      "passed": true,
+      "detail": "VIX=24.23, Expected tier 3, got 3",
+      "expected": 3,
+      "actual": 3,
+      "severity": "high"
+    },
+    {
+      "check_id": "VX-02",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "MOVE/VIX ratio = MOVE / VIX",
+      "passed": true,
+      "detail": "Expected 3.24, got 3.24",
+      "expected": 3.24,
+      "actual": 3.24,
+      "severity": "medium"
+    },
+    {
+      "check_id": "VX-03",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "VIX percentile in [0, 100]",
+      "passed": true,
+      "detail": "Percentile: 88.4",
+      "expected": "[0, 100]",
+      "actual": 88.4,
+      "severity": "low"
+    },
+    {
+      "check_id": "CC-01",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Growth classification \u2194 ISM value",
+      "passed": true,
+      "detail": "ISM: 49.12, Classification: 'contraction'",
+      "expected": "contraction",
+      "actual": "contraction",
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Macro credit stress \u2194 Stress HY OAS level (same source)",
+      "passed": true,
+      "detail": "Macro: 'elevated', Stress: 'elevated'",
+      "expected": "match",
+      "actual": "elevated vs elevated",
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-03",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Bond yield curve shape \u2194 Macro rates curve shape",
+      "passed": true,
+      "detail": "Bonds: 'normal \u2014 no recession signal', Macro: 'normal \u2014 no recession signal'",
+      "expected": "match",
+      "actual": "'normal \u2014 no recession signal' vs 'normal \u2014 no recession signal'",
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-04",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Recessionary outlook \u2194 stress score \u2265 4",
+      "passed": true,
+      "detail": "Outlook: 'Recessionary \u2014 contracting growth with tight credit conditions.', Stress: 4.0",
+      "expected": "\u2265 4",
+      "actual": 4.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-05",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Housing signals consistent between /macro and /housing",
+      "passed": true,
+      "detail": "Macro signals: ['EXISTING_SALES_PLUNGING'], Housing: ['SALES_PLUNGING', 'AFFORDABILITY_STRESSED', 'EXISTING_SALES_PLUNGING'], Shared: ['EXISTING_SALES_PLUNGING']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-06",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Consumer health \u2194 stress consumer credit (informational)",
+      "passed": true,
+      "detail": "Consumer level: 'stable', Delinquency score: 1/10",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "CC-07",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Late-cycle ISM firing \u2194 macro ISM_CONTRACTION signal",
+      "passed": true,
+      "detail": "Late-cycle ISM: firing, Macro ISM_CONTRACTION: True",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-08",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "VIX value consistent: /stress vs /vixanalysis",
+      "passed": true,
+      "detail": "Stress VIX: 24.2, VIX analysis: 24.23",
+      "expected": 24.2,
+      "actual": 24.23,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-09",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "HY OAS consistent: /bonds vs /stress",
+      "passed": true,
+      "detail": "Bonds HY: 3.13, Stress HY: 3.13",
+      "expected": 3.13,
+      "actual": 3.13,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-10",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Labor balance \u2194 macro employment (informational)",
+      "passed": true,
+      "detail": "Labor: 'hiring_dominant', Macro employment: 'moderate'",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "CC-11",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Core CPI YoY plausible (-5% to 15%)",
+      "passed": false,
+      "detail": "Core CPI YoY: -8.22%. IMPLAUSIBLE \u2014 -8.22% core CPI never happens in normal economy",
+      "expected": "[-5, 15]",
+      "actual": -8.22,
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC-12",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Core PCE value plausibility",
+      "passed": false,
+      "detail": "Core PCE YoY: 0.28%. Evidence: 'Core PCE YoY = 0.28'. SUSPICIOUS \u2014 0.28% Core PCE YoY is implausibly low",
+      "expected": "> 1% or plausible",
+      "actual": 0.28,
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC-13",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "CREDIT_TIGHT signal \u2194 credit classification",
+      "passed": true,
+      "detail": "Signal: CREDIT_TIGHT, Classification: 'elevated'",
+      "expected": "elevated+",
+      "actual": "elevated",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-01",
+      "category": "grounding",
+      "command": "macro",
+      "check_name": "Inflation 'cooling' \u2194 trend direction",
+      "passed": false,
+      "detail": "Classification: 'cooling', Trend: 'rising'. CONTRADICTION: cooling but rising trend",
+      "expected": "consistent",
+      "actual": "cooling + rising",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GR-02",
+      "category": "grounding",
+      "command": "stress",
+      "check_name": "Stress level label \u2194 composite score",
+      "passed": true,
+      "detail": "Score: 4.0, Expected: 'elevated', Got: 'elevated'",
+      "expected": "elevated",
+      "actual": "elevated",
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-03",
+      "category": "grounding",
+      "command": "latecycle",
+      "check_name": "Late-cycle confidence label clarity",
+      "passed": false,
+      "detail": "Count: 3/13, Confidence: 'late-early warning'. CONFUSING: late-early warning is ambiguous",
+      "expected": "clear label",
+      "actual": "late-early warning",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-04",
+      "category": "grounding",
+      "command": "consumer",
+      "check_name": "Consumer health label \u2194 score",
+      "passed": true,
+      "detail": "Score: 6.87, Expected: 'stable', Got: 'stable'",
+      "expected": "stable",
+      "actual": "stable",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-05",
+      "category": "grounding",
+      "command": "housing",
+      "check_name": "Housing cycle 'distressed' \u2194 distress signals present",
+      "passed": true,
+      "detail": "Phase: 'distressed', Distress signals: ['SALES_PLUNGING', 'AFFORDABILITY_STRESSED', 'EXISTING_SALES_PLUNGING']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-06",
+      "category": "grounding",
+      "command": "bonds",
+      "check_name": "Duration risk label \u2194 real yield trend",
+      "passed": true,
+      "detail": "Duration risk: 'moderate-high', Real yield trend: 'rising'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-07",
+      "category": "grounding",
+      "command": "bonds",
+      "check_name": "Fed stance \u2194 funds rate vs 10Y",
+      "passed": true,
+      "detail": "Fed: 3.64%, 10Y: 4.15%, Stance: 'Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-08",
+      "category": "grounding",
+      "command": "labor",
+      "check_name": "Labor power label \u2194 quits rate (informational)",
+      "passed": true,
+      "detail": "Power: 'weakening', Quits rate: 2.0%",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "LLM-MACRO_BO",
+      "category": "llm_judge",
+      "command": "macro_bonds_stress",
+      "check_name": "LLM Judge: Macro Suite (/macro, /bonds, /stress, /latecycle)",
+      "passed": true,
+      "detail": "Weighted score: 6.7/10",
+      "expected": "\u2265 5.0",
+      "actual": 6.7,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-CONSUMER",
+      "category": "llm_judge",
+      "command": "consumer_housing_labor",
+      "check_name": "LLM Judge: Consumer/Housing/Labor Suite",
+      "passed": true,
+      "detail": "Weighted score: 6.0/10",
+      "expected": "\u2265 5.0",
+      "actual": 6.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-GRAHAM_V",
+      "category": "llm_judge",
+      "command": "graham_valuation_vix",
+      "check_name": "LLM Judge: Valuation Suite (/graham, /valuation, /vixanalysis)",
+      "passed": true,
+      "detail": "Weighted score: 6.0/10",
+      "expected": "\u2265 5.0",
+      "actual": 6.0,
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {
+    "macro_bonds_stress": {
+      "Regime Classification Quality": {
+        "score": 6,
+        "weight": 20,
+        "critique": "Most regime classifications are reasonable (inflation: cooling with 0.28% core PCE; growth: contraction at ISM 49.12; credit: elevated at 73rd percentile). However, there are internal inconsistencies: inflation trend shows 'rising' despite 'cooling' classification, and housing is marked 'data_unavailable' yet contains partial data (permits_trend, mortgage_rate). The employment classification as 'moderate' is somewhat vague given the mixed labor signals."
+      },
+      "Data Completeness": {
+        "score": 5,
+        "weight": 15,
+        "critique": "Major gaps exist. The /stress output is truncated - it shows composite_score: 4.0 but the 'components' section for nfci is cut off mid-field. The /latecycle module is entirely missing from the provided output. Housing section has 'data_unavailable' flag despite having some fields populated. These incompleteness issues prevent full system evaluation."
+      },
+      "Signal Coherence": {
+        "score": 8,
+        "weight": 20,
+        "critique": "Strong cross-tool alignment. Macro signals (INFLATION_COOLING, ISM_CONTRACTION, GROWTH_CONTRACTION, CREDIT_TIGHT) align with recessionary composite_outlook. Bonds signals (CURVE_STEEPENING, BREAKEVEN_RISING) are consistent with easing Fed stance. Stress score of 4.0 (elevated) logically follows from tight credit conditions. The only minor tension is BREAKEVEN_MIXED vs BREAKEVEN_RISING signals."
+      },
+      "Quantitative Accuracy": {
+        "score": 8,
+        "weight": 15,
+        "critique": "Calculations appear correct: 2s10s spread = 4.15 - 3.56 = 0.59% (shows 0.57%, close); HY-IG differential = 313 - 84 = 229bps (correct). Term premium decomposition (nominal = real + breakeven: 1.8 + 2.34 = 4.14 vs nominal 4.15) is accurate. Units are consistent throughout (percentages, bps). Percentile calculations appear reasonable."
+      },
+      "Analytical Depth": {
+        "score": 7,
+        "weight": 15,
+        "critique": "Good interpretive content: ISM decomposition identifies employment breadth as contracting; labor breadth analysis flags weakening job openings; credit interpretation provides context (73rd percentile). Term premium analysis connects to global discount rate adjustments. However, lacks second-order effects (e.g., sector rotation implications, equity market volatility forecasts) and lacks forward-looking scenario analysis."
+      },
+      "Actionability": {
+        "score": 6,
+        "weight": 15,
+        "critique": "Provides useful decision context: recessionary outlook, elevated stress level, duration risk warning (moderate-high), and credit stress flag. However, lacks explicit positioning recommendations (overweight/underweight, duration preference, sector allocation). No clear trading signals or catalyst/timeframe for the identified risks. The elevated stress level could benefit from specific hedging recommendations."
+      },
+      "_weighted_score": 6.7
+    },
+    "consumer_housing_labor": {
+      "Component Coverage": {
+        "score": 7,
+        "weight": 20,
+        "critique": "Reasonable coverage across domains: Consumer covers 3/4 indicators (missing credit growth velocity), Housing covers 5/6 (missing price dynamics), Labor covers 4/5 (productivity data unavailable). Coverage ~75-85% for each domain. Gaps include credit growth velocity (key consumer signal), price dynamics (critical for housing cycle), and productivity/ULC data (core labor margin analysis). The proxy for hiring plans (using JOLTS/claims instead of Challenger data) is a reasonable substitute but indicates data limitation."
+      },
+      "Data Availability": {
+        "score": 5,
+        "weight": 15,
+        "critique": "Significant data gaps: 7 null/unavailable fields out of ~19 total (37% null rate). Consumer: credit_growth_velocity null. Labor: productivity_yoy_pct, ulc_yoy_pct, gap, classification, hires_yoy_pct all null. Housing: price_dynamics unavailable. The high null rate undermines the tool's reliability - nearly 4 in 10 data points missing. While the tool handles missing data gracefully with interpretations (e.g., 'Insufficient data for gap computation'), this represents a material weakness for real-time economic analysis."
+      },
+      "Composite Score Logic": {
+        "score": 3,
+        "weight": 20,
+        "critique": "Critical calculation error in consumer composite: The weighted formula (5*0.3 + 0*0.25 + 1*0.25 + 3*0.2) = 2.35, but reported composite is 6.87 - a major inconsistency. Additionally, the scoring scale appears non-linear or transformed (possibly 0-3 score converted to 0-10). Housing 'distressed' classification based on 3 distress signals is reasonable but not quantitative. Labor composite lacks a numeric score despite having component data. The domain-level classifications (stable, distressed, dovish) are logical but the numeric scoring methodology lacks transparency and appears flawed."
+      },
+      "Leading Indicator Value": {
+        "score": 8,
+        "weight": 20,
+        "critique": "Strong forward-looking signal generation: Consumer signals flag CONSUMER_STABLE and SAVINGS_RATE_LOW. Housing correctly identifies demand-side weakness (sales plunging) and flags HOUSING_CAUTION with permit/start monitoring. Labor identifies WORKER_POWER_WEAKENING and DISINFLATIONARY_PRODUCTIVITY with explicit Fed tilt (dovish). The tool appropriately distinguishes leading from lagging indicators - housing permits/starts lead sales, quits rate leads wage pressures. The affordability analysis and trend detection (flat, rising, falling) provide actionable forward guidance. Minor gap: no explicit 3-6 month outlook or probability assignment."
+      },
+      "Cross-Domain Integration": {
+        "score": 6,
+        "weight": 15,
+        "critique": "Partial integration - each domain analyzed separately without explicit cross-domain narrative. The data tells a coherent story: stressed consumer savings + distressed housing + weakening labor power = disinflationary environment enabling dovish Fed. However, the tool does not explicitly connect these dots. No unified dashboard or synthesis statement. The labor analysis noting 'Fed can lean dovish' provides some cross-domain link to monetary policy, but consumer-housing nexus (affordability impacting consumer health) is not explicitly drawn. The domains use different classification systems (numeric score vs. phase labels vs. power levels), hindering unified assessment."
+      },
+      "Professional Quality": {
+        "score": 8,
+        "weight": 10,
+        "critique": "High professional standards: Consistent date stamp (2026-03-12), proper economic terminology (SAAR, MoM, YoY, PCE, CPI, ULC, JOLTS), clear JSON structure, appropriate use of technical metrics. Interpretations are clear and actionable ('demand collapsing', 'stretched'). Signal naming convention is consistent (UPPER_SNAKE_CASE). The note about using proxy data for Challenger hiring plans demonstrates transparency. Minor issues: inconsistent numeric formatting (some integers, some floats), housing assessment paragraph is verbose, and composite score methodology lacks documentation. Overall presentation suitable for institutional use."
+      },
+      "_weighted_score": 6.0
+    },
+    "graham_valuation_vix": {
+      "Valuation Framework Quality": {
+        "score": 7,
+        "weight": 25,
+        "critique": "Graham Number calculation is correct (sqrt(22.5 \u00d7 EPS \u00d7 BVPS) = 28.63), Defensive Criteria properly applied with 7 tests, Net-Net WCav correctly computed. However, Yardeni's Rule of 20/24 cannot be calculated due to missing CPI YoY data - the valuation tool returns 'insufficient_data'. The methodology section is present but non-functional for the core valuation. Graham framework is solid where data exists; Yardeni framework is incomplete."
+      },
+      "Data Freshness": {
+        "score": 3,
+        "weight": 20,
+        "critique": "CRITICAL ISSUE: Latest quarter listed as '2020-Q2' - this is approximately 5-6 years stale for a 2026 analysis date. NVDA's current financial position likely differs dramatically from 2020 data (pre-AI boom). Price data (186.03) appears current but fundamental inputs (EPS TTM 1.73, BVPS 21.0595) are from historical quarters. This undermines the entire valuation as Graham metrics require current earnings and book values."
+      },
+      "Risk Assessment": {
+        "score": 8,
+        "weight": 20,
+        "critique": "VIX analysis is well-executed: VIX at 24.23 with 88.4th percentile percentile provides meaningful elevated caution context. MOVE/VIX ratio (3.24) correctly interpreted as balanced equity/rate vol. Tier system (Tier 3: Elevated caution) is intuitive. UnderVIX check properly noted as not applicable. Opportunity assessment is clear. Only minor gap is empty 'signals' array - would benefit from explicit output text."
+      },
+      "Actionability": {
+        "score": 5,
+        "weight": 20,
+        "critique": "The outputs describe valuation levels but do not provide clear buy/sell/hold recommendations. Graham analysis shows 'Overvalued vs Graham Number' and 'No margin of safety' but stops short of a directive. Earnings Power Value shows -223.19% margin vs price but no actionable takeaway. VIX says 'Elevated caution - No extreme opportunity signal' but no position sizing or hedging guidance. An investor would need to interpret the diagnostics themselves to take action."
+      },
+      "Internal Consistency": {
+        "score": 8,
+        "weight": 10,
+        "critique": "Numerical calculations are correct: Graham Number (28.63), Earnings Yield (0.93% = 1/107.53), Margin of Safety (-549.77% = (28.63-186.03)/28.63), PE \u00d7 PB (949.49). Minor inconsistency: Defensive criteria shows 'score: 3/7' but 'assessment: Partial Graham fit (3-4/7)' - the range is unnecessary given discrete pass/fail. Labels generally match values. Current ratio 10.29 correctly passes the \u22652.0 threshold."
+      },
+      "Completeness": {
+        "score": 5,
+        "weight": 5,
+        "critique": "Major gap: valuation tool returns 'insufficient_data' due to null CPI YoY, preventing Rule of 20/24 calculation. Forward P/E also unavailable per note. Graham analysis is comprehensive. VIX analysis is mostly complete but has empty 'signals' array. Overall about 75% coverage - missing a core Yardeni valuation method and some VIX signal outputs."
+      },
+      "_weighted_score": 6.0
+    }
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "timestamp": "2026-03-12T16:09:28.986038",
+  "commands": [
+    "bbb",
+    "fsmi",
+    "vigilantes",
+    "drawdown",
+    "peers_NVDA",
+    "allocation_NVDA",
+    "balance_NVDA",
+    "riskpremium",
+    "crossasset",
+    "intermarket",
+    "synthesize"
+  ],
+  "summary": {
+    "total_checks": 45,
+    "passed": 33,
+    "failed": 12,
+    "rate": "73.3%",
+    "critical_failures": 3,
+    "by_category": {
+      "accuracy": {
+        "total": 27,
+        "passed": 18,
+        "failed": 9
+      },
+      "coherence": {
+        "total": 10,
+        "passed": 9,
+        "failed": 1
+      },
+      "grounding": {
+        "total": 8,
+        "passed": 6,
+        "failed": 2
+      }
+    },
+    "by_command": {
+      "bbb": {
+        "total": 4,
+        "passed": 2,
+        "failed": 2
+      },
+      "fsmi": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1
+      },
+      "vigilantes": {
+        "total": 3,
+        "passed": 0,
+        "failed": 3
+      },
+      "drawdown": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "peers": {
+        "total": 4,
+        "passed": 2,
+        "failed": 2
+      },
+      "allocation": {
+        "total": 6,
+        "passed": 3,
+        "failed": 3
+      },
+      "balance": {
+        "total": 2,
+        "passed": 1,
+        "failed": 1
+      },
+      "riskpremium": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "crossasset": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "intermarket": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "synthesize": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "cross-command": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check_id": "BBB-01",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "BBB ratio = copper / (claims/1000)",
+      "passed": false,
+      "detail": "Copper=5.88, Claims=213000.0, Expected ratio\u22480.0276, Got=0.0 BUG: ratio is 0 despite copper>0",
+      "expected": 0.0276,
+      "actual": 0.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "BBB-02",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "Initial claims in plausible range (100K-500K)",
+      "passed": true,
+      "detail": "Claims=213000",
+      "expected": "[100000, 500000]",
+      "actual": 213000.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "FSMI-01",
+      "category": "accuracy",
+      "command": "fsmi",
+      "check_name": "FSMI command executes without error",
+      "passed": false,
+      "detail": "Error: float() argument must be a string or a real number, not 'Timestamp'",
+      "expected": "no error",
+      "actual": "float() argument must be a string or a real number, not 'Timestamp'",
+      "severity": "critical"
+    },
+    {
+      "check_id": "VIG-01",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "10Y yield data available",
+      "passed": false,
+      "detail": "MISSING \u2014 null 10Y yield",
+      "expected": "available",
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "VIG-02",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "Nominal GDP YoY data available",
+      "passed": false,
+      "detail": "MISSING \u2014 null GDP data",
+      "expected": "available",
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "VIG-03",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "Vigilantes model produces a regime",
+      "passed": false,
+      "detail": "Regime: insufficient_data",
+      "expected": "vigilante_mode or suppression_mode",
+      "actual": "insufficient_data",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DD-01",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "Drawdown % = (price - ATH) / ATH \u00d7 100",
+      "passed": true,
+      "detail": "Expected -4.03%, got -4.03%",
+      "expected": -4.03,
+      "actual": -4.03,
+      "severity": "high"
+    },
+    {
+      "check_id": "DD-02",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "Drawdown classification matches Yardeni thresholds",
+      "passed": true,
+      "detail": "DD=-4.03% \u2192 expected 'panic_attack', got 'panic_attack'",
+      "expected": "panic_attack",
+      "actual": "panic_attack",
+      "severity": "high"
+    },
+    {
+      "check_id": "DD-03",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "52wk high \u2265 all-time high (within lookback)",
+      "passed": true,
+      "detail": "52wk_high=7016.5, ATH=7016.5",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "PEER-01",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Reference ticker (NVDA) in comparison list",
+      "passed": true,
+      "detail": "Found 9 peers, reference present: True",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "PEER-02",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Peer data freshness (recent quarters)",
+      "passed": false,
+      "detail": "9/9 peers using stale (2019-2020) data",
+      "expected": "2024+ data",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "PEER-03",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Peer median gross margin matches calculation",
+      "passed": true,
+      "detail": "Calculated median: 51.08%, Reported: 51.08%",
+      "expected": 51.08,
+      "actual": 51.08,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ALLOC-01",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "SBC/FCF ratio arithmetic (2025-Q3)",
+      "passed": true,
+      "detail": "SBC=1.6B, FCF=13.5B, Expected=12.06%, Got=12.06%",
+      "expected": 12.06,
+      "actual": 12.06,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ALLOC-02",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "No negative diluted_shares values",
+      "passed": false,
+      "detail": "5 quarters with negative diluted_shares (e.g., 2021-Q1: -3,136,000,000)",
+      "expected": "all positive",
+      "actual": "5 negative",
+      "severity": "high"
+    },
+    {
+      "check_id": "ALLOC-03",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "Buyback/FCF ratio arithmetic (2026-Q1)",
+      "passed": true,
+      "detail": "Buybacks=3.8B, FCF=34.9B, Expected=10.93%, Got=10.93%",
+      "expected": 10.93,
+      "actual": 10.93,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ALLOC-04",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "Buyback strategy label matches latest quarter activity",
+      "passed": false,
+      "detail": "Latest repurchases=$3.8B, strategy='inactive' BUG: $3.8B buyback but labeled 'inactive'",
+      "expected": "active",
+      "actual": "inactive",
+      "severity": "high"
+    },
+    {
+      "check_id": "BAL-01",
+      "category": "accuracy",
+      "command": "balance",
+      "check_name": "Latest summary references most recent quarter",
+      "passed": false,
+      "detail": "Latest summary quarter: 2020-Q2, array spans 2020-Q2 to 2026-Q1 BUG: summary shows oldest quarter not newest",
+      "expected": "2026-Q1",
+      "actual": "2020-Q2",
+      "severity": "high"
+    },
+    {
+      "check_id": "BAL-02",
+      "category": "accuracy",
+      "command": "balance",
+      "check_name": "CCC = DSO - DPO + DIO",
+      "passed": true,
+      "detail": "DSO=50.82, DPO=51.84, DIO=113.08, Expected CCC=112.06, Got=112.06",
+      "expected": 112.06,
+      "actual": 112.06,
+      "severity": "medium"
+    },
+    {
+      "check_id": "RP-01",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "Opportunity score \u2248 mean of components",
+      "passed": true,
+      "detail": "Components avg: 4.8, Reported: 4.8",
+      "expected": 4.8,
+      "actual": 4.8,
+      "severity": "medium"
+    },
+    {
+      "check_id": "RP-02",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "VIX percentile in [0, 100]",
+      "passed": true,
+      "detail": "VIX percentile: 92.1",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "RP-03",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "VIX tier matches level (7-tier scale)",
+      "passed": true,
+      "detail": "VIX=25.3, expected tier 5, got 5",
+      "expected": 5,
+      "actual": 5,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-01",
+      "category": "accuracy",
+      "command": "crossasset",
+      "check_name": "BTC/SPX ratio change consistent with individual returns",
+      "passed": true,
+      "detail": "BTC=2.75%, SPX=-3.26%, ratio change=7.7%, expected\u22486.2%",
+      "expected": 6.2,
+      "actual": 7.7,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-02",
+      "category": "accuracy",
+      "command": "crossasset",
+      "check_name": "All correlations in [-1, 1]",
+      "passed": true,
+      "detail": "5 correlations, all valid: True",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "IM-01",
+      "category": "accuracy",
+      "command": "intermarket",
+      "check_name": "Alignment score matches aligned relationship count",
+      "passed": true,
+      "detail": "Aligned: 2/4, Reported: '2/5 relationships aligned with Murphy theory'",
+      "expected": "2/4 relationships aligned with Murphy theory",
+      "actual": "2/5 relationships aligned with Murphy theory",
+      "severity": "medium"
+    },
+    {
+      "check_id": "IM-02",
+      "category": "accuracy",
+      "command": "intermarket",
+      "check_name": "All intermarket correlations in [-1, 1]",
+      "passed": true,
+      "detail": "5 relationships, correlations valid: True",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "SYN-01",
+      "category": "accuracy",
+      "command": "synthesize",
+      "check_name": "Regime summary covers all macro dimensions",
+      "passed": true,
+      "detail": "All 5 dimensions present",
+      "expected": [
+        "growth",
+        "inflation",
+        "employment",
+        "rates",
+        "credit"
+      ],
+      "actual": [
+        "growth",
+        "inflation",
+        "employment",
+        "rates",
+        "credit",
+        "credit_stress_level",
+        "housing",
+        "financial_stress_score",
+        "late_cycle_signals",
+        "consumer_health"
+      ],
+      "severity": "high"
+    },
+    {
+      "check_id": "SYN-02",
+      "category": "accuracy",
+      "command": "synthesize",
+      "check_name": "Synthesis produces actionable recommendations",
+      "passed": true,
+      "detail": "Recommendations present: ['fixed_income']",
+      "expected": "non-empty recommendations",
+      "actual": "has recs",
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-01",
+      "category": "coherence",
+      "command": "bbb",
+      "check_name": "BBB initial claims value plausible",
+      "passed": true,
+      "detail": "Claims=213000 \u2014 plausible",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Drawdown severity consistent with Dow Theory",
+      "passed": true,
+      "detail": "Drawdown: panic_attack, Dow: CONFIRMED_BEARISH \u2014 both averages in downtrend (Dow Theory sell signal)",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC3-03",
+      "category": "coherence",
+      "command": "riskpremium",
+      "check_name": "VIX level in plausible range (10-80)",
+      "passed": true,
+      "detail": "VIX=25.3",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-04",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Cross-asset regime consistent with risk premium state",
+      "passed": true,
+      "detail": "Cross-asset: 'risk_on_selective', Risk premium: 'expanding', Wall: 'fear'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-05",
+      "category": "coherence",
+      "command": "intermarket",
+      "check_name": "Dow Theory confirmation consistent with trend directions",
+      "passed": true,
+      "detail": "SP500=bearish, Russell=bearish, Confirmation='CONFIRMED_BEARISH \u2014 both averages in downtrend (Dow Theory sell signal)'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC3-06",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Synthesize credit assessment \u2248 risk premium credit state",
+      "passed": true,
+      "detail": "Synthesize credit: 'elevated', Risk premium credit: 'elevated'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-07",
+      "category": "coherence",
+      "command": "peers",
+      "check_name": "Peer data from consistent time period",
+      "passed": false,
+      "detail": "Years: ['2019', '2020'], 9 peers",
+      "expected": "recent consistent data",
+      "actual": "years: ['2019', '2020']",
+      "severity": "high"
+    },
+    {
+      "check_id": "CC3-08",
+      "category": "coherence",
+      "command": "synthesize",
+      "check_name": "Contradiction count matches contradictions list length",
+      "passed": true,
+      "detail": "Count: 0, List length: 0",
+      "expected": 0,
+      "actual": 0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-09",
+      "category": "coherence",
+      "command": "riskpremium",
+      "check_name": "HY OAS in plausible range (100-2000 bps)",
+      "passed": true,
+      "detail": "HY OAS: 306.0 bps",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC3-10",
+      "category": "coherence",
+      "command": "allocation",
+      "check_name": "Allocation data includes recent (2025+) quarters",
+      "passed": true,
+      "detail": "Quarter range: 2020-Q2 to 2026-Q1",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-01",
+      "category": "grounding",
+      "command": "bbb",
+      "check_name": "BBB interpretation consistent with ratio value",
+      "passed": false,
+      "detail": "Ratio=0 but copper=5.88. Interpretation: 'contraction_signal \u2014 recessionary dynamics'. SUSPECT: zero ratio with positive copper is a computation bug, not true contraction",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR3-02",
+      "category": "grounding",
+      "command": "drawdown",
+      "check_name": "Drawdown classification appears in description",
+      "passed": true,
+      "detail": "Classification: 'panic_attack', Description: '4.0% pullback \u2014 Yardeni 'panic attack'. 66 such events occurred 2009-2020. Typic'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-03",
+      "category": "grounding",
+      "command": "riskpremium",
+      "check_name": "Wall-of-worry phase label appears in interpretation",
+      "passed": true,
+      "detail": "Phase: 'fear', Interpretation: 'Fear phase \u2014 VIX elevated + credit widening. Opportunities building for contrari'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-04",
+      "category": "grounding",
+      "command": "crossasset",
+      "check_name": "Cross-asset regime label reflected in summary",
+      "passed": true,
+      "detail": "Regime: 'risk_on_selective', Summary: 'Cross-asset regime: risk on selective. Leader: SILVER (+4.0%), Laggard: SPX (-3.'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-05",
+      "category": "grounding",
+      "command": "intermarket",
+      "check_name": "Intermarket regime label reflects alignment score",
+      "passed": true,
+      "detail": "Aligned: 2/5 relationships aligned with Murphy theory, Regime: 'Anomalous regime \u2014 intermarket relationships breaking down'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-06",
+      "category": "grounding",
+      "command": "intermarket",
+      "check_name": "SP500 trend direction consistent with SMA50 position",
+      "passed": true,
+      "detail": "Trend: bearish, vs SMA50: below",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-07",
+      "category": "grounding",
+      "command": "synthesize",
+      "check_name": "Coherence status consistent with contradiction count",
+      "passed": true,
+      "detail": "Status: 'CLEAN', Contradictions: 0",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR3-08",
+      "category": "grounding",
+      "command": "allocation",
+      "check_name": "Buyback strategy label matches latest quarter data",
+      "passed": false,
+      "detail": "Strategy: 'inactive', Latest buybacks: $3.8B \u2014 CONTRADICTION",
+      "expected": "active",
+      "actual": "inactive",
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {}
+}

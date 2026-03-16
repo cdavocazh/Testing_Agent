@@ -1,0 +1,776 @@
+{
+  "analyze_NVDA": {
+    "ticker": "NVDA",
+    "company": "NVIDIA CORP",
+    "data_source": "SEC EDGAR",
+    "schema": "expanded_53col",
+    "quarters_analyzed": 24,
+    "latest_quarter": "2020-Q2",
+    "data_warning": "STALE DATA \u2014 latest quarter is 2020-Q2, over 6 years old. Valuation and financial analysis may be unreliable.",
+    "latest_metrics": {
+      "revenue": 3080000000.0,
+      "cost_of_revenue": 1076000000.0,
+      "gross_profit": 2004000000.0,
+      "operating_income": 976000000.0,
+      "net_income": 917000000.0,
+      "ebitda": 976000000.0,
+      "total_assets": 23254000000.0,
+      "total_liabilities": 10155000000.0,
+      "operating_cash_flow": 909000000.0,
+      "free_cash_flow": 754000000.0,
+      "capital_expenditure": -155000000.0,
+      "debt_ratio": 0.4367,
+      "diluted_eps": 1.47,
+      "diluted_shares": 622000000.0,
+      "stock_based_compensation": 224000000.0,
+      "research_development": 735000000.0
+    },
+    "margins": {
+      "gross_margin_pct": 65.06,
+      "operating_margin_pct": 31.69,
+      "net_margin_pct": 29.77,
+      "ebitda_margin_pct": 31.69,
+      "rd_to_revenue_pct": 23.86,
+      "sbc_to_revenue_pct": 7.27
+    },
+    "cash_flow_quality": {
+      "ocf_to_net_income": 0.99,
+      "interpretation": "Strong \u2014 cash flow well supports earnings",
+      "fcf_margin_pct": 24.48,
+      "capex_to_ocf_pct": 17.05,
+      "sbc_to_revenue_pct": 7.27,
+      "fcf_to_net_income": 0.82,
+      "ocf_to_revenue_pct": 29.51
+    },
+    "balance_sheet": {
+      "total_equity": 13099000000.0,
+      "equity_ratio": 0.5633,
+      "leverage_ratio": 0.78,
+      "current_ratio": 10.29,
+      "debt_to_equity": 0.53,
+      "total_debt": 6959000000.0,
+      "net_debt": -8535000000.0
+    },
+    "growth_trend": [
+      {
+        "from": "2020-Q3",
+        "to": "2020-Q2",
+        "total_revenue_growth_pct": -20.33,
+        "net_income_growth_pct": 47.43,
+        "operating_cash_flow_growth_pct": -41.99,
+        "free_cash_flow_growth_pct": -44.15,
+        "ebitda_growth_pct": 49.92,
+        "gross_profit_growth_pct": -11.91
+      },
+      {
+        "from": "2020-Q4",
+        "to": "2020-Q3",
+        "total_revenue_growth_pct": -18.2,
+        "net_income_growth_pct": -53.44,
+        "operating_cash_flow_growth_pct": 22.52,
+        "free_cash_flow_growth_pct": 67.49,
+        "ebitda_growth_pct": -53.43,
+        "gross_profit_growth_pct": -23.14
+      },
+      {
+        "from": "2021-Q1",
+        "to": "2020-Q4",
+        "total_revenue_growth_pct": -5.54,
+        "net_income_growth_pct": -8.3,
+        "operating_cash_flow_growth_pct": -38.12,
+        "free_cash_flow_growth_pct": -61.01,
+        "ebitda_growth_pct": -7.23,
+        "gross_profit_growth_pct": -6.24
+      },
+      {
+        "from": "2021-Q2",
+        "to": "2021-Q1",
+        "total_revenue_growth_pct": -11.62,
+        "net_income_growth_pct": -23.8,
+        "operating_cash_flow_growth_pct": 10.3,
+        "free_cash_flow_growth_pct": 31.15,
+        "ebitda_growth_pct": -32.63,
+        "gross_profit_growth_pct": -13.01
+      }
+    ],
+    "year_over_year": {
+      "current_quarter": "2020-Q2",
+      "year_ago_quarter": "2021-Q2",
+      "total_revenue_yoy_growth_pct": -45.59,
+      "net_income_yoy_growth_pct": -52.04,
+      "operating_cash_flow_yoy_growth_pct": -51.49,
+      "free_cash_flow_yoy_growth_pct": -52.16,
+      "ebitda_yoy_growth_pct": -56.37,
+      "gross_profit_yoy_growth_pct": -44.78,
+      "operating_income_yoy_growth_pct": -50.1
+    },
+    "return_on_capital": {
+      "roe_quarterly_pct": 7.0,
+      "roe_annualized_pct": 28.0,
+      "roic_quarterly_pct": 19.99,
+      "roic_annualized_pct": 79.96,
+      "effective_tax_rate_pct": 6.52,
+      "roa_quarterly_pct": 3.94,
+      "roa_annualized_pct": 15.77
+    },
+    "margin_trends": {
+      "gross_margin": {
+        "values_pct": [
+          75.0,
+          73.41,
+          72.42,
+          60.52,
+          73.03,
+          74.56,
+          75.15,
+          78.35,
+          75.97,
+          73.95,
+          70.05,
+          64.63,
+          63.34,
+          53.57,
+          43.48,
+          65.53,
+          65.42,
+          65.2,
+          64.78,
+          64.11,
+          63.1,
+          62.63,
+          58.85,
+          65.06
+        ],
+        "trend": "declining"
+      },
+      "operating_margin": {
+        "values_pct": [
+          65.02,
+          63.17,
+          60.84,
+          49.11,
+          61.1,
+          62.34,
+          62.06,
+          64.92,
+          61.6,
+          57.49,
+          50.34,
+          29.76,
+          20.76,
+          10.13,
+          7.44,
+          22.54,
+          38.86,
+          37.6,
+          37.56,
+          34.55,
+          30.12,
+          29.58,
+          16.84,
+          31.69
+        ],
+        "trend": "declining"
+      },
+      "net_margin": {
+        "values_pct": [
+          63.06,
+          55.98,
+          56.53,
+          42.61,
+          56.17,
+          55.04,
+          55.26,
+          57.14,
+          55.59,
+          51.01,
+          45.81,
+          28.41,
+          23.37,
+          11.47,
+          9.79,
+          19.52,
+          39.28,
+          34.69,
+          36.48,
+          33.77,
+          29.12,
+          28.27,
+          16.09,
+          29.77
+        ],
+        "trend": "volatile"
+      },
+      "ebitda_margin": {
+        "values_pct": [
+          65.02,
+          63.17,
+          60.84,
+          50.49,
+          61.1,
+          62.34,
+          62.06,
+          66.5,
+          61.6,
+          57.49,
+          50.34,
+          35.09,
+          20.76,
+          10.13,
+          7.44,
+          26.57,
+          38.86,
+          37.6,
+          37.56,
+          39.52,
+          30.12,
+          29.58,
+          16.84,
+          31.69
+        ],
+        "trend": "volatile"
+      }
+    },
+    "net_cash_position": {
+      "cash_and_equivalents": 15494000000.0,
+      "cash_and_short_term_investments": 16354000000.0,
+      "total_debt": 6959000000.0,
+      "net_debt": -8535000000.0,
+      "net_cash_position": 8535000000.0,
+      "position": "net_cash"
+    },
+    "capital_allocation": {
+      "dividends_paid": -98000000.0,
+      "dividend_to_revenue_pct": 3.18,
+      "sbc": 224000000.0
+    },
+    "balance_sheet_efficiency": {
+      "days_sales_outstanding": 55.72,
+      "days_payable_outstanding": 63.65,
+      "inventory_turnover": 0.95,
+      "days_inventory_outstanding": 94.35,
+      "cash_conversion_cycle": 86.42,
+      "working_capital": 17681000000.0,
+      "working_capital_to_revenue_pct": 574.06
+    },
+    "sector_classification": {
+      "gics_sector": "Information Technology",
+      "gics_industry_group": "Semiconductors & Semiconductor Equipment"
+    },
+    "flags": [
+      "HIGH_MARGIN: Operating margin 31.69% \u2014 premium business",
+      "HIGH_GROSS_MARGIN: 65.06% \u2014 strong pricing power",
+      "HIGH_RD_SPEND: R&D at 23.86% of revenue \u2014 heavy investment phase",
+      "REVENUE_DECLINE: YoY revenue down -45.59%",
+      "HIGH_ROIC: 79.96% annualized \u2014 strong value creation",
+      "LARGE_NET_CASH: Net cash is 277.11% of quarterly revenue",
+      "MARGIN_DECLINING: gross_margin trending down across recent quarters",
+      "MARGIN_DECLINING: operating_margin trending down across recent quarters"
+    ],
+    "valuation": {
+      "diluted_eps": 1.47,
+      "annualized_eps": 5.88,
+      "book_value_per_share": 21.06,
+      "note": "For market P/E, use graham_analysis(ticker) or get_valuation_snapshot()"
+    }
+  },
+  "commodity_crude_oil": {
+    "commodity": "crude_oil",
+    "timestamp": "2026-03-12",
+    "price_analysis": {
+      "indicator": "Crude Oil Futures",
+      "total_rows": 504,
+      "metrics": {
+        "crude_oil_price": {
+          "latest_value": 92.03,
+          "daily_change": 4.78,
+          "daily_change_pct": 5.48,
+          "wow_change": 11.02,
+          "wow_change_pct": 13.6,
+          "mom_change": 28.07,
+          "mom_change_pct": 43.89,
+          "3m_change_pct": 53.18,
+          "z_score_20d": 1.72,
+          "52w_high": 94.77,
+          "52w_low": 55.27,
+          "pct_from_52w_high": -2.89,
+          "pct_from_52w_low": 66.51,
+          "flags": [
+            "NOTABLE_OIL_MOVE: Oil moved +5.48%",
+            "SIGNIFICANT_OIL_MOVE: Oil moved +5.48% \u2014 significant (geopolitics/OPEC?)",
+            "WEEKLY_PCT_MOVE: +13.60% WoW",
+            "MONTHLY_PCT_MOVE: +43.89% MoM",
+            "OIL_ELEVATED: Oil above $80 \u2014 elevated; inflationary pressure",
+            "STATISTICAL_WATCH: crude_oil_price elevated (z=1.72, 20-day)",
+            "NEAR_52W_HIGH: Within 3% of 52-week high (94.77)"
+          ]
+        }
+      }
+    },
+    "inventory_data": {
+      "as_of": "2026-03-12",
+      "wti": {
+        "latest_price": 92.03,
+        "date": "2026-03-12",
+        "daily_change": 4.78,
+        "daily_change_pct": 5.4785,
+        "wow_change": 11.02,
+        "wow_change_pct": 13.6033
+      },
+      "brent": {
+        "latest_price": 94.35,
+        "date": "2026-03-09",
+        "daily_change": -1.39,
+        "daily_change_pct": -1.4518,
+        "wow_change": 17.11,
+        "wow_change_pct": 22.1517
+      },
+      "wti_brent_spread": {
+        "value": -2.32,
+        "interpretation": "Brent premium (typical)"
+      },
+      "crude_inventories": {
+        "error": "Failed to fetch crude inventory data (WCESTUS1)",
+        "hint": "Check FRED_API_KEY validity and network connectivity"
+      },
+      "gasoline_stocks": {
+        "error": "Failed to fetch gasoline stock data (WGTSTUS1)",
+        "hint": "Check FRED_API_KEY validity and network connectivity"
+      },
+      "distillate_stocks": {
+        "error": "Failed to fetch distillate stock data (WDISTUS1)",
+        "hint": "Check FRED_API_KEY validity and network connectivity"
+      },
+      "gasoline_price": {
+        "latest_price_per_gallon": 3.502,
+        "date": "2026-03-09"
+      }
+    },
+    "seasonal_pattern": {
+      "current_month": "March",
+      "avg_monthly_return_pct": 1.0457,
+      "historical_tendency": "bullish",
+      "strongest_month": "March",
+      "weakest_month": "April",
+      "all_months": {
+        "January": {
+          "mean_return_pct": 0.357,
+          "median_return_pct": 0.4224,
+          "positive_pct": 56.1,
+          "sample_size": 41
+        },
+        "February": {
+          "mean_return_pct": -0.0128,
+          "median_return_pct": -0.0862,
+          "positive_pct": 47.4,
+          "sample_size": 38
+        },
+        "March": {
+          "mean_return_pct": 1.0457,
+          "median_return_pct": 0.492,
+          "positive_pct": 64.3,
+          "sample_size": 42
+        },
+        "April": {
+          "mean_return_pct": -0.4847,
+          "median_return_pct": -0.0585,
+          "positive_pct": 48.8,
+          "sample_size": 43
+        },
+        "May": {
+          "mean_return_pct": -0.0314,
+          "median_return_pct": -0.2074,
+          "positive_pct": 44.2,
+          "sample_size": 43
+        },
+        "June": {
+          "mean_return_pct": 0.3582,
+          "median_return_pct": 0.4292,
+          "positive_pct": 61.5,
+          "sample_size": 39
+        },
+        "July": {
+          "mean_return_pct": 0.0515,
+          "median_return_pct": -0.2961,
+          "positive_pct": 42.2,
+          "sample_size": 45
+        },
+        "August": {
+          "mean_return_pct": -0.2984,
+          "median_return_pct": -0.7304,
+          "positive_pct": 44.2,
+          "sample_size": 43
+        },
+        "September": {
+          "mean_return_pct": -0.2301,
+          "median_return_pct": -0.0417,
+          "positive_pct": 43.9,
+          "sample_size": 41
+        },
+        "October": {
+          "mean_return_pct": 0.0121,
+          "median_return_pct": 0.102,
+          "positive_pct": 52.2,
+          "sample_size": 46
+        },
+        "November": {
+          "mean_return_pct": -0.1374,
+          "median_return_pct": 0.1148,
+          "positive_pct": 51.3,
+          "sample_size": 39
+        },
+        "December": {
+          "mean_return_pct": 0.0878,
+          "median_return_pct": 0.1471,
+          "positive_pct": 51.2,
+          "sample_size": 43
+        }
+      }
+    },
+    "support_resistance": {
+      "supports": [
+        56.37,
+        59.27,
+        62.23
+      ],
+      "resistances": [
+        94.77
+      ],
+      "current_price": 92.03
+    },
+    "correlations": {
+      "dxy_20d_correlation": 0.42,
+      "interpretation": "moderate positive"
+    },
+    "energy_etf_divergence": {
+      "xle": {
+        "ticker": "XLE",
+        "latest_price": 56.98,
+        "price_1w_ago": 56.19,
+        "pct_change_1w": 1.41,
+        "price_1m_ago": 53.64,
+        "pct_change_1m": 6.23
+      },
+      "xop": {
+        "ticker": "XOP",
+        "latest_price": 164.69,
+        "price_1w_ago": 160.77,
+        "pct_change_1w": 2.44,
+        "price_1m_ago": 146.49,
+        "pct_change_1m": 12.42
+      },
+      "spread_1w_pp": 1.03,
+      "spread_1m_pp": 6.19,
+      "interpretation": "XLE +1.4%, XOP +2.4% \u2014 modest divergence, no strong signal."
+    },
+    "signals": [],
+    "summary": "Crude Oil at $92.03. near 52-week high. up 13.6% WoW. seasonally bullish in March."
+  },
+  "macro": {
+    "timestamp": "2026-03-12",
+    "regimes": {
+      "inflation": {
+        "classification": "rising_from_low_base",
+        "value": 0.28,
+        "evidence": "Core PCE YoY = 0.28",
+        "trend": "rising",
+        "breakeven_5y": 2.58
+      },
+      "employment": {
+        "classification": "moderate",
+        "value": 4.4,
+        "evidence": "Unemployment Rate = 4.40",
+        "claims_trend": "flat",
+        "latest_nfp_thousands": -92.0,
+        "labor_breadth": {
+          "job_openings_thousands": 6542.0,
+          "job_openings_interpretation": "Labor demand weakening \u2014 fewer openings",
+          "quits_rate_pct": 2.0,
+          "quits_rate_interpretation": "Quits rate in normal range",
+          "continuing_claims_momentum_pct": -0.65,
+          "nfp_3m_avg_thousands": 5.7,
+          "nfp_decelerating": false
+        }
+      },
+      "growth": {
+        "classification": "contraction",
+        "value": 49.12,
+        "evidence": "ISM Manufacturing PMI = 49.12",
+        "ism_decomposition": {
+          "new_orders": 319898.0,
+          "new_orders_interpretation": "Manufacturing demand stable",
+          "employment": 12573.0,
+          "employment_breadth": "contracting",
+          "inventories": 1.36,
+          "inventory_flip": false,
+          "inventories_too_high": false,
+          "pull_forward_detected": false
+        }
+      },
+      "rates": {
+        "value": 3.64,
+        "classification": "easing",
+        "evidence": "Fed funds = 3.64%, trend = falling",
+        "curve_shape": "normal \u2014 no recession signal",
+        "stance": "Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)"
+      },
+      "credit": {
+        "metric": "HY OAS",
+        "value": 3.06,
+        "value_bps": 306,
+        "classification": "elevated",
+        "stress_level": "elevated",
+        "evidence": "HY spread at 306bps \u2014 above average \u2014 watchful (65th pctile, 1Y)",
+        "spread_direction": "widening",
+        "one_year_percentile": 64.6
+      },
+      "housing": {
+        "classification": "data_unavailable",
+        "evidence": "Housing starts data unavailable",
+        "permits_trend": "flat",
+        "mortgage_rate": 6.0
+      }
+    },
+    "composite_outlook": "Recessionary \u2014 contracting growth with tight credit conditions.",
+    "signals": [
+      "INFLATION_STABLE",
+      "JOLTS_OPENINGS_DECLINING",
+      "LABOR_MODERATE",
+      "ISM_CONTRACTION",
+      "GROWTH_CONTRACTION",
+      "FED_EASING",
+      "CREDIT_TIGHT"
+    ],
+    "inflation_detail": {
+      "cpi": {
+        "latest_value": 2.6646,
+        "trend": "falling",
+        "yoy_change_pct": -4.89,
+        "interpretation": "Below target at -4.89% \u2014 disinflation risk"
+      },
+      "core_cpi": {
+        "latest_value": 2.7335,
+        "trend": "flat",
+        "yoy_change_pct": -12.88,
+        "interpretation": "Below target at -12.88% \u2014 disinflation risk"
+      },
+      "pce": {
+        "latest_value": 128.605,
+        "trend": "rising",
+        "yoy_change_pct": 2.9,
+        "interpretation": "Moderately above target at 2.9%"
+      },
+      "core_pce": {
+        "latest_value": 2.9969,
+        "trend": "rising",
+        "yoy_change_pct": 0.28,
+        "interpretation": "Below target at 0.28% \u2014 disinflation risk"
+      },
+      "ppi": {
+        "latest_value": 2.8376,
+        "trend": "flat",
+        "yoy_change_pct": -25.07
+      }
+    }
+  },
+  "graham_NVDA": {
+    "ticker": "NVDA",
+    "analysis": "benjamin_graham_value",
+    "as_of": "2026-03-12",
+    "company": "NVIDIA CORP",
+    "latest_quarter": "2020-Q2",
+    "current_price": 186.02999877929688,
+    "graham_number": {
+      "value": 28.63,
+      "formula": "sqrt(22.5 \u00d7 EPS_TTM \u00d7 BVPS)",
+      "eps_ttm": 1.73,
+      "bvps": 21.0595
+    },
+    "margin_of_safety": {
+      "pct": -84.61,
+      "assessment": "Overvalued vs Graham Number (negative margin)"
+    },
+    "defensive_criteria": {
+      "score": "3/7",
+      "tests": [
+        {
+          "test": "1. Adequate size",
+          "threshold": "Annual revenue > $100M",
+          "value": "$16.68B",
+          "pass": true
+        },
+        {
+          "test": "2. Strong financial condition",
+          "threshold": "Current ratio \u2265 2.0",
+          "value": 10.2911,
+          "pass": true
+        },
+        {
+          "test": "3. Earnings stability",
+          "threshold": "Positive EPS in all quarters",
+          "value": "21/24 quarters positive",
+          "pass": false
+        },
+        {
+          "test": "4. Dividend record",
+          "threshold": "Paying dividends",
+          "value": "$0.40B TTM",
+          "pass": true
+        },
+        {
+          "test": "5. Earnings growth",
+          "threshold": "EPS growth (newest 4Q vs oldest 4Q)",
+          "value": "-64.69%",
+          "pass": false
+        },
+        {
+          "test": "6. Moderate P/E ratio",
+          "threshold": "P/E < 15",
+          "value": 107.53,
+          "pass": false
+        },
+        {
+          "test": "7. Moderate P/E \u00d7 P/B",
+          "threshold": "P/E \u00d7 P/B < 22.5",
+          "value": 949.49,
+          "pass": false
+        }
+      ],
+      "assessment": "Partial Graham fit (3-4/7)"
+    },
+    "net_net_wcav": {
+      "ncav_per_share": 15.16,
+      "current_assets": 19584000000.0,
+      "total_liabilities": 10155000000.0,
+      "formula": "(Current Assets - Total Liabilities) / Shares",
+      "price_to_ncav": 12.27,
+      "signal": "Trading above NCAV"
+    },
+    "debt_safety": {
+      "current_ratio": 10.2911,
+      "debt_to_equity": 0.5313,
+      "long_term_debt": null,
+      "assessment": [
+        "PASS: Current ratio \u2265 2.0 (Graham threshold)",
+        "PASS: Debt/equity < 1.0 (Graham preferred)"
+      ]
+    },
+    "earnings_power_value": {
+      "epv_total": 35.8,
+      "epv_per_share": 57.56,
+      "operating_income_ttm": 4.53,
+      "assumed_cost_of_capital": "10%",
+      "assumed_tax_rate": "21%",
+      "formula": "After-tax Operating Income / Cost of Capital",
+      "margin_vs_price": "-223.19%"
+    },
+    "book_value": {
+      "bvps": 21.0595,
+      "tangible_bvps": 20.0498,
+      "pb_ratio": 8.83,
+      "bvps_trend": "declining"
+    },
+    "valuation_metrics": {
+      "trailing_pe": 107.53,
+      "price_to_book": 8.83,
+      "pe_x_pb": 949.49,
+      "earnings_yield": 0.93
+    },
+    "overall_assessment": [
+      "Partial Graham fit (3/7)",
+      "No margin of safety \u2014 trading above Graham Number"
+    ]
+  },
+  "valuation": {
+    "as_of": "2026-03-12",
+    "inputs": {
+      "pe_ratio": 26.8,
+      "pe_source": "trailing_PE",
+      "cpi_yoy_pct": null,
+      "unemployment_rate": 4.4
+    },
+    "assessment": "insufficient_data",
+    "data_note": "NOTE: Using trailing_PE instead of forward P/E (I/B/E/S data not available). ",
+    "methodology": "Rule of 20 (Jim Moltz / Yardeni): P/E + CPI = 20 is fair value. Rule of 24 (Yardeni extension): P/E + Misery Index (unemployment + CPI) avg = 23.9 since 1979. Real Earnings Yield: 1/PE - CPI YoY \u2014 mean-reverting valuation signal."
+  },
+  "stress": {
+    "as_of": "2026-03-12",
+    "composite_score": 4.0,
+    "stress_level": "elevated",
+    "components": {
+      "nfci": {
+        "value": -0.514,
+        "score": 1,
+        "weight": 0.18,
+        "interpretation": "NFCI at -0.514 \u2014 looser than average"
+      },
+      "hy_oas": {
+        "value": 3.06,
+        "score": 5,
+        "weight": 0.18,
+        "interpretation": "HY spread at 306bps \u2014 above average \u2014 watchful (65th pctile, 1Y)",
+        "stress_level": "elevated"
+      },
+      "vix": {
+        "value": 25.2,
+        "score": 5,
+        "weight": 0.14,
+        "interpretation": "VIX at 25.2"
+      },
+      "yield_curve_2s10s": {
+        "value": 0.57,
+        "score": 2,
+        "weight": 0.14,
+        "interpretation": "2s10s at 0.57% \u2014 normal"
+      },
+      "initial_claims": {
+        "value": 213.0,
+        "score": 1,
+        "weight": 0.1,
+        "interpretation": "Initial claims at 213K"
+      },
+      "sahm_rule": {
+        "value": 0.27,
+        "score": 3,
+        "weight": 0.1,
+        "interpretation": "Sahm Rule at 0.27"
+      },
+      "consumer_sentiment": {
+        "value": 56.4,
+        "score": 7,
+        "weight": 0.08,
+        "interpretation": "U of Michigan Sentiment at 56.4"
+      },
+      "consumer_credit": {
+        "value": 1.48,
+        "score": 1,
+        "weight": 0.08,
+        "interpretation": "All-loan delinquency rate at 1.48%"
+      }
+    },
+    "supplemental": {
+      "private_credit_proxy": {
+        "stress_level": "watch",
+        "interpretation": "HY OAS elevated/widening at 306bps but bank lending not yet tightening sharply. Monitor for confirmation.",
+        "hy_oas_bps": 306,
+        "hy_direction": "widening",
+        "hy_regime_classification": "elevated",
+        "bank_tightening_net_pct": 5.3
+      },
+      "bank_equity_vs_credit": {
+        "kbe_latest": 58.66,
+        "kbe_1w_pct": -5.13,
+        "kbe_1m_pct": -12.77,
+        "hy_oas_bps": 306,
+        "hy_regime_classification": "elevated",
+        "diagnosis": "systemic_risk",
+        "interpretation": "Bank equities falling (KBE -5.1% 1W) AND credit spreads stressed (306bps HY OAS) \u2014 SYSTEMIC risk. Both equity and credit markets pricing bank deterioration."
+      }
+    },
+    "signals": [
+      "STRESS_ELEVATED",
+      "BANK_SYSTEMIC_STRESS"
+    ],
+    "summary": "Financial Stress Score: 4.0/10 (elevated). Based on 8/8 available components. Supplemental: bank systemic risk detected. Signals: STRESS_ELEVATED, BANK_SYSTEMIC_STRESS."
+  }
+}

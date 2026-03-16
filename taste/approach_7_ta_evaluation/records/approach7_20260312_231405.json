@@ -1,0 +1,466 @@
+{
+  "approach": "7_ta_coherence",
+  "timestamp": "2026-03-12T23:14:05.215307",
+  "results": {
+    "summary": {
+      "total": 45,
+      "passed": 45,
+      "failed": 0,
+      "pass_rate": "100.0%",
+      "critical": 0,
+      "elapsed": "0.0s"
+    },
+    "all_checks": [
+      {
+        "check_id": "TC-01",
+        "asset": "btc",
+        "name": "Composite signal vs trend direction",
+        "passed": true,
+        "expected": "compatible (BULLISH vs contracting_range)",
+        "actual": "signal=BULLISH, trend=contracting_range",
+        "detail": "Strong composite signal should not oppose strong trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-02",
+        "asset": "btc",
+        "name": "MACD crossover vs histogram",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "hist=625.3450, crossover=bullish",
+        "detail": "Histogram sign should match crossover type",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-03",
+        "asset": "btc",
+        "name": "RSI vs Stochastic alignment",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "RSI=54.5(mid), %K=59.2(mid)",
+        "detail": "RSI and Stochastic should not have opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-04",
+        "asset": "btc",
+        "name": "Bollinger %B vs RSI",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "%B=69.5, RSI=54.5",
+        "detail": "BB position and RSI should not be opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-05",
+        "asset": "btc",
+        "name": "Trend vs MA",
+        "passed": true,
+        "expected": "skip",
+        "actual": "N/A",
+        "detail": "No MA data",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-06",
+        "asset": "btc",
+        "name": "Supports < price < resistances",
+        "passed": true,
+        "expected": "all supports <= 70225.91, all res >= 68835.29",
+        "actual": "supports=[65415.3, 62786.65, 59800.0], res=[70049.5, 70938.5, 72024.05]",
+        "detail": "S/R levels should be properly ordered around price",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-07",
+        "asset": "btc",
+        "name": "Murphy vs standalone nearest support",
+        "passed": true,
+        "expected": "< 2% difference",
+        "actual": "murphy=65415.30, standalone=65415.30 (0.00%)",
+        "detail": "Both tools should identify similar support levels",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-08",
+        "asset": "btc",
+        "name": "S/R levels have adequate spacing",
+        "passed": true,
+        "expected": "> 0.3% spacing",
+        "actual": "min spacing = 889.00 (1.28%)",
+        "detail": "S/R levels too close together are essentially duplicates",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-09",
+        "asset": "btc",
+        "name": "Murphy RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "murphy=54.51, standalone=54.51",
+        "detail": "Same RSI calculation should produce identical results",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-10",
+        "asset": "btc",
+        "name": "Breakout vs trend",
+        "passed": true,
+        "expected": "no breakout \u2014 consistent",
+        "actual": "detected=False, trend=contracting_range",
+        "detail": "No breakout is consistent with any trend",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-11",
+        "asset": "btc",
+        "name": "Breakout nearest_res matches S/R",
+        "passed": true,
+        "expected": "< 1% difference",
+        "actual": "breakout=70049.50, S/R=70049.50 (0.00%)",
+        "detail": "Both tools should find same nearest resistance",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-12",
+        "asset": "btc",
+        "name": "Snapshot RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "snap=54.51, standalone=54.51",
+        "detail": "Snapshot embeds same RSI calculation",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-13",
+        "asset": "btc",
+        "name": "Long stop below entry",
+        "passed": true,
+        "expected": "< 69530.60",
+        "actual": "65088.22",
+        "detail": "Long position stop-loss must be below entry",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TC-14",
+        "asset": "btc",
+        "name": "Swing stop near S/R support",
+        "passed": true,
+        "expected": "within 5% of nearest support (65415.30)",
+        "actual": "swing_stop=65088.22 (0.5% away)",
+        "detail": "Swing stop should relate to nearby support level",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-15",
+        "asset": "btc",
+        "name": "Position sizing capital_at_risk",
+        "passed": true,
+        "expected": "4442.38",
+        "actual": "4442.38",
+        "detail": "capital_at_risk = |entry - stop|",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-01",
+        "asset": "gold",
+        "name": "Composite signal vs trend direction",
+        "passed": true,
+        "expected": "compatible (NEUTRAL vs contracting_range)",
+        "actual": "signal=NEUTRAL, trend=contracting_range",
+        "detail": "Strong composite signal should not oppose strong trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-02",
+        "asset": "gold",
+        "name": "MACD crossover vs histogram",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "hist=-14.8205, crossover=bearish",
+        "detail": "Histogram sign should match crossover type",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-03",
+        "asset": "gold",
+        "name": "RSI vs Stochastic alignment",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "RSI=54.4(mid), %K=36.1(mid)",
+        "detail": "RSI and Stochastic should not have opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-04",
+        "asset": "gold",
+        "name": "Bollinger %B vs RSI",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "%B=58.8, RSI=54.4",
+        "detail": "BB position and RSI should not be opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-05",
+        "asset": "gold",
+        "name": "Trend vs MA structure",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "price=5148.00, SMA50=4897.85, SMA200=4017.78, trend=contracting_range",
+        "detail": "Price vs MAs should agree with trend direction",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-06",
+        "asset": "gold",
+        "name": "Supports < price < resistances",
+        "passed": true,
+        "expected": "all supports <= 5199.48, all res >= 5096.52",
+        "actual": "supports=[5119.3, 4989.85, 4889.33], res=[5213.6, 5306.4]",
+        "detail": "S/R levels should be properly ordered around price",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-07",
+        "asset": "gold",
+        "name": "Murphy vs standalone nearest support",
+        "passed": true,
+        "expected": "< 2% difference",
+        "actual": "murphy=5119.30, standalone=5119.30 (0.00%)",
+        "detail": "Both tools should identify similar support levels",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-08",
+        "asset": "gold",
+        "name": "S/R levels have adequate spacing",
+        "passed": true,
+        "expected": "> 0.3% spacing",
+        "actual": "min spacing = 92.80 (1.80%)",
+        "detail": "S/R levels too close together are essentially duplicates",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-09",
+        "asset": "gold",
+        "name": "Murphy RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "murphy=54.42, standalone=54.42",
+        "detail": "Same RSI calculation should produce identical results",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-10",
+        "asset": "gold",
+        "name": "Breakout vs trend",
+        "passed": true,
+        "expected": "no breakout \u2014 consistent",
+        "actual": "detected=False, trend=contracting_range",
+        "detail": "No breakout is consistent with any trend",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-11",
+        "asset": "gold",
+        "name": "Breakout nearest_res matches S/R",
+        "passed": true,
+        "expected": "< 1% difference",
+        "actual": "breakout=5213.60, S/R=5213.60 (0.00%)",
+        "detail": "Both tools should find same nearest resistance",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-12",
+        "asset": "gold",
+        "name": "Snapshot RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "snap=54.42, standalone=54.42",
+        "detail": "Snapshot embeds same RSI calculation",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-13",
+        "asset": "gold",
+        "name": "Long stop below entry",
+        "passed": true,
+        "expected": "< 5148.00",
+        "actual": "5093.70",
+        "detail": "Long position stop-loss must be below entry",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TC-14",
+        "asset": "gold",
+        "name": "Swing stop near S/R support",
+        "passed": true,
+        "expected": "within 5% of nearest support (5119.30)",
+        "actual": "swing_stop=5093.70 (0.5% away)",
+        "detail": "Swing stop should relate to nearby support level",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-15",
+        "asset": "gold",
+        "name": "Position sizing capital_at_risk",
+        "passed": true,
+        "expected": "54.30",
+        "actual": "54.30",
+        "detail": "capital_at_risk = |entry - stop|",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-01",
+        "asset": "AAPL",
+        "name": "Composite signal vs trend direction",
+        "passed": true,
+        "expected": "compatible (BEARISH vs downtrend)",
+        "actual": "signal=BEARISH, trend=downtrend",
+        "detail": "Strong composite signal should not oppose strong trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-02",
+        "asset": "AAPL",
+        "name": "MACD crossover vs histogram",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "hist=-1.1120, crossover=bearish",
+        "detail": "Histogram sign should match crossover type",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-03",
+        "asset": "AAPL",
+        "name": "RSI vs Stochastic alignment",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "RSI=36.7(mid), %K=4.7(oversold)",
+        "detail": "RSI and Stochastic should not have opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-04",
+        "asset": "AAPL",
+        "name": "Bollinger %B vs RSI",
+        "passed": true,
+        "expected": "no contradiction",
+        "actual": "%B=8.9, RSI=36.7",
+        "detail": "BB position and RSI should not be opposing extremes",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-05",
+        "asset": "AAPL",
+        "name": "Trend vs MA structure",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "price=254.73, SMA50=263.01, SMA200=244.94, trend=downtrend",
+        "detail": "Price vs MAs should agree with trend direction",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-06",
+        "asset": "AAPL",
+        "name": "Supports < price < resistances",
+        "passed": true,
+        "expected": "all supports <= 257.28, all res >= 252.18",
+        "actual": "supports=[243.82], res=[263.92, 277.11, 288.35]",
+        "detail": "S/R levels should be properly ordered around price",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-07",
+        "asset": "AAPL",
+        "name": "Murphy vs standalone nearest support",
+        "passed": true,
+        "expected": "< 2% difference",
+        "actual": "murphy=243.82, standalone=243.82 (0.00%)",
+        "detail": "Both tools should identify similar support levels",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-08",
+        "asset": "AAPL",
+        "name": "S/R levels have adequate spacing",
+        "passed": true,
+        "expected": "> 0.3% spacing",
+        "actual": "min spacing = 11.24 (4.41%)",
+        "detail": "S/R levels too close together are essentially duplicates",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-09",
+        "asset": "AAPL",
+        "name": "Murphy RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "murphy=36.68, standalone=36.68",
+        "detail": "Same RSI calculation should produce identical results",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-10",
+        "asset": "AAPL",
+        "name": "Breakout vs trend",
+        "passed": true,
+        "expected": "no breakout \u2014 consistent",
+        "actual": "detected=False, trend=downtrend",
+        "detail": "No breakout is consistent with any trend",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-11",
+        "asset": "AAPL",
+        "name": "Breakout nearest_res matches S/R",
+        "passed": true,
+        "expected": "< 1% difference",
+        "actual": "breakout=263.92, S/R=263.92 (0.00%)",
+        "detail": "Both tools should find same nearest resistance",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TC-12",
+        "asset": "AAPL",
+        "name": "Snapshot RSI vs standalone RSI",
+        "passed": true,
+        "expected": "< 0.1 difference",
+        "actual": "snap=36.68, standalone=36.68",
+        "detail": "Snapshot embeds same RSI calculation",
+        "severity": "high"
+      },
+      {
+        "check_id": "TC-13",
+        "asset": "AAPL",
+        "name": "Long stop below entry",
+        "passed": true,
+        "expected": "< 254.73",
+        "actual": "242.60",
+        "detail": "Long position stop-loss must be below entry",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TC-14",
+        "asset": "AAPL",
+        "name": "Swing stop near S/R support",
+        "passed": true,
+        "expected": "within 5% of nearest support (243.82)",
+        "actual": "swing_stop=242.60 (0.5% away)",
+        "detail": "Swing stop should relate to nearby support level",
+        "severity": "low"
+      },
+      {
+        "check_id": "TC-15",
+        "asset": "AAPL",
+        "name": "Position sizing capital_at_risk",
+        "passed": true,
+        "expected": "12.13",
+        "actual": "12.13",
+        "detail": "capital_at_risk = |entry - stop|",
+        "severity": "medium"
+      }
+    ]
+  }
+}

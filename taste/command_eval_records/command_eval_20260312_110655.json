@@ -1,0 +1,769 @@
+{
+  "timestamp": "2026-03-12T11:06:55.787419",
+  "input_commands": [
+    "analyze NVDA",
+    "commodity crude_oil",
+    "drivers both"
+  ],
+  "summary": {
+    "total_checks": 55,
+    "passed": 47,
+    "failed": 8,
+    "rate": "85.5%",
+    "critical_failures": 6,
+    "by_category": {
+      "accuracy": {
+        "total": 32,
+        "passed": 28,
+        "failed": 4
+      },
+      "coherence": {
+        "total": 14,
+        "passed": 12,
+        "failed": 2
+      },
+      "grounding": {
+        "total": 9,
+        "passed": 7,
+        "failed": 2
+      }
+    },
+    "by_command": {
+      "equity": {
+        "total": 26,
+        "passed": 23,
+        "failed": 3
+      },
+      "commodity": {
+        "total": 11,
+        "passed": 9,
+        "failed": 2
+      },
+      "drivers": {
+        "total": 17,
+        "passed": 14,
+        "failed": 3
+      },
+      "cross-command": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "elapsed": "0.0s"
+  },
+  "failures": [
+    {
+      "check_id": "EA-14",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Data freshness \u2014 latest quarter within 2 years",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2. STALE \u2014 data is from 2020-Q2",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "CA-02",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "All resistance levels above current price",
+      "passed": false,
+      "detail": "Resistances: [65.06, 58.32, 62.02], Price: 94.8. BUG: resistances below price",
+      "expected": "all > 94.8",
+      "actual": [
+        65.06,
+        58.32,
+        62.02
+      ],
+      "severity": "high"
+    },
+    {
+      "check_id": "CA-08",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "S/R levels relevant to current price (gap < 30%)",
+      "passed": false,
+      "detail": "Price: 94.8, Nearest support: 62.23, Gap: 34.4%. BUG: S/R levels stale or computed from old data range",
+      "expected": "gap < 30%",
+      "actual": "34.4%",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DA-05",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Equity Risk Premium data available",
+      "passed": false,
+      "detail": "MISSING \u2014 ERP is a core driver metric, should not be unavailable",
+      "expected": "available",
+      "actual": "data_unavailable",
+      "severity": "critical"
+    },
+    {
+      "check_id": "EC-03",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "Cash flow interpretation matches OCF/NI ratio",
+      "passed": false,
+      "detail": "OCF/NI: 0.99, Interpretation: 'Weak \u2014 earnings may not be backed by cash'. CONTRADICTION",
+      "expected": "Strong",
+      "actual": "Weak \u2014 earnings may not be backed by cash",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DC-01",
+      "category": "coherence",
+      "command": "drivers",
+      "check_name": "DXY interpretation \u2194 level and direction",
+      "passed": false,
+      "detail": "DXY: 99.5, WoW: +0.74%, Interp: 'Weak dollar \u2014 tailwind for multinationals, EM'. CONTRADICTION: DXY rising but called tailwind",
+      "expected": "no contradiction",
+      "actual": "weak+tailwind with +0.74% WoW",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GE-01",
+      "category": "grounding",
+      "command": "equity",
+      "check_name": "Cash flow quality label \u2194 OCF/NI ratio",
+      "passed": false,
+      "detail": "OCF/NI: 0.99, Expected: 'strong', Got: 'weak' (from 'Weak \u2014 earnings may not be backed by cash')",
+      "expected": "strong",
+      "actual": "weak",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GD-05",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "Credit stress level \u2194 HY OAS bps",
+      "passed": false,
+      "detail": "HY OAS: 313bps, Expected: 'normal', Got: 'elevated'",
+      "expected": "normal",
+      "actual": "elevated",
+      "severity": "high"
+    }
+  ],
+  "all_checks": [
+    {
+      "check_id": "EA-01",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Gross margin = gross_profit / revenue \u00d7 100",
+      "passed": true,
+      "detail": "Expected 65.06%, got 65.06%",
+      "expected": 65.06,
+      "actual": 65.06,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-02",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Operating margin = OI / revenue \u00d7 100",
+      "passed": true,
+      "detail": "Expected 31.69%, got 31.69%",
+      "expected": 31.69,
+      "actual": 31.69,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-03",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Net margin = NI / revenue \u00d7 100",
+      "passed": true,
+      "detail": "Expected 29.77%, got 29.77%",
+      "expected": 29.77,
+      "actual": 29.77,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-04",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Debt ratio = total_liabilities / total_assets",
+      "passed": true,
+      "detail": "Expected 0.4367, got 0.4367",
+      "expected": 0.4367,
+      "actual": 0.4367,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-05",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Equity ratio = total_equity / total_assets",
+      "passed": true,
+      "detail": "Expected 0.5633, got 0.5633",
+      "expected": 0.5633,
+      "actual": 0.5633,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-06",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Total equity = assets - liabilities",
+      "passed": true,
+      "detail": "Expected 13099000000.0, got 13099000000.0",
+      "expected": 13099000000.0,
+      "actual": 13099000000.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-07",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "OCF/NI ratio = OCF / net_income",
+      "passed": true,
+      "detail": "Expected 0.99, got 0.99",
+      "expected": 0.99,
+      "actual": 0.99,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-08",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "FCF = OCF + capex",
+      "passed": true,
+      "detail": "Expected 754000000.0, got 754000000.0",
+      "expected": 754000000.0,
+      "actual": 754000000.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "EA-09",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Annualized EPS = quarterly EPS \u00d7 4",
+      "passed": true,
+      "detail": "Expected 5.88, got 5.88",
+      "expected": 5.88,
+      "actual": 5.88,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-10",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "BV/share = total_equity / diluted_shares",
+      "passed": true,
+      "detail": "Expected 21.06, got 21.06",
+      "expected": 21.06,
+      "actual": 21.06,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-11",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Net cash position = cash - debt",
+      "passed": true,
+      "detail": "Expected 8535000000.0, got 8535000000.0",
+      "expected": 8535000000.0,
+      "actual": 8535000000.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-12",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "ROE quarterly = NI / equity \u00d7 100",
+      "passed": true,
+      "detail": "Expected 7.0%, got 7.0%",
+      "expected": 7.0,
+      "actual": 7.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-13",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "ROE annualized = ROE quarterly \u00d7 4",
+      "passed": true,
+      "detail": "Expected 28.0%, got 28.0%",
+      "expected": 28.0,
+      "actual": 28.0,
+      "severity": "low"
+    },
+    {
+      "check_id": "EA-14",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Data freshness \u2014 latest quarter within 2 years",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2. STALE \u2014 data is from 2020-Q2",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "EA-15",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "R&D % = R&D / revenue \u00d7 100",
+      "passed": true,
+      "detail": "Expected 23.86%, got 23.86%",
+      "expected": 23.86,
+      "actual": 23.86,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EA-16",
+      "category": "accuracy",
+      "command": "equity",
+      "check_name": "Leverage ratio = liabilities / equity",
+      "passed": true,
+      "detail": "Expected 0.78, got 0.78",
+      "expected": 0.78,
+      "actual": 0.78,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-01",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "All support levels below current price",
+      "passed": true,
+      "detail": "Supports: [59.27, 62.23, 55.99], Price: 94.8. All below",
+      "expected": "all < 94.8",
+      "actual": [
+        59.27,
+        62.23,
+        55.99
+      ],
+      "severity": "high"
+    },
+    {
+      "check_id": "CA-02",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "All resistance levels above current price",
+      "passed": false,
+      "detail": "Resistances: [65.06, 58.32, 62.02], Price: 94.8. BUG: resistances below price",
+      "expected": "all > 94.8",
+      "actual": [
+        65.06,
+        58.32,
+        62.02
+      ],
+      "severity": "high"
+    },
+    {
+      "check_id": "CA-03",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "Support levels within 50% of current price",
+      "passed": true,
+      "detail": "Supports: [59.27, 62.23, 55.99], Price: 94.8. Reasonable",
+      "expected": "> 47.40",
+      "actual": [
+        59.27,
+        62.23,
+        55.99
+      ],
+      "severity": "critical"
+    },
+    {
+      "check_id": "CA-04",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "Daily change % = change / (price - change) \u00d7 100",
+      "passed": true,
+      "detail": "Expected 13.6%, got 13.6%",
+      "expected": 13.6,
+      "actual": 13.6,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-05",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "WTI-Brent spread = WTI - Brent",
+      "passed": true,
+      "detail": "Expected 0.45, got 0.45",
+      "expected": 0.45,
+      "actual": 0.45,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-06",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "ETF spread 1w = XOP 1w% - XLE 1w%",
+      "passed": true,
+      "detail": "Expected 1.03pp, got 1.03pp",
+      "expected": 1.03,
+      "actual": 1.03,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-07",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "XLE 1w% = (latest - 1w_ago) / 1w_ago \u00d7 100",
+      "passed": true,
+      "detail": "Expected 1.41%, got 1.41%",
+      "expected": 1.41,
+      "actual": 1.41,
+      "severity": "low"
+    },
+    {
+      "check_id": "CA-08",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "S/R levels relevant to current price (gap < 30%)",
+      "passed": false,
+      "detail": "Price: 94.8, Nearest support: 62.23, Gap: 34.4%. BUG: S/R levels stale or computed from old data range",
+      "expected": "gap < 30%",
+      "actual": "34.4%",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DA-01",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "HY OAS bps = pct \u00d7 100",
+      "passed": true,
+      "detail": "Expected 313bps, got 313bps",
+      "expected": 313,
+      "actual": 313,
+      "severity": "high"
+    },
+    {
+      "check_id": "DA-02",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "All correlations in [-1, 1] range",
+      "passed": true,
+      "detail": "All OK",
+      "expected": "all in [-1,1]",
+      "actual": "all OK",
+      "severity": "high"
+    },
+    {
+      "check_id": "DA-03",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "VIX tier matches VIX value",
+      "passed": true,
+      "detail": "VIX=24.2, Expected tier 3, got tier 3",
+      "expected": 3,
+      "actual": 3,
+      "severity": "high"
+    },
+    {
+      "check_id": "DA-04",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "CPI YoY in plausible range (-5% to 15%)",
+      "passed": true,
+      "detail": "CPI YoY: -1.46%. Plausible",
+      "expected": "[-5, 15]",
+      "actual": -1.46,
+      "severity": "high"
+    },
+    {
+      "check_id": "DA-05",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Equity Risk Premium data available",
+      "passed": false,
+      "detail": "MISSING \u2014 ERP is a core driver metric, should not be unavailable",
+      "expected": "available",
+      "actual": "data_unavailable",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DA-06",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "DXY in plausible range (70-130)",
+      "passed": true,
+      "detail": "DXY: 99.5",
+      "expected": "[70, 130]",
+      "actual": 99.5,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DA-07",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Real yield in plausible range (-3% to 5%)",
+      "passed": true,
+      "detail": "Real yield: 1.8%",
+      "expected": "[-3, 5]",
+      "actual": 1.8,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DA-08",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "VIX in plausible range (5-90)",
+      "passed": true,
+      "detail": "VIX: 24.2",
+      "expected": "[5, 90]",
+      "actual": 24.2,
+      "severity": "low"
+    },
+    {
+      "check_id": "EC-01",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "HIGH_MARGIN flag \u2194 operating margin > 30%",
+      "passed": true,
+      "detail": "OM: 31.69%, Flag present: True, Expected: True",
+      "expected": true,
+      "actual": true,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EC-02",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "CASH_FLOW_WARNING flag \u2194 OCF/NI < 0.5",
+      "passed": true,
+      "detail": "OCF/NI: 0.99, Warning flag: False, Expected: False",
+      "expected": false,
+      "actual": false,
+      "severity": "high"
+    },
+    {
+      "check_id": "EC-03",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "Cash flow interpretation matches OCF/NI ratio",
+      "passed": false,
+      "detail": "OCF/NI: 0.99, Interpretation: 'Weak \u2014 earnings may not be backed by cash'. CONTRADICTION",
+      "expected": "Strong",
+      "actual": "Weak \u2014 earnings may not be backed by cash",
+      "severity": "critical"
+    },
+    {
+      "check_id": "EC-04",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "Net cash position label \u2194 net_debt sign",
+      "passed": true,
+      "detail": "net_debt=-8535000000.0, position='net_cash', expected='net_cash'",
+      "expected": "net_cash",
+      "actual": "net_cash",
+      "severity": "high"
+    },
+    {
+      "check_id": "EC-05",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "Gross margin trend label \u2194 recent values",
+      "passed": true,
+      "detail": "Last 3 values: [62.63, 58.85, 65.06], Trend: declining. Recent direction: up/flat",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "EC-06",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "REVENUE_DECLINE flag \u2194 YoY revenue < -5%",
+      "passed": true,
+      "detail": "YoY rev: -45.59%, Flag: True, Expected: True",
+      "expected": true,
+      "actual": true,
+      "severity": "medium"
+    },
+    {
+      "check_id": "EC-07",
+      "category": "coherence",
+      "command": "equity",
+      "check_name": "HIGH_ROIC flag \u2194 ROIC annualized > 25%",
+      "passed": true,
+      "detail": "ROIC: 79.96%, Flag: True, Expected: True",
+      "expected": true,
+      "actual": true,
+      "severity": "medium"
+    },
+    {
+      "check_id": "OC-01",
+      "category": "coherence",
+      "command": "commodity",
+      "check_name": "AT_52W_HIGH flag \u2194 within 1% of 52w high",
+      "passed": true,
+      "detail": "Pct from high: 0.0%, Flag: True",
+      "expected": true,
+      "actual": true,
+      "severity": "medium"
+    },
+    {
+      "check_id": "OC-02",
+      "category": "coherence",
+      "command": "commodity",
+      "check_name": "WTI-Brent spread interpretation \u2194 value sign",
+      "passed": true,
+      "detail": "Spread: 0.45, Interpretation: 'WTI premium (unusual)'",
+      "expected": "premium",
+      "actual": "WTI premium (unusual)",
+      "severity": "medium"
+    },
+    {
+      "check_id": "DC-01",
+      "category": "coherence",
+      "command": "drivers",
+      "check_name": "DXY interpretation \u2194 level and direction",
+      "passed": false,
+      "detail": "DXY: 99.5, WoW: +0.74%, Interp: 'Weak dollar \u2014 tailwind for multinationals, EM'. CONTRADICTION: DXY rising but called tailwind",
+      "expected": "no contradiction",
+      "actual": "weak+tailwind with +0.74% WoW",
+      "severity": "critical"
+    },
+    {
+      "check_id": "DC-02",
+      "category": "coherence",
+      "command": "drivers",
+      "check_name": "Credit stress level \u2194 HY OAS level (informational)",
+      "passed": true,
+      "detail": "HY OAS: 313bps, Stress: 'elevated'. Consistent.",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "DC-03",
+      "category": "coherence",
+      "command": "drivers",
+      "check_name": "Real yield signals match conditions",
+      "passed": true,
+      "detail": "RY=1.8%, trend=rising. No contradictory signals.",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DC-04",
+      "category": "coherence",
+      "command": "drivers",
+      "check_name": "VIX tier 1-3 \u2192 no VIX signal expected",
+      "passed": true,
+      "detail": "VIX=24.2, tier=3, signals=[]",
+      "expected": "no VIX signals",
+      "actual": [],
+      "severity": "medium"
+    },
+    {
+      "check_id": "XC-01",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Oil DXY signal \u2194 drivers DXY data (informational)",
+      "passed": true,
+      "detail": "Oil DXY corr: 0.51, DXY: 99.5, Oil signals: ['DXY_HEADWIND']",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GE-01",
+      "category": "grounding",
+      "command": "equity",
+      "check_name": "Cash flow quality label \u2194 OCF/NI ratio",
+      "passed": false,
+      "detail": "OCF/NI: 0.99, Expected: 'strong', Got: 'weak' (from 'Weak \u2014 earnings may not be backed by cash')",
+      "expected": "strong",
+      "actual": "weak",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GE-02-gr",
+      "category": "grounding",
+      "command": "equity",
+      "check_name": "gross_margin trend label \u2194 values",
+      "passed": true,
+      "detail": "Values: ...[64.11, 63.1, 62.63, 58.85, 65.06], Neg%: 74%, Expected: 'declining', Got: 'declining'",
+      "expected": "declining",
+      "actual": "declining",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GE-02-op",
+      "category": "grounding",
+      "command": "equity",
+      "check_name": "operating_margin trend label \u2194 values",
+      "passed": true,
+      "detail": "Values: ...[34.55, 30.12, 29.58, 16.84, 31.69], Neg%: 74%, Expected: 'declining', Got: 'declining'",
+      "expected": "declining",
+      "actual": "declining",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GC-01",
+      "category": "grounding",
+      "command": "commodity",
+      "check_name": "DXY correlation interpretation \u2194 value",
+      "passed": true,
+      "detail": "Correlation: 0.51, Expected: 'moderate_positive', Got: 'moderate positive'",
+      "expected": "moderate_positive",
+      "actual": "moderate positive",
+      "severity": "medium"
+    },
+    {
+      "check_id": "GD-01",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "sp500/dxy corr interpretation \u2194 value",
+      "passed": true,
+      "detail": "Value: -0.12, Expected: 'weak_inverse', Got: 'weak inverse'",
+      "expected": "weak_inverse",
+      "actual": "weak inverse",
+      "severity": "low"
+    },
+    {
+      "check_id": "GD-02",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "sp500/10y_yield corr interpretation \u2194 value",
+      "passed": true,
+      "detail": "Value: 0.4, Expected: 'moderate_positive', Got: 'moderate positive'",
+      "expected": "moderate_positive",
+      "actual": "moderate positive",
+      "severity": "low"
+    },
+    {
+      "check_id": "GD-03",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "sp500/2y_yield corr interpretation \u2194 value",
+      "passed": true,
+      "detail": "Value: 0.37, Expected: 'moderate_positive', Got: 'moderate positive'",
+      "expected": "moderate_positive",
+      "actual": "moderate positive",
+      "severity": "low"
+    },
+    {
+      "check_id": "GD-04",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "sp500/vix corr interpretation \u2194 value",
+      "passed": true,
+      "detail": "Value: -0.86, Expected: 'strong_inverse', Got: 'strong inverse'",
+      "expected": "strong_inverse",
+      "actual": "strong inverse",
+      "severity": "low"
+    },
+    {
+      "check_id": "GD-05",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "Credit stress level \u2194 HY OAS bps",
+      "passed": false,
+      "detail": "HY OAS: 313bps, Expected: 'normal', Got: 'elevated'",
+      "expected": "normal",
+      "actual": "elevated",
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {}
+}

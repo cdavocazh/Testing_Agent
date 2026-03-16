@@ -1,0 +1,4178 @@
+[
+  [
+    "Macro",
+    "/scan",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "has flagged_indicators",
+    "PASS",
+    "type=list",
+    "normal",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "total_indicators > 0",
+    "PASS",
+    "total=27",
+    "normal",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan",
+    "has cross_asset_signals",
+    "PASS",
+    "",
+    "normal",
+    0.1140599250793457
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/scan(vix)",
+    "returns indicator data",
+    "PASS",
+    "keys=['indicator', 'total_rows', 'metrics']",
+    "normal",
+    0.002112150192260742
+  ],
+  [
+    "Macro",
+    "/macro",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "response time < 30s",
+    "PASS",
+    "0.6s",
+    "high",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "decimal precision OK (\u22644dp)",
+    "FAIL",
+    "4 excessive",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "has regimes dict",
+    "PASS",
+    "",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "has 6 regime dimensions",
+    "PASS",
+    "got 6",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "has composite_outlook",
+    "PASS",
+    "",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/macro",
+    "has signals list",
+    "PASS",
+    "",
+    "normal",
+    0.6268141269683838
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "response time < 30s",
+    "PASS",
+    "0.5s",
+    "high",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "has yield_curve",
+    "PASS",
+    "",
+    "normal",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "has credit_spreads",
+    "PASS",
+    "",
+    "normal",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/bonds",
+    "has summary",
+    "PASS",
+    "",
+    "normal",
+    0.5303618907928467
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "response time < 30s",
+    "PASS",
+    "0.6s",
+    "high",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "has equity_risk_premium",
+    "PASS",
+    "",
+    "normal",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/drivers",
+    "has summary",
+    "PASS",
+    "",
+    "normal",
+    0.6254878044128418
+  ],
+  [
+    "Macro",
+    "/stress",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "response time < 30s",
+    "PASS",
+    "1.0s",
+    "high",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "composite_score in [0,10]",
+    "PASS",
+    "score=3.54",
+    "normal",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "has stress_level",
+    "PASS",
+    "",
+    "normal",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/stress",
+    "has 8 components",
+    "PASS",
+    "got 8",
+    "normal",
+    0.9907503128051758
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "response time < 30s",
+    "PASS",
+    "1.1s",
+    "high",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "count in [0,13]",
+    "PASS",
+    "count=3",
+    "normal",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "total == 13",
+    "PASS",
+    "total=13",
+    "normal",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/latecycle",
+    "has confidence_level",
+    "PASS",
+    "",
+    "normal",
+    1.1259880065917969
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "response time < 30s",
+    "PASS",
+    "0.5s",
+    "high",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/termpremium",
+    "returns analysis",
+    "PASS",
+    "keys=['as_of', 'term_premium', 'breakeven_context', 'credit_context', 'signals']",
+    "normal",
+    0.5060851573944092
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0021550655364990234
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0021550655364990234
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0021550655364990234
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0021550655364990234
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0021550655364990234
+  ],
+  [
+    "Macro",
+    "/vixanalysis",
+    "has vix data",
+    "PASS",
+    "keys=['as_of', 'vix', 'move', 'under_vix', 'opportunity_assessment']",
+    "normal",
+    0.0021550655364990234
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "has ticker",
+    "PASS",
+    "got AAPL",
+    "normal",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze AAPL",
+    "has valuation data",
+    "FAIL",
+    "keys=['ticker', 'company', 'data_source', 'schema', 'quarters_analyzed', 'latest_quarter']",
+    "normal",
+    0.006997823715209961
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "has ticker",
+    "PASS",
+    "got NVDA",
+    "normal",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze NVDA",
+    "has valuation data",
+    "FAIL",
+    "keys=['ticker', 'company', 'data_source', 'schema', 'quarters_analyzed', 'latest_quarter']",
+    "normal",
+    0.005900144577026367
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "has ticker",
+    "PASS",
+    "got JPM",
+    "normal",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/analyze JPM",
+    "has valuation data",
+    "FAIL",
+    "keys=['ticker', 'company', 'data_source', 'schema', 'quarters_analyzed', 'latest_quarter']",
+    "normal",
+    0.005844831466674805
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/compare AAPL,NVDA",
+    "returns comparison data",
+    "PASS",
+    "keys=['companies_compared', 'comparison']",
+    "normal",
+    0.0040130615234375
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/snapshot",
+    "returns snapshot",
+    "PASS",
+    "keys=['companies', 'columns', 'data']",
+    "normal",
+    0.0026738643646240234
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/peers AAPL",
+    "has peer data",
+    "PASS",
+    "keys=['reference_ticker', 'sector', 'industry_group', 'peer_level', 'peers_found']",
+    "normal",
+    0.029178142547607422
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/allocation AAPL",
+    "returns allocation analysis",
+    "PASS",
+    "",
+    "normal",
+    0.0032329559326171875
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/balance AAPL",
+    "returns balance sheet data",
+    "PASS",
+    "",
+    "normal",
+    0.003564119338989258
+  ],
+  [
+    "Equity",
+    "/analyze ZZZZZ",
+    "[invalid ticker] returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0004930496215820312
+  ],
+  [
+    "Equity",
+    "/analyze ZZZZZ",
+    "[invalid ticker] response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0004930496215820312
+  ],
+  [
+    "Equity",
+    "/analyze ZZZZZ",
+    "[invalid ticker] no error in response",
+    "FAIL",
+    "No data for ticker 'ZZZZZ'. Use search_equities() to find valid tickers.",
+    "high",
+    0.0004930496215820312
+  ],
+  [
+    "Equity",
+    "/analyze ZZZZZ",
+    "[invalid ticker] no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0004930496215820312
+  ],
+  [
+    "Equity",
+    "/analyze ZZZZZ",
+    "[invalid ticker] decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0004930496215820312
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "has composite_signal",
+    "PASS",
+    "keys=['asset', 'timeframe', 'analysis', 'as_of', 'data_points']",
+    "normal",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta gold",
+    "composite_signal has confidence",
+    "PASS",
+    "",
+    "normal",
+    0.004480123519897461
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "has composite_signal",
+    "PASS",
+    "keys=['asset', 'timeframe', 'analysis', 'as_of', 'data_points']",
+    "normal",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta AAPL",
+    "composite_signal has confidence",
+    "PASS",
+    "",
+    "normal",
+    0.11634492874145508
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "has composite_signal",
+    "PASS",
+    "keys=['asset', 'timeframe', 'analysis', 'as_of', 'data_points']",
+    "normal",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta crude_oil",
+    "composite_signal has confidence",
+    "PASS",
+    "",
+    "normal",
+    0.0038759708404541016
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "has composite_signal",
+    "PASS",
+    "keys=['asset', 'timeframe', 'analysis', 'as_of', 'data_points']",
+    "normal",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta es_futures",
+    "composite_signal has confidence",
+    "PASS",
+    "",
+    "normal",
+    0.004290103912353516
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "has composite_signal",
+    "PASS",
+    "keys=['asset', 'timeframe', 'analysis', 'as_of', 'data_points']",
+    "normal",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/ta btc",
+    "composite_signal has confidence",
+    "PASS",
+    "",
+    "normal",
+    0.04549908638000488
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "RSI in [0,100]",
+    "FAIL",
+    "rsi=None",
+    "normal",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi AAPL",
+    "has zone label",
+    "PASS",
+    "zone=bearish_momentum",
+    "normal",
+    0.001850128173828125
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "RSI in [0,100]",
+    "FAIL",
+    "rsi=None",
+    "normal",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi gold",
+    "has zone label",
+    "PASS",
+    "zone=bullish_momentum",
+    "normal",
+    0.0040361881256103516
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "RSI in [0,100]",
+    "FAIL",
+    "rsi=None",
+    "normal",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi btc",
+    "has zone label",
+    "PASS",
+    "zone=bullish_momentum",
+    "normal",
+    0.04170393943786621
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "RSI in [0,100]",
+    "FAIL",
+    "rsi=None",
+    "normal",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/rsi crude_oil",
+    "has zone label",
+    "PASS",
+    "zone=overbought",
+    "normal",
+    0.004255056381225586
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "has supports list",
+    "PASS",
+    "",
+    "normal",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "has resistances list",
+    "PASS",
+    "",
+    "normal",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr gold",
+    "has current_price",
+    "PASS",
+    "",
+    "normal",
+    0.0018939971923828125
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "has supports list",
+    "PASS",
+    "",
+    "normal",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "has resistances list",
+    "PASS",
+    "",
+    "normal",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr NVDA",
+    "has current_price",
+    "PASS",
+    "",
+    "normal",
+    0.09175896644592285
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "has supports list",
+    "PASS",
+    "",
+    "normal",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "has resistances list",
+    "PASS",
+    "",
+    "normal",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/sr es_futures",
+    "has current_price",
+    "PASS",
+    "",
+    "normal",
+    0.0044672489166259766
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout gold",
+    "has breakout data",
+    "PASS",
+    "keys=['asset', 'analysis', 'timeframe', 'as_of', 'current_price']",
+    "normal",
+    0.0021638870239257812
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/breakout AAPL",
+    "has breakout data",
+    "PASS",
+    "keys=['asset', 'analysis', 'timeframe', 'as_of', 'current_price']",
+    "normal",
+    0.0004761219024658203
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/quickta AAPL",
+    "returns snapshot",
+    "PASS",
+    "",
+    "normal",
+    0.0030031204223632812
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/intermarket",
+    "returns intermarket data",
+    "PASS",
+    "keys=['analysis', 'as_of', 'available', 'relationships', 'alignment_score']",
+    "normal",
+    0.0293118953704834
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.009177923202514648
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.009177923202514648
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.009177923202514648
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.009177923202514648
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "decimal precision OK (\u22644dp)",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.009177923202514648
+  ],
+  [
+    "TA",
+    "/synthesis AAPL",
+    "returns synthesis",
+    "PASS",
+    "keys=['ticker', 'analysis', 'as_of', 'fundamental', 'technical']",
+    "normal",
+    0.009177923202514648
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "has copper_claims_ratio",
+    "PASS",
+    "keys=['as_of', 'copper_price', 'initial_claims', 'bbb_ratio', 'interpretation']",
+    "normal",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/bbb",
+    "has signals",
+    "FAIL",
+    "",
+    "normal",
+    0.02350902557373047
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/fsmi",
+    "has FSMI data",
+    "PASS",
+    "keys=['as_of', 'components', 'fsmi_zscore', 'interpretation', 'methodology']",
+    "normal",
+    0.0057561397552490234
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "response time < 30s",
+    "PASS",
+    "0.5s",
+    "high",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/vigilantes",
+    "returns vigilantes analysis",
+    "PASS",
+    "keys=['as_of', 'yield_10y', 'nominal_gdp_yoy_pct', 'regime', 'methodology']",
+    "normal",
+    0.4656660556793213
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/valuation",
+    "has Rule of 20 or valuation",
+    "FAIL",
+    "keys=['as_of', 'inputs', 'assessment', 'data_note', 'methodology']",
+    "normal",
+    0.053681135177612305
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0015680789947509766
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0015680789947509766
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0015680789947509766
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0015680789947509766
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0015680789947509766
+  ],
+  [
+    "Yardeni",
+    "/drawdown",
+    "returns classification",
+    "PASS",
+    "keys=['as_of', 'current_price', 'all_time_high', 'peak_date', 'drawdown_pct']",
+    "normal",
+    0.0015680789947509766
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "response time < 30s",
+    "PASS",
+    "0.5s",
+    "high",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "has graham_number",
+    "PASS",
+    "",
+    "normal",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "has defensive_criteria",
+    "PASS",
+    "",
+    "normal",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham AAPL",
+    "has overall_assessment",
+    "PASS",
+    "",
+    "normal",
+    0.5413210391998291
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "has graham_number",
+    "PASS",
+    "",
+    "normal",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "has defensive_criteria",
+    "PASS",
+    "",
+    "normal",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham MSFT",
+    "has overall_assessment",
+    "PASS",
+    "",
+    "normal",
+    0.1035006046295166
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "has graham_number",
+    "PASS",
+    "",
+    "normal",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "has defensive_criteria",
+    "PASS",
+    "",
+    "normal",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/graham BRK-B",
+    "has overall_assessment",
+    "PASS",
+    "",
+    "normal",
+    0.06469869613647461
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: returns valid output",
+    "PASS",
+    "",
+    "critical",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: response time < 30s",
+    "PASS",
+    "9.3s",
+    "high",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: no error in response",
+    "PASS",
+    "",
+    "high",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/grahamscreen",
+    "screen: returns screen results",
+    "PASS",
+    "keys=['screen', 'as_of', 'universe_size', 'results_count', 'screened']",
+    "normal",
+    9.25928807258606
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: returns valid output",
+    "PASS",
+    "",
+    "critical",
+    7.265918016433716
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: response time < 30s",
+    "PASS",
+    "7.3s",
+    "high",
+    7.265918016433716
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: no error in response",
+    "PASS",
+    "",
+    "high",
+    7.265918016433716
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    7.265918016433716
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    7.265918016433716
+  ],
+  [
+    "Graham",
+    "/graham net-net",
+    "net-net: returns net-net data",
+    "PASS",
+    "keys=['screen', 'as_of', 'formula', 'graham_rule', 'universe_size']",
+    "normal",
+    7.265918016433716
+  ],
+  [
+    "BTC",
+    "/btc",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btc",
+    "response time < 30s",
+    "PASS",
+    "4.0s",
+    "high",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btc",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btc",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btc",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btc",
+    "has btc data",
+    "PASS",
+    "keys=['as_of', 'current_price', 'data_through', 'trend_context', 'composite_bias']",
+    "normal",
+    4.026014089584351
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btctrend",
+    "has trend data",
+    "PASS",
+    "keys=['as_of', 'current_price', 'data_through', 'trend_context', 'composite_bias']",
+    "normal",
+    0.0542452335357666
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    3.729449987411499
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "response time < 30s",
+    "PASS",
+    "3.7s",
+    "high",
+    3.729449987411499
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    3.729449987411499
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    3.729449987411499
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    3.729449987411499
+  ],
+  [
+    "BTC",
+    "/btcposition",
+    "has positioning data",
+    "PASS",
+    "keys=['as_of', 'current_price', 'positioning', 'funding_rate', 'funding_annualized_pct']",
+    "normal",
+    3.729449987411499
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "response time < 30s",
+    "PASS",
+    "3.4s",
+    "high",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity crude_oil",
+    "has outlook",
+    "PASS",
+    "keys=['commodity', 'timestamp', 'price_analysis', 'inventory_data', 'seasonal_pattern']",
+    "normal",
+    3.398650884628296
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity gold",
+    "has outlook",
+    "PASS",
+    "keys=['commodity', 'timestamp', 'price_analysis', 'cot_positioning', 'seasonal_pattern']",
+    "normal",
+    0.015073060989379883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity silver",
+    "has outlook",
+    "PASS",
+    "keys=['commodity', 'timestamp', 'price_analysis', 'cot_positioning', 'seasonal_pattern']",
+    "normal",
+    0.014188051223754883
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/commodity copper",
+    "has outlook",
+    "PASS",
+    "keys=['commodity', 'timestamp', 'price_analysis', 'seasonal_pattern', 'support_resistance']",
+    "normal",
+    0.00970602035522461
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "response time < 30s",
+    "PASS",
+    "1.4s",
+    "high",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/oil",
+    "has oil data",
+    "PASS",
+    "keys=['as_of', 'wti', 'brent', 'wti_brent_spread', 'crude_inventories']",
+    "normal",
+    1.360400915145874
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.0035181045532226562
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.0035181045532226562
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.0035181045532226562
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.0035181045532226562
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.0035181045532226562
+  ],
+  [
+    "Commodity",
+    "/seasonal gold",
+    "has seasonal data",
+    "PASS",
+    "",
+    "normal",
+    0.0035181045532226562
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "composite_score in [0,10]",
+    "PASS",
+    "score=3.13",
+    "normal",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "has health_level",
+    "PASS",
+    "",
+    "normal",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/consumer",
+    "has components",
+    "PASS",
+    "",
+    "normal",
+    0.011286735534667969
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "has housing_cycle_phase",
+    "PASS",
+    "",
+    "normal",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/housing",
+    "has assessment",
+    "PASS",
+    "",
+    "normal",
+    0.01823902130126953
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.07705092430114746
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.07705092430114746
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.07705092430114746
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.07705092430114746
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.07705092430114746
+  ],
+  [
+    "Consumer",
+    "/labor",
+    "has labor data",
+    "PASS",
+    "keys=['as_of', 'productivity_vs_ulc', 'hiring_firing_balance', 'hiring_plans_proxy', 'labor_market_power']",
+    "normal",
+    0.07705092430114746
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/riskpremium",
+    "has risk premium data",
+    "PASS",
+    "keys=['as_of', 'vix_regime', 'vanna_charm_regime', 'cta_proxy', 'credit_state']",
+    "normal",
+    0.03864693641662598
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/crossasset",
+    "has momentum data",
+    "PASS",
+    "keys=['as_of', 'returns_20d', 'relative_strength', 'correlations_20d', 'divergences']",
+    "normal",
+    0.06215810775756836
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "decimal precision OK",
+    "FAIL",
+    "1 excessive",
+    "normal",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/pmregime",
+    "has PM regime data",
+    "PASS",
+    "keys=['as_of', 'gold_regime', 'silver_analysis', 'parabolic_detection', 'correction_risk']",
+    "normal",
+    0.028481006622314453
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/usdregime",
+    "has USD regime data",
+    "PASS",
+    "keys=['as_of', 'dxy_regime', 'yield_30y', 'bond_volatility', 'exodus_basket']",
+    "normal",
+    0.02234792709350586
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl AAPL 150 long",
+    "has stop-loss data",
+    "PASS",
+    "keys=['asset_class', 'direction', 'entry_price', 'current_price', 'stop_levels']",
+    "normal",
+    4.410743713378906e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    3.528594970703125e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    3.528594970703125e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    3.528594970703125e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    3.528594970703125e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    3.528594970703125e-05
+  ],
+  [
+    "ProTrader",
+    "/sl gold 2000 short",
+    "has stop-loss data",
+    "PASS",
+    "keys=['asset_class', 'direction', 'entry_price', 'current_price', 'stop_levels']",
+    "normal",
+    3.528594970703125e-05
+  ],
+  [
+    "Meta",
+    "/indicators",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.056601762771606445
+  ],
+  [
+    "Meta",
+    "/indicators",
+    "response time < 30s",
+    "PASS",
+    "0.1s",
+    "high",
+    0.056601762771606445
+  ],
+  [
+    "Meta",
+    "/indicators",
+    "returns non-empty list",
+    "PASS",
+    "len=27",
+    "high",
+    0
+  ],
+  [
+    "Meta",
+    "/indicators",
+    "has 20+ indicators",
+    "PASS",
+    "len=27",
+    "normal",
+    0
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "has per-indicator details",
+    "FAIL",
+    "keys=['last_extraction', 'indicators']",
+    "normal",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/metadata",
+    "no \"?\" values",
+    "PASS",
+    "",
+    "normal",
+    0.00030684471130371094
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    1.0062079429626465
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "response time < 30s",
+    "PASS",
+    "1.0s",
+    "high",
+    1.0062079429626465
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    1.0062079429626465
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    1.0062079429626465
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    1.0062079429626465
+  ],
+  [
+    "Meta",
+    "/search_equities",
+    "returns results",
+    "PASS",
+    "",
+    "normal",
+    0
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "decimal precision OK",
+    "FAIL",
+    "8 excessive",
+    "normal",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred inflation",
+    "returns data",
+    "PASS",
+    "keys=['as_of', 'cpi', 'core_cpi', 'pce', 'core_pce']",
+    "normal",
+    0.03106999397277832
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred employment",
+    "returns data",
+    "PASS",
+    "keys=['as_of', 'unemployment_rate', 'nonfarm_payrolls', 'initial_claims', 'continuing_claims']",
+    "normal",
+    0.01420903205871582
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "response time < 30s",
+    "PASS",
+    "0.4s",
+    "high",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred yields",
+    "returns data",
+    "PASS",
+    "keys=['as_of', 'nominal_yields', 'yield_curve_spreads', 'curve_shape', 'fed_policy']",
+    "normal",
+    0.4088749885559082
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred credit_spreads",
+    "returns data",
+    "PASS",
+    "keys=['as_of', 'high_yield_oas', 'ig_corporate_oas', 'bbb_oas', 'hy_ig_differential']",
+    "normal",
+    0.035758018493652344
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "returns valid output",
+    "PASS",
+    "",
+    "critical",
+    0.00290679931640625
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "response time < 30s",
+    "PASS",
+    "0.0s",
+    "high",
+    0.00290679931640625
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "no error in response",
+    "PASS",
+    "",
+    "high",
+    0.00290679931640625
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "no \"?\" placeholders",
+    "PASS",
+    "0 found: []",
+    "normal",
+    0.00290679931640625
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "decimal precision OK",
+    "PASS",
+    "0 excessive",
+    "normal",
+    0.00290679931640625
+  ],
+  [
+    "FRED",
+    "/fred productivity",
+    "returns data",
+    "PASS",
+    "keys=['as_of', 'productivity', 'unit_labor_costs', 'productivity_ulc_gap', 'signals']",
+    "normal",
+    0.00290679931640625
+  ]
+]

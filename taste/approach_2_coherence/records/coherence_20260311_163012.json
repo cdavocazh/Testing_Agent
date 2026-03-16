@@ -1,0 +1,219 @@
+{
+  "timestamp": "2026-03-11T16:30:12.330096",
+  "input_snapshot": {
+    "scan_all_indicators": [
+      "scan_time",
+      "mode",
+      "total_indicators",
+      "flagged_count",
+      "flagged_indicators",
+      "cross_asset_signals",
+      "normal_count",
+      "follow_up_suggestions"
+    ],
+    "analyze_macro_regime": [
+      "timestamp",
+      "regimes",
+      "composite_outlook",
+      "signals",
+      "inflation_detail"
+    ],
+    "analyze_financial_stress": [
+      "as_of",
+      "composite_score",
+      "stress_level",
+      "components",
+      "supplemental",
+      "signals",
+      "summary"
+    ],
+    "detect_late_cycle_signals": [
+      "as_of",
+      "signals_firing",
+      "count",
+      "total",
+      "confidence_level",
+      "interpretation",
+      "assessment"
+    ],
+    "analyze_equity_drivers": [
+      "timestamp",
+      "index",
+      "equity_risk_premium",
+      "real_yield_impact",
+      "credit_equity_link",
+      "dxy_impact",
+      "inflation_rotation",
+      "volatility_regime",
+      "rolling_correlations",
+      "signals",
+      "summary"
+    ],
+    "analyze_bond_market": [
+      "timestamp",
+      "yield_curve",
+      "real_yields",
+      "breakevens",
+      "credit_spreads",
+      "fed_policy",
+      "duration_risk",
+      "term_premium",
+      "signals",
+      "summary"
+    ],
+    "analyze_consumer_health": [
+      "as_of",
+      "components",
+      "composite_score",
+      "consumer_health_level",
+      "signals",
+      "assessment"
+    ],
+    "analyze_housing_market": [
+      "as_of",
+      "starts_momentum",
+      "permits_pipeline",
+      "sales_trend",
+      "affordability",
+      "price_dynamics",
+      "housing_cycle_phase",
+      "leading_indicator_signal",
+      "signals",
+      "assessment"
+    ]
+  },
+  "coherence_results": {
+    "summary": {
+      "total_checks": 11,
+      "coherent": 10,
+      "contradictions": 1,
+      "coherence_rate": "90.9%",
+      "critical_contradictions": 1,
+      "elapsed": "0.0s"
+    },
+    "contradictions": [
+      {
+        "rule_id": "C-02",
+        "rule_name": "Credit spread level vs. interpretation",
+        "passed": false,
+        "left_claim": "HY OAS = 313 bps (>250 = widening/stressed)",
+        "right_claim": "Interpretation: \"Tight credit spreads \u2014 supportive risk environment\"",
+        "explanation": "At 313bps, HY OAS is NOT tight. Tight = <150bps. The narrative contradicts the data \u2014 this misleads investors about credit risk.",
+        "severity": "critical",
+        "timestamp": "2026-03-11T16:30:12.330009"
+      }
+    ],
+    "all_checks": [
+      {
+        "rule_id": "C-01",
+        "rule_name": "Macro regime vs. stress level",
+        "passed": true,
+        "left_claim": "Macro regime: \"Reflationary \u2014 falling inflation allowing policy easing.\"",
+        "right_claim": "Stress score: 3.8/10 (moderate)",
+        "explanation": "Reflationary/goldilocks regimes should have stress < 6. If stress is elevated during easing, it suggests the regime classification is missing something (e.g., banking sector stress despite rate cuts).",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.329991"
+      },
+      {
+        "rule_id": "C-02",
+        "rule_name": "Credit spread level vs. interpretation",
+        "passed": false,
+        "left_claim": "HY OAS = 313 bps (>250 = widening/stressed)",
+        "right_claim": "Interpretation: \"Tight credit spreads \u2014 supportive risk environment\"",
+        "explanation": "At 313bps, HY OAS is NOT tight. Tight = <150bps. The narrative contradicts the data \u2014 this misleads investors about credit risk.",
+        "severity": "critical",
+        "timestamp": "2026-03-11T16:30:12.330009"
+      },
+      {
+        "rule_id": "C-03",
+        "rule_name": "Yield curve shape vs. late-cycle count",
+        "passed": true,
+        "left_claim": "Yield curve: \"normal \u2014 no recession signal\"",
+        "right_claim": "Late-cycle signals: 2/13",
+        "explanation": "Yield curve shape and late-cycle count are consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330016"
+      },
+      {
+        "rule_id": "C-04",
+        "rule_name": "Housing signals vs. consumer health",
+        "passed": true,
+        "left_claim": "Housing distressed=True",
+        "right_claim": "Consumer health: \"stable\"",
+        "explanation": "Housing and consumer health assessments are broadly consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330021"
+      },
+      {
+        "rule_id": "C-05",
+        "rule_name": "VIX level vs. stress classification",
+        "passed": true,
+        "left_claim": "VIX = 24.9",
+        "right_claim": "Stress level: \"moderate\"",
+        "explanation": "VIX level and stress classification are consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330025"
+      },
+      {
+        "rule_id": "C-06",
+        "rule_name": "Growth regime vs. ISM signal",
+        "passed": true,
+        "left_claim": "Growth regime: \"contraction\"",
+        "right_claim": "ISM_CONTRACTION firing: True",
+        "explanation": "Growth regime and ISM signal are consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330038"
+      },
+      {
+        "rule_id": "C-07",
+        "rule_name": "No contradictory signal pairs found",
+        "passed": true,
+        "left_claim": "All signals checked",
+        "right_claim": "No mutual exclusions detected",
+        "explanation": "Signals across all tools are internally consistent.",
+        "severity": "critical",
+        "timestamp": "2026-03-11T16:30:12.330043"
+      },
+      {
+        "rule_id": "C-08",
+        "rule_name": "Bank stress signal vs. consumer credit",
+        "passed": true,
+        "left_claim": "Bank stress signal: True",
+        "right_claim": "Consumer credit assessment: \"\"",
+        "explanation": "Bank stress and consumer credit assessments are consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330053"
+      },
+      {
+        "rule_id": "C-09",
+        "rule_name": "Real yield trend vs. equity narrative",
+        "passed": true,
+        "left_claim": "Real yield: 1.8%, trend: rising",
+        "right_claim": "Equity interpretation: \"Real yields at 1.8% \u2014 moderate level\"",
+        "explanation": "Real yield level is moderate \u2014 rising trend noted but not critical.",
+        "severity": "medium",
+        "timestamp": "2026-03-11T16:30:12.330056"
+      },
+      {
+        "rule_id": "C-10",
+        "rule_name": "Rate regime vs. Fed policy signals",
+        "passed": true,
+        "left_claim": "Rate regime: \"easing\"",
+        "right_claim": "Fed signals: ['FED_EASING']",
+        "explanation": "Rate regime and Fed signals are consistent.",
+        "severity": "high",
+        "timestamp": "2026-03-11T16:30:12.330069"
+      },
+      {
+        "rule_id": "C-11",
+        "rule_name": "Scan flag rate vs. stress level",
+        "passed": true,
+        "left_claim": "Scan: 23/27 flagged (85%)",
+        "right_claim": "Stress level: \"moderate\"",
+        "explanation": "Scan flag rate and stress level are broadly consistent.",
+        "severity": "medium",
+        "timestamp": "2026-03-11T16:30:12.330074"
+      }
+    ]
+  }
+}

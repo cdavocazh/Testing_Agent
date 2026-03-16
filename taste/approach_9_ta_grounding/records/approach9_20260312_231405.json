@@ -1,0 +1,376 @@
+{
+  "approach": "9_ta_grounding",
+  "timestamp": "2026-03-12T23:14:05.772117",
+  "results": {
+    "summary": {
+      "total": 36,
+      "passed": 36,
+      "failed": 0,
+      "pass_rate": "100.0%",
+      "critical": 0,
+      "elapsed": "0.0s"
+    },
+    "all_checks": [
+      {
+        "check_id": "TG-01",
+        "asset": "btc",
+        "name": "RSI zone 'bullish_momentum' matches value 54.5",
+        "passed": true,
+        "expected": "RSI in [50,70]",
+        "actual": "54.51",
+        "detail": "Zone 'bullish_momentum' requires RSI in (50, 70)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-02",
+        "asset": "btc",
+        "name": "RSI no divergence (valid null)",
+        "passed": true,
+        "expected": "null (no divergence)",
+        "actual": "null",
+        "detail": "Null divergence is valid \u2014 means no divergence detected",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-03",
+        "asset": "btc",
+        "name": "Stochastic zone 'neutral' matches %K=59.2",
+        "passed": true,
+        "expected": "%K in [20,80]",
+        "actual": "59.19",
+        "detail": "Zone 'neutral' requires %K in (20, 80)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-04",
+        "asset": "btc",
+        "name": "Stochastic BEARISH_CROSS: %K <= %D",
+        "passed": true,
+        "expected": "%K(59.2) <= %D(62.2)",
+        "actual": "%K=59.2, %D=62.2",
+        "detail": "Bearish cross means %K crossed below %D",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-05",
+        "asset": "btc",
+        "name": "BB squeeze=False (not in squeeze)",
+        "passed": true,
+        "expected": "no squeeze",
+        "actual": "bandwidth=12.37%",
+        "detail": "Not in squeeze is always valid",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-06",
+        "asset": "btc",
+        "name": "BB position 'within_bands' matches %B=69.5",
+        "passed": true,
+        "expected": "%B in [20,80]",
+        "actual": "69.45",
+        "detail": "Position 'within_bands' requires %B in (20, 80)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-07",
+        "asset": "btc",
+        "name": "MACD BULLISH crossover: hist >= 0",
+        "passed": true,
+        "expected": "histogram >= 0 for BULLISH",
+        "actual": "hist=625.3450",
+        "detail": "Bullish crossover means MACD > signal (positive hist)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-08",
+        "asset": "btc",
+        "name": "Trend 'contracting_range' matches price vs swings",
+        "passed": true,
+        "expected": "price position consistent with contracting_range",
+        "actual": "dist_high=3.2%, dist_low=5.7%",
+        "detail": "Price should be positioned consistently with trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-09",
+        "asset": "btc",
+        "name": "MA crossover grounding",
+        "passed": true,
+        "expected": "skip",
+        "actual": "N/A",
+        "detail": "Missing data",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-10",
+        "asset": "btc",
+        "name": "Composite 'BULLISH' matches score 0.38",
+        "passed": true,
+        "expected": "score in [0.3,1.0]",
+        "actual": "0.380",
+        "detail": "Signal 'BULLISH' requires score in (0.3, 1.0)",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TG-11",
+        "asset": "btc",
+        "name": "Confidence 'medium' matches |score|=0.38",
+        "passed": true,
+        "expected": "|score| in [0.3,0.6]",
+        "actual": "0.380",
+        "detail": "Confidence 'medium' requires |score| in (0.3, 0.6)",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-12",
+        "asset": "btc",
+        "name": "Breakout confidence grounding",
+        "passed": true,
+        "expected": "no breakout",
+        "actual": "N/A",
+        "detail": "No breakout detected \u2014 confidence N/A",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-01",
+        "asset": "gold",
+        "name": "RSI zone 'bullish_momentum' matches value 54.4",
+        "passed": true,
+        "expected": "RSI in [50,70]",
+        "actual": "54.42",
+        "detail": "Zone 'bullish_momentum' requires RSI in (50, 70)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-02",
+        "asset": "gold",
+        "name": "RSI no divergence (valid null)",
+        "passed": true,
+        "expected": "null (no divergence)",
+        "actual": "null",
+        "detail": "Null divergence is valid \u2014 means no divergence detected",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-03",
+        "asset": "gold",
+        "name": "Stochastic zone 'neutral' matches %K=36.1",
+        "passed": true,
+        "expected": "%K in [20,80]",
+        "actual": "36.10",
+        "detail": "Zone 'neutral' requires %K in (20, 80)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-04",
+        "asset": "gold",
+        "name": "Stochastic crossover label present",
+        "passed": true,
+        "expected": "non-empty",
+        "actual": "%K below %D",
+        "detail": "Some crossover description present",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-05",
+        "asset": "gold",
+        "name": "BB squeeze=False (not in squeeze)",
+        "passed": true,
+        "expected": "no squeeze",
+        "actual": "bandwidth=8.54%",
+        "detail": "Not in squeeze is always valid",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-06",
+        "asset": "gold",
+        "name": "BB position 'within_bands' matches %B=58.8",
+        "passed": true,
+        "expected": "%B in [20,80]",
+        "actual": "58.78",
+        "detail": "Position 'within_bands' requires %B in (20, 80)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-07",
+        "asset": "gold",
+        "name": "MACD BEARISH crossover: hist <= 0",
+        "passed": true,
+        "expected": "histogram <= 0 for BEARISH",
+        "actual": "hist=-14.8205",
+        "detail": "Bearish crossover means MACD < signal (negative hist)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-08",
+        "asset": "gold",
+        "name": "Trend 'contracting_range' matches price vs swings",
+        "passed": true,
+        "expected": "price position consistent with contracting_range",
+        "actual": "dist_high=1.6%, dist_low=1.6%",
+        "detail": "Price should be positioned consistently with trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-09",
+        "asset": "gold",
+        "name": "MA bullish alignment: SMA50 >= SMA200",
+        "passed": true,
+        "expected": "SMA50(4897.85) >= SMA200(4017.78)",
+        "actual": "SMA50=4897.85, SMA200=4017.78",
+        "detail": "Bullish MA alignment means SMA50 > SMA200",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-10",
+        "asset": "gold",
+        "name": "Composite 'NEUTRAL' matches score 0.12",
+        "passed": true,
+        "expected": "score in [-0.3,0.3]",
+        "actual": "0.120",
+        "detail": "Signal 'NEUTRAL' requires score in (-0.3, 0.3)",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TG-11",
+        "asset": "gold",
+        "name": "Confidence 'low' matches |score|=0.12",
+        "passed": true,
+        "expected": "|score| in [0.0,0.3]",
+        "actual": "0.120",
+        "detail": "Confidence 'low' requires |score| in (0.0, 0.3)",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-12",
+        "asset": "gold",
+        "name": "Breakout confidence grounding",
+        "passed": true,
+        "expected": "no breakout",
+        "actual": "N/A",
+        "detail": "No breakout detected \u2014 confidence N/A",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-01",
+        "asset": "AAPL",
+        "name": "RSI zone 'bearish_momentum' matches value 36.7",
+        "passed": true,
+        "expected": "RSI in [30,50]",
+        "actual": "36.68",
+        "detail": "Zone 'bearish_momentum' requires RSI in (30, 50)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-02",
+        "asset": "AAPL",
+        "name": "RSI no divergence (valid null)",
+        "passed": true,
+        "expected": "null (no divergence)",
+        "actual": "null",
+        "detail": "Null divergence is valid \u2014 means no divergence detected",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-03",
+        "asset": "AAPL",
+        "name": "Stochastic zone 'oversold' matches %K=4.7",
+        "passed": true,
+        "expected": "%K in [0,20]",
+        "actual": "4.68",
+        "detail": "Zone 'oversold' requires %K in (0, 20)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-04",
+        "asset": "AAPL",
+        "name": "Stochastic BEARISH_CROSS: %K <= %D",
+        "passed": true,
+        "expected": "%K(4.7) <= %D(22.8)",
+        "actual": "%K=4.7, %D=22.8",
+        "detail": "Bearish cross means %K crossed below %D",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-05",
+        "asset": "AAPL",
+        "name": "BB squeeze=False (not in squeeze)",
+        "passed": true,
+        "expected": "no squeeze",
+        "actual": "bandwidth=7.89%",
+        "detail": "Not in squeeze is always valid",
+        "severity": "low"
+      },
+      {
+        "check_id": "TG-06",
+        "asset": "AAPL",
+        "name": "BB position 'near_lower_band' matches %B=8.9",
+        "passed": true,
+        "expected": "%B in [0,20]",
+        "actual": "8.86",
+        "detail": "Position 'near_lower_band' requires %B in (0, 20)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-07",
+        "asset": "AAPL",
+        "name": "MACD BEARISH crossover: hist <= 0",
+        "passed": true,
+        "expected": "histogram <= 0 for BEARISH",
+        "actual": "hist=-1.1120",
+        "detail": "Bearish crossover means MACD < signal (negative hist)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-08",
+        "asset": "AAPL",
+        "name": "Trend 'downtrend' matches price vs swings",
+        "passed": true,
+        "expected": "price position consistent with downtrend",
+        "actual": "dist_high=3.0%, dist_low=0.4%",
+        "detail": "Price should be positioned consistently with trend",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-09",
+        "asset": "AAPL",
+        "name": "MA bullish alignment: SMA50 >= SMA200",
+        "passed": true,
+        "expected": "SMA50(263.01) >= SMA200(244.94)",
+        "actual": "SMA50=263.01, SMA200=244.94",
+        "detail": "Bullish MA alignment means SMA50 > SMA200",
+        "severity": "high"
+      },
+      {
+        "check_id": "TG-10",
+        "asset": "AAPL",
+        "name": "Composite 'BEARISH' matches score -0.75",
+        "passed": true,
+        "expected": "score in [-1.0,-0.3]",
+        "actual": "-0.750",
+        "detail": "Signal 'BEARISH' requires score in (-1.0, -0.3)",
+        "severity": "critical"
+      },
+      {
+        "check_id": "TG-11",
+        "asset": "AAPL",
+        "name": "Confidence 'high' matches |score|=0.75",
+        "passed": true,
+        "expected": "|score| in [0.6,1.0]",
+        "actual": "0.750",
+        "detail": "Confidence 'high' requires |score| in (0.6, 1.0)",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TG-12",
+        "asset": "AAPL",
+        "name": "Breakout confidence grounding",
+        "passed": true,
+        "expected": "no breakout",
+        "actual": "N/A",
+        "detail": "No breakout detected \u2014 confidence N/A",
+        "severity": "low"
+      }
+    ]
+  }
+}

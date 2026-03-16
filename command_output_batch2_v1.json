@@ -1,0 +1,673 @@
+{
+  "macro": {
+    "timestamp": "2026-03-12",
+    "regimes": {
+      "inflation": {
+        "classification": "cooling",
+        "value": 0.28,
+        "evidence": "Core PCE YoY = 0.28",
+        "trend": "rising",
+        "breakeven_5y": 2.56
+      },
+      "employment": {
+        "classification": "moderate",
+        "value": 4.4,
+        "evidence": "Unemployment Rate = 4.40",
+        "claims_trend": "flat",
+        "latest_nfp_thousands": -92.0,
+        "labor_breadth": {
+          "job_openings_thousands": 6542.0,
+          "job_openings_interpretation": "Labor demand weakening \u2014 fewer openings",
+          "quits_rate_pct": 2.0,
+          "quits_rate_interpretation": "Quits rate in normal range",
+          "continuing_claims_momentum_pct": -0.65,
+          "nfp_3m_avg_thousands": 5.7,
+          "nfp_decelerating": false
+        }
+      },
+      "growth": {
+        "classification": "contraction",
+        "value": 49.12,
+        "evidence": "ISM Manufacturing PMI = 49.12",
+        "ism_decomposition": {
+          "new_orders": 319898.0,
+          "new_orders_interpretation": "Manufacturing demand stable",
+          "employment": 12573.0,
+          "employment_breadth": "contracting",
+          "inventories": 1.36,
+          "inventory_flip": false,
+          "inventories_too_high": false,
+          "pull_forward_detected": false
+        }
+      },
+      "rates": {
+        "value": 3.64,
+        "classification": "easing",
+        "evidence": "Fed funds = 3.64%, trend = falling",
+        "curve_shape": "normal \u2014 no recession signal",
+        "stance": "Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)"
+      },
+      "credit": {
+        "metric": "HY OAS",
+        "value": 3.13,
+        "value_bps": 313,
+        "classification": "elevated",
+        "stress_level": "elevated",
+        "evidence": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "spread_direction": "widening",
+        "one_year_percentile": 72.7
+      },
+      "housing": {
+        "classification": "data_unavailable",
+        "evidence": "Housing starts data unavailable",
+        "permits_trend": "flat",
+        "mortgage_rate": 6.0
+      }
+    },
+    "composite_outlook": "Recessionary \u2014 contracting growth with tight credit conditions.",
+    "signals": [
+      "INFLATION_COOLING",
+      "JOLTS_OPENINGS_DECLINING",
+      "LABOR_MODERATE",
+      "ISM_CONTRACTION",
+      "GROWTH_CONTRACTION",
+      "FED_EASING",
+      "CREDIT_TIGHT",
+      "EXISTING_SALES_PLUNGING"
+    ],
+    "inflation_detail": {
+      "cpi": {
+        "latest_value": 2.8287,
+        "trend": "flat",
+        "yoy_change_pct": -1.46,
+        "interpretation": "Below target at -1.46% \u2014 disinflation risk"
+      },
+      "core_cpi": {
+        "latest_value": 2.9493,
+        "trend": "flat",
+        "yoy_change_pct": -8.22,
+        "interpretation": "Below target at -8.22% \u2014 disinflation risk"
+      },
+      "pce": {
+        "latest_value": 128.605,
+        "trend": "rising",
+        "yoy_change_pct": 2.9,
+        "interpretation": "Moderately above target at 2.9%"
+      },
+      "core_pce": {
+        "latest_value": 2.9969,
+        "trend": "rising",
+        "yoy_change_pct": 0.28,
+        "interpretation": "Below target at 0.28% \u2014 disinflation risk"
+      },
+      "ppi": {
+        "latest_value": 2.8376,
+        "trend": "flat",
+        "yoy_change_pct": -25.07
+      }
+    }
+  },
+  "bonds": {
+    "timestamp": "2026-03-12",
+    "yield_curve": {
+      "nominal_yields": {
+        "2y": {
+          "latest_value": 3.56,
+          "trend": "rising",
+          "daily_change_bps": -1.0,
+          "wow_change_bps": 18.0
+        },
+        "5y": {
+          "latest_value": 3.72,
+          "trend": "rising",
+          "daily_change_bps": 0.0,
+          "wow_change_bps": 21.0
+        },
+        "10y": {
+          "latest_value": 4.15,
+          "trend": "rising",
+          "daily_change_bps": 2.0,
+          "wow_change_bps": 18.0
+        },
+        "30y": {
+          "latest_value": 4.77,
+          "trend": "rising",
+          "daily_change_bps": 3.0,
+          "wow_change_bps": 13.0
+        }
+      },
+      "spreads": {
+        "2s10s": {
+          "latest_value": 0.57,
+          "curve_status": "normal",
+          "interpretation": "2s10s at 0.57% \u2014 normal",
+          "slope_trend": "stable"
+        },
+        "3m10s": {
+          "latest_value": 0.41,
+          "curve_status": "normal",
+          "interpretation": "3m10s at 0.41% \u2014 normal",
+          "slope_trend": "steepening"
+        }
+      },
+      "shape": "normal \u2014 no recession signal"
+    },
+    "real_yields": {
+      "5y_real": {
+        "latest_value": 1.16,
+        "trend": "rising",
+        "interpretation": "Moderately positive real yield at 1.16%",
+        "daily_change_bps": -5.0
+      },
+      "10y_real": {
+        "latest_value": 1.8,
+        "trend": "rising",
+        "interpretation": "Moderately positive real yield at 1.8%",
+        "daily_change_bps": -2.0
+      }
+    },
+    "breakevens": {
+      "t5yie": {
+        "latest_value": 2.56,
+        "trend": "rising",
+        "interpretation": "5Y Breakeven Inflation at 2.56% \u2014 above Fed target, inflation risk"
+      },
+      "t10yie": {
+        "latest_value": 2.34,
+        "trend": "rising",
+        "interpretation": "10Y Breakeven Inflation at 2.34% \u2014 well-anchored near target"
+      },
+      "t5yifr": {
+        "latest_value": 2.12,
+        "trend": "falling",
+        "interpretation": "5Y5Y Forward Inflation Expectation at 2.12% \u2014 well-anchored near target"
+      }
+    },
+    "credit_spreads": {
+      "high_yield_oas": {
+        "latest_value": 3.13,
+        "wow_change_bps": 1.0,
+        "latest_value_bps": 313,
+        "stress_level": "elevated",
+        "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "one_year_percentile": 72.7,
+        "spread_direction": "widening"
+      },
+      "ig_corporate_oas": {
+        "latest_value": 0.84,
+        "wow_change_bps": -2.0,
+        "latest_value_bps": 84,
+        "stress_level": "tight",
+        "interpretation": "IG spread at 84bps \u2014 tight, risk-on",
+        "one_year_percentile": 66.9,
+        "spread_direction": "tightening"
+      },
+      "bbb_oas": {
+        "latest_value": 1.06,
+        "wow_change_bps": -2.0,
+        "latest_value_bps": 106,
+        "one_year_percentile": 66.5,
+        "spread_direction": "widening"
+      },
+      "hy_ig_differential": {
+        "value_bps": 229,
+        "interpretation": "Tight differential \u2014 strong risk appetite"
+      }
+    },
+    "fed_policy": {
+      "effective_rate": 3.64,
+      "target_upper": 3.75,
+      "stance": "Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)",
+      "rate_trend": "falling"
+    },
+    "duration_risk": {
+      "level": "moderate-high",
+      "interpretation": "Rising real yields increase mark-to-market risk for long-duration bonds"
+    },
+    "term_premium": {
+      "term_premium_pct": 0.01,
+      "components": {
+        "nominal_10y": 4.15,
+        "real_10y": 1.8,
+        "breakeven_10y": 2.34
+      },
+      "interpretation": "Term premium positive (0.01%) with rising breakevens \u2014 global discount rate adjustment signal"
+    },
+    "signals": [
+      "CURVE_STEEPENING",
+      "BREAKEVEN_RISING",
+      "BREAKEVEN_MIXED",
+      "GLOBAL_DISCOUNT_RATE_ADJUSTMENT"
+    ],
+    "summary": "Curve: normal \u2014 no recession signal. 10Y real yield: 1.8%. HY OAS: 3.13bps. Fed: Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%). Duration risk: moderate-high. Term premium: 0.01%. Signals: CURVE_STEEPENING, BREAKEVEN_RISING, BREAKEVEN_MIXED, GLOBAL_DISCOUNT_RATE_ADJUSTMENT."
+  },
+  "stress": {
+    "as_of": "2026-03-12",
+    "composite_score": 4.0,
+    "stress_level": "elevated",
+    "components": {
+      "nfci": {
+        "value": -0.524,
+        "score": 1,
+        "weight": 0.18,
+        "interpretation": "NFCI at -0.524 \u2014 looser than average"
+      },
+      "hy_oas": {
+        "value": 3.13,
+        "score": 5,
+        "weight": 0.18,
+        "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "stress_level": "elevated"
+      },
+      "vix": {
+        "value": 24.2,
+        "score": 5,
+        "weight": 0.14,
+        "interpretation": "VIX at 24.2"
+      },
+      "yield_curve_2s10s": {
+        "value": 0.57,
+        "score": 2,
+        "weight": 0.14,
+        "interpretation": "2s10s at 0.57% \u2014 normal"
+      },
+      "initial_claims": {
+        "value": 213000.0,
+        "score": 9,
+        "weight": 0.1,
+        "interpretation": "Initial claims at 213000K"
+      },
+      "sahm_rule": {
+        "value": 0.27,
+        "score": 3,
+        "weight": 0.1,
+        "interpretation": "Sahm Rule at 0.27"
+      },
+      "consumer_sentiment": {
+        "value": 56.4,
+        "score": 7,
+        "weight": 0.08,
+        "interpretation": "U of Michigan Sentiment at 56.4"
+      },
+      "consumer_credit": {
+        "value": 1.48,
+        "score": 1,
+        "weight": 0.08,
+        "interpretation": "All-loan delinquency rate at 1.48%"
+      }
+    },
+    "supplemental": {
+      "private_credit_proxy": {
+        "stress_level": "watch",
+        "interpretation": "HY OAS elevated/widening at 313bps but bank lending not yet tightening sharply. Monitor for confirmation.",
+        "hy_oas_bps": 313,
+        "hy_direction": "widening",
+        "hy_regime_classification": "elevated",
+        "bank_tightening_net_pct": 5.3
+      },
+      "bank_equity_vs_credit": {
+        "kbe_latest": 58.66,
+        "kbe_1w_pct": -5.13,
+        "kbe_1m_pct": -12.77,
+        "hy_oas_bps": 313,
+        "hy_regime_classification": "elevated",
+        "diagnosis": "systemic_risk",
+        "interpretation": "Bank equities falling (KBE -5.1% 1W) AND credit spreads stressed (313bps HY OAS) \u2014 SYSTEMIC risk. Both equity and credit markets pricing bank deterioration."
+      }
+    },
+    "signals": [
+      "STRESS_ELEVATED",
+      "BANK_SYSTEMIC_STRESS"
+    ],
+    "summary": "Financial Stress Score: 4.0/10 (elevated). Based on 8/8 available components. Supplemental: bank systemic risk detected. Signals: STRESS_ELEVATED, BANK_SYSTEMIC_STRESS."
+  },
+  "latecycle": {
+    "as_of": "2026-03-12",
+    "signals_firing": [
+      {
+        "name": "ISM Manufacturing contraction",
+        "status": "firing",
+        "evidence": "Headline PMI at 49.1 \u2014 below 50 contraction threshold"
+      },
+      {
+        "name": "ISM New Orders declining",
+        "status": "not_firing",
+        "evidence": "New orders stable or rising"
+      },
+      {
+        "name": "NFP deceleration",
+        "status": "not_firing",
+        "evidence": "3M avg 5.7K vs prior 3M avg -7.7K"
+      },
+      {
+        "name": "Rising continuing claims",
+        "status": "not_firing",
+        "evidence": "Continuing claims momentum -0.7%"
+      },
+      {
+        "name": "Credit spreads widening",
+        "status": "firing",
+        "evidence": "HY OAS at 313bps, direction: widening"
+      },
+      {
+        "name": "Term premium rising",
+        "status": "not_firing",
+        "evidence": "Term premium proxy: 0.010% (10Y nom 4.15% - real 1.8% - BE 2.34%)"
+      },
+      {
+        "name": "JOLTS quits declining",
+        "status": "not_firing",
+        "evidence": "Quits rate at 2.0%, trend: rising"
+      },
+      {
+        "name": "Yield curve inversion",
+        "status": "not_firing",
+        "evidence": "2s10s spread at 0.57% \u2014 normal"
+      },
+      {
+        "name": "Housing permits declining",
+        "status": "not_firing",
+        "evidence": "Building permits at 1448K SAAR, trend: flat"
+      },
+      {
+        "name": "Delinquencies rising",
+        "status": "not_firing",
+        "evidence": "Delinquency rate at 1.48%, trend: falling"
+      },
+      {
+        "name": "Bank lending tightening",
+        "status": "not_firing",
+        "evidence": "Net 5.3% of banks tightening lending standards"
+      },
+      {
+        "name": "Labor share near record lows",
+        "status": "firing",
+        "evidence": "Labor share at 42.7%, 0th percentile \u2014 near historical lows, late-cycle tell"
+      },
+      {
+        "name": "Manufacturing recession (labor hoarding)",
+        "status": "not_firing",
+        "evidence": "Durable goods orders unknown, mfg hours 41.5h \u2014 no manufacturing recession signal"
+      }
+    ],
+    "count": 3,
+    "total": 13,
+    "confidence_level": "late-early warning",
+    "interpretation": "3/13 signals firing \u2014 early late-cycle warning signs emerging",
+    "assessment": "3/13 late-cycle signals firing. Confidence: late-early warning. 3/13 signals firing \u2014 early late-cycle warning signs emerging."
+  },
+  "consumer": {
+    "as_of": "2026-03-12",
+    "components": {
+      "savings_rate": {
+        "value": 3.6,
+        "score": 5,
+        "weight": 0.3,
+        "interpretation": "Savings rate below average at 3.6% \u2014 moderate stress"
+      },
+      "credit_growth_velocity": {
+        "value": null,
+        "score": 0,
+        "weight": 0.25,
+        "interpretation": "Data unavailable"
+      },
+      "delinquency_rate": {
+        "value": 1.48,
+        "score": 1,
+        "weight": 0.25,
+        "interpretation": "Delinquency rate low at 1.48% \u2014 healthy credit quality"
+      },
+      "bank_lending_tightening": {
+        "value": 5.3,
+        "score": 3,
+        "weight": 0.2,
+        "interpretation": "Net 5.3% banks tightening \u2014 mild tightening"
+      }
+    },
+    "composite_score": 6.87,
+    "consumer_health_level": "stable",
+    "signals": [
+      "CONSUMER_STABLE",
+      "SAVINGS_RATE_LOW"
+    ],
+    "assessment": "Consumer Health Score: 6.87/10 (stable). Based on 3/4 available components. Signals: CONSUMER_STABLE, SAVINGS_RATE_LOW."
+  },
+  "housing": {
+    "as_of": "2026-03-12",
+    "starts_momentum": {
+      "latest_value": 1404.0,
+      "direction": "improving",
+      "level": "moderate",
+      "trend": "rising",
+      "interpretation": "Housing starts at 1404K SAAR \u2014 improving, moderate level"
+    },
+    "permits_pipeline": {
+      "latest_value": 1448.0,
+      "trend": "flat",
+      "permits_to_starts_ratio": 1.03,
+      "pipeline_assessment": "expansion",
+      "interpretation": "Building permits at 1448K SAAR, trend: flat, permits/starts ratio: 1.03"
+    },
+    "sales_trend": {
+      "latest_value": 3910000.0,
+      "trend": "flat",
+      "mom_change_pct": -8.43,
+      "interpretation": "Existing home sales plunging -8.4% MoM \u2014 demand collapsing"
+    },
+    "affordability": {
+      "mortgage_rate_pct": 6.0,
+      "median_price_usd": 405300.0,
+      "monthly_interest_payment_usd": 2026.0,
+      "affordability_level": "stretched",
+      "interpretation": "At 6.00% mortgage rate and $405,300 median price, monthly interest payment ~$2,026 \u2014 stretched"
+    },
+    "price_dynamics": {
+      "status": "data_unavailable"
+    },
+    "housing_cycle_phase": {
+      "phase": "distressed",
+      "interpretation": "Housing distressed \u2014 3 distress signals firing despite mixed upstream activity data"
+    },
+    "leading_indicator_signal": {
+      "signal": "HOUSING_CAUTION",
+      "interpretation": "Existing home sales plunging \u2014 demand-side weakness. Monitor permits and starts for supply-side confirmation."
+    },
+    "signals": [
+      "SALES_PLUNGING",
+      "AFFORDABILITY_STRESSED",
+      "EXISTING_SALES_PLUNGING"
+    ],
+    "assessment": "Housing starts at 1404K SAAR (moderate). Permits at 1448K, trend: flat. Existing sales MoM: -8.4%. Affordability: stretched. Cycle: distressed. Leading signal: HOUSING_CAUTION. Signals: SALES_PLUNGING, AFFORDABILITY_STRESSED, EXISTING_SALES_PLUNGING."
+  },
+  "labor": {
+    "as_of": "2026-03-12",
+    "productivity_vs_ulc": {
+      "productivity_yoy_pct": null,
+      "ulc_yoy_pct": null,
+      "gap": null,
+      "classification": null,
+      "interpretation": "Insufficient data for gap computation"
+    },
+    "hiring_firing_balance": {
+      "hires_latest_thousands": 5293.0,
+      "layoffs_latest_thousands": 1762.0,
+      "hires_to_layoffs_ratio": 3.0,
+      "layoff_trend": "flat",
+      "balance": "hiring_dominant",
+      "interpretation": "Hires/layoffs ratio at 3.00 \u2014 hiring well exceeds layoffs, healthy labor market"
+    },
+    "hiring_plans_proxy": {
+      "hires_yoy_pct": null,
+      "hires_trend": "flat",
+      "openings_trend": "falling",
+      "continuing_claims_momentum_pct": -0.65,
+      "outlook": "mixed",
+      "interpretation": "Hiring outlook mixed \u2014 one indicator flagging caution but others stable.",
+      "note": "This is a proxy for Challenger hiring plans data (not available via free API). Uses JOLTS hires, job openings, and continuing claims as substitutes."
+    },
+    "labor_market_power": {
+      "quits_rate": 2.0,
+      "power_level": "weakening",
+      "interpretation": "Quits rate at 2.0% \u2014 workers less confident, fewer voluntary departures",
+      "jolts_openings_thousands": 6542.0,
+      "jolts_openings_trend": "falling",
+      "openings_note": "Job openings declining \u2014 labor demand weakening"
+    },
+    "wage_inflation_link": {
+      "ulc_trend": "flat",
+      "productivity_trend": "rising",
+      "core_pce_yoy_pct": 0.28,
+      "core_cpi_yoy_pct": -8.22,
+      "dynamic": "productivity_driven_disinflation",
+      "interpretation": "Productivity rising while ULC contained \u2014 disinflationary dynamic. Real wages can grow without fueling inflation. Fed can lean dovish.",
+      "fed_tilt": "dovish"
+    },
+    "composite_assessment": "Labor market balance: hiring_dominant. Hires/layoffs ratio: 3.00. Worker bargaining power: weakening. Wage-inflation dynamic: productivity_driven_disinflation. Fed tilt: dovish. Signals: WORKER_POWER_WEAKENING, DISINFLATIONARY_PRODUCTIVITY.",
+    "signals": [
+      "WORKER_POWER_WEAKENING",
+      "DISINFLATIONARY_PRODUCTIVITY"
+    ]
+  },
+  "graham_NVDA": {
+    "ticker": "NVDA",
+    "analysis": "benjamin_graham_value",
+    "as_of": "2026-03-12",
+    "company": "NVIDIA CORP",
+    "latest_quarter": "2020-Q2",
+    "current_price": 186.02999877929688,
+    "graham_number": {
+      "value": 28.63,
+      "formula": "sqrt(22.5 \u00d7 EPS_TTM \u00d7 BVPS)",
+      "eps_ttm": 1.73,
+      "bvps": 21.0595
+    },
+    "margin_of_safety": {
+      "pct": -549.77,
+      "assessment": "Overvalued vs Graham Number (negative margin)"
+    },
+    "defensive_criteria": {
+      "score": "3/7",
+      "tests": [
+        {
+          "test": "1. Adequate size",
+          "threshold": "Annual revenue > $100M",
+          "value": "$16.68B",
+          "pass": true
+        },
+        {
+          "test": "2. Strong financial condition",
+          "threshold": "Current ratio \u2265 2.0",
+          "value": 10.2911,
+          "pass": true
+        },
+        {
+          "test": "3. Earnings stability",
+          "threshold": "Positive EPS in all quarters",
+          "value": "21/24 quarters positive",
+          "pass": false
+        },
+        {
+          "test": "4. Dividend record",
+          "threshold": "Paying dividends",
+          "value": "$0.40B TTM",
+          "pass": true
+        },
+        {
+          "test": "5. Earnings growth",
+          "threshold": "EPS growth (newest 4Q vs oldest 4Q)",
+          "value": "-64.69%",
+          "pass": false
+        },
+        {
+          "test": "6. Moderate P/E ratio",
+          "threshold": "P/E < 15",
+          "value": 107.53,
+          "pass": false
+        },
+        {
+          "test": "7. Moderate P/E \u00d7 P/B",
+          "threshold": "P/E \u00d7 P/B < 22.5",
+          "value": 949.49,
+          "pass": false
+        }
+      ],
+      "assessment": "Partial Graham fit (3-4/7)"
+    },
+    "net_net_wcav": {
+      "ncav_per_share": 15.16,
+      "current_assets": 19584000000.0,
+      "total_liabilities": 10155000000.0,
+      "formula": "(Current Assets - Total Liabilities) / Shares",
+      "price_to_ncav": 12.27,
+      "signal": "Trading above NCAV"
+    },
+    "debt_safety": {
+      "current_ratio": 10.2911,
+      "debt_to_equity": 0.5313,
+      "long_term_debt": null,
+      "assessment": [
+        "PASS: Current ratio \u2265 2.0 (Graham threshold)",
+        "PASS: Debt/equity < 1.0 (Graham preferred)"
+      ]
+    },
+    "earnings_power_value": {
+      "epv_total": 35.8,
+      "epv_per_share": 57.56,
+      "operating_income_ttm": 4.53,
+      "assumed_cost_of_capital": "10%",
+      "assumed_tax_rate": "21%",
+      "formula": "After-tax Operating Income / Cost of Capital",
+      "margin_vs_price": "-223.19%"
+    },
+    "book_value": {
+      "bvps": 21.0595,
+      "tangible_bvps": 20.0498,
+      "pb_ratio": 8.83,
+      "bvps_trend": "declining"
+    },
+    "valuation_metrics": {
+      "trailing_pe": 107.53,
+      "price_to_book": 8.83,
+      "pe_x_pb": 949.49,
+      "earnings_yield": 0.93
+    },
+    "overall_assessment": [
+      "Partial Graham fit (3/7)",
+      "No margin of safety \u2014 trading above Graham Number"
+    ]
+  },
+  "valuation": {
+    "as_of": "2026-03-12",
+    "inputs": {
+      "pe_ratio": 27.3,
+      "pe_source": "trailing_PE",
+      "cpi_yoy_pct": null,
+      "unemployment_rate": 4.4
+    },
+    "assessment": "insufficient_data",
+    "data_note": "NOTE: Using trailing_PE instead of forward P/E (I/B/E/S data not available). ",
+    "methodology": "Rule of 20 (Jim Moltz / Yardeni): P/E + CPI = 20 is fair value. Rule of 24 (Yardeni extension): P/E + Misery Index (unemployment + CPI) avg = 23.9 since 1979. Real Earnings Yield: 1/PE - CPI YoY \u2014 mean-reverting valuation signal."
+  },
+  "vixanalysis": {
+    "as_of": "2026-03-12",
+    "vix": {
+      "latest": 24.23,
+      "percentile_1y": 88.4,
+      "tier": 3,
+      "tier_description": "Elevated caution",
+      "tier_detail": "Above-average uncertainty, monitor for escalation"
+    },
+    "move": {
+      "latest": 78.6,
+      "move_vix_ratio": 3.24,
+      "interpretation": "MOVE/VIX ratio at 3.24 \u2014 balanced equity and rate vol"
+    },
+    "under_vix": {
+      "detected": false,
+      "evidence": [],
+      "interpretation": "VIX at 24.2 \u2014 above 18, UnderVIX check not applicable"
+    },
+    "opportunity_assessment": "VIX at 24.2 \u2014 Elevated caution. No extreme opportunity signal.",
+    "signals": []
+  }
+}

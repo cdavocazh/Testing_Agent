@@ -1,0 +1,20 @@
+# ─── Testing Agent — Dependencies ────────────────────────────────────
+
+# LangChain + LangGraph (agent framework)
+langchain>=0.3
+langchain-openai>=0.3
+langgraph>=0.3
+
+# Core (shared with Financial Agent)
+python-dotenv>=1.0
+pandas>=2.2.0
+numpy>=1.26.0
+requests>=2.31
+openai>=1.0
+
+# Market data (needed by Financial Agent tools)
+yfinance>=0.2
+duckduckgo-search>=7.0
+
+# Report generation
+tabulate>=0.9

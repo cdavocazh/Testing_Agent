@@ -1,0 +1,759 @@
+{
+  "timestamp": "2026-03-12T22:06:00.517375",
+  "commands": [
+    "drivers",
+    "bonds",
+    "latecycle",
+    "consumer",
+    "housing",
+    "labor",
+    "vixanalysis",
+    "bbb",
+    "fsmi",
+    "drawdown"
+  ],
+  "summary": {
+    "total_checks": 57,
+    "passed": 49,
+    "failed": 8,
+    "rate": "86.0%",
+    "critical_failures": 1,
+    "by_category": {
+      "accuracy": {
+        "total": 40,
+        "passed": 33,
+        "failed": 7
+      },
+      "coherence": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "grounding": {
+        "total": 8,
+        "passed": 7,
+        "failed": 1
+      },
+      "llm_judge": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "by_command": {
+      "drivers": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0
+      },
+      "bonds": {
+        "total": 6,
+        "passed": 5,
+        "failed": 1
+      },
+      "latecycle": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "consumer": {
+        "total": 4,
+        "passed": 1,
+        "failed": 3
+      },
+      "housing": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "labor": {
+        "total": 5,
+        "passed": 3,
+        "failed": 2
+      },
+      "vixanalysis": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "bbb": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "fsmi": {
+        "total": 4,
+        "passed": 3,
+        "failed": 1
+      },
+      "drawdown": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "cross-command": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "drivers_bonds_vix": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "consumer_housing_labor": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "yardeni_latecycle": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check_id": "DR-01",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Equity Risk Premium data available",
+      "passed": true,
+      "detail": "ERP: 1.91%",
+      "expected": "available",
+      "actual": 1.91,
+      "severity": "critical"
+    },
+    {
+      "check_id": "DR-02",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "DXY in plausible range (70-130)",
+      "passed": true,
+      "detail": "DXY: 99.51",
+      "expected": "[70, 130]",
+      "actual": 99.51,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DR-03",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "HY OAS available in bps",
+      "passed": true,
+      "detail": "HY OAS: 306 bps",
+      "expected": "[100, 2000]",
+      "actual": 306,
+      "severity": "high"
+    },
+    {
+      "check_id": "DR-04",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "VIX data available in drivers",
+      "passed": true,
+      "detail": "VIX: 25.8",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DR-05",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Rolling correlations data present",
+      "passed": true,
+      "detail": "Correlation entries: 16",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DR-06",
+      "category": "accuracy",
+      "command": "drivers",
+      "check_name": "Signals generated (was empty before)",
+      "passed": true,
+      "detail": "3 signals: ['EQUITY_RISK_PREMIUM_LOW', 'INFLATION_ROTATION_GROWTH', 'RISK_OFF_REGIME']",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "BO-01",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "10Y yield available and plausible",
+      "passed": true,
+      "detail": "10Y: 4.15%",
+      "expected": "(0, 10)",
+      "actual": 4.15,
+      "severity": "high"
+    },
+    {
+      "check_id": "BO-02",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "2s10s spread = 10Y - 2Y",
+      "passed": true,
+      "detail": "10Y=4.15, 2Y=3.57, Spread=0.57, Calc=0.58",
+      "expected": 0.58,
+      "actual": 0.57,
+      "severity": "high"
+    },
+    {
+      "check_id": "BO-03",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "10Y real yield available",
+      "passed": true,
+      "detail": "10Y real: 1.82%",
+      "expected": "[-3, 5]",
+      "actual": 1.82,
+      "severity": "high"
+    },
+    {
+      "check_id": "BO-04",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "10Y breakeven inflation available",
+      "passed": true,
+      "detail": "10Y BE: 2.36%",
+      "expected": "(0, 6)",
+      "actual": 2.36,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BO-05",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "Nominal \u2248 Real + Breakeven + Term Premium",
+      "passed": true,
+      "detail": "10Y=4.15, Real=1.82, BE=2.36, Residual=-0.03",
+      "expected": "residual < 0.5",
+      "actual": -0.03,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BO-06",
+      "category": "accuracy",
+      "command": "bonds",
+      "check_name": "Credit spreads data present in bonds",
+      "passed": false,
+      "detail": "Credit keys: [], HY: None",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LC-01",
+      "category": "accuracy",
+      "command": "latecycle",
+      "check_name": "Reported count matches actual firing signals",
+      "passed": true,
+      "detail": "Reported: 4, Actual firing: 4/13",
+      "expected": 4,
+      "actual": 4,
+      "severity": "high"
+    },
+    {
+      "check_id": "LC-02",
+      "category": "accuracy",
+      "command": "latecycle",
+      "check_name": "Signal framework has \u22658 signals",
+      "passed": true,
+      "detail": "Total signals: 13",
+      "expected": "\u2265 8",
+      "actual": 13,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LC-03",
+      "category": "accuracy",
+      "command": "latecycle",
+      "check_name": "Confidence level present and clear",
+      "passed": true,
+      "detail": "Confidence: 'early warning' (prior was 'late-early warning' \u2014 confusing)",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-01",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Composite score in [0,10]",
+      "passed": true,
+      "detail": "Composite: 6.87",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-02",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Composite = weighted avg of available components",
+      "passed": false,
+      "detail": "Weighted avg: 2.35, Reported: 6.87 (4 components)",
+      "expected": 2.35,
+      "actual": 6.87,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CON-03",
+      "category": "accuracy",
+      "command": "consumer",
+      "check_name": "Credit growth velocity data available",
+      "passed": false,
+      "detail": "MISSING \u2014 key consumer metric unavailable",
+      "expected": "available",
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "HO-01",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Housing cycle phase present",
+      "passed": true,
+      "detail": "Cycle phase: mixed",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "HO-02",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Price dynamics (Case-Shiller) available",
+      "passed": false,
+      "detail": "Status: data_unavailable",
+      "expected": "available",
+      "actual": "data_unavailable",
+      "severity": "high"
+    },
+    {
+      "check_id": "HO-03",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Permits/starts ratio computed",
+      "passed": true,
+      "detail": "Permits/starts: 1.03",
+      "expected": "(0.5, 2.0)",
+      "actual": 1.03,
+      "severity": "medium"
+    },
+    {
+      "check_id": "HO-04",
+      "category": "accuracy",
+      "command": "housing",
+      "check_name": "Affordability metrics (rate + median price) present",
+      "passed": true,
+      "detail": "Rate: 6.0%, Price: $405300.0",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LB-01",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Hires/layoffs ratio available and plausible",
+      "passed": true,
+      "detail": "Ratio: 3.0",
+      "expected": "(0.5, 10)",
+      "actual": 3.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LB-02",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Productivity vs ULC data available",
+      "passed": false,
+      "detail": "Productivity: None, ULC: None",
+      "expected": "both available",
+      "actual": "prod=None, ulc=None",
+      "severity": "high"
+    },
+    {
+      "check_id": "LB-03",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Core CPI YoY in plausible range (-5% to 15%)",
+      "passed": false,
+      "detail": "Core CPI YoY: -12.88% \u2014 IMPLAUSIBLE",
+      "expected": "[-5, 15]",
+      "actual": -12.88,
+      "severity": "critical"
+    },
+    {
+      "check_id": "LB-04",
+      "category": "accuracy",
+      "command": "labor",
+      "check_name": "Labor signals generated",
+      "passed": true,
+      "detail": "2 signals: ['WORKER_POWER_WEAKENING', 'DISINFLATIONARY_PRODUCTIVITY']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "VX-01",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "VIX value present and plausible (5-90)",
+      "passed": true,
+      "detail": "VIX: 26.18",
+      "expected": "[5, 90]",
+      "actual": 26.18,
+      "severity": "high"
+    },
+    {
+      "check_id": "VX-02",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "VIX tier matches VIX value",
+      "passed": true,
+      "detail": "VIX=26.18, Tier=4, Expected=4",
+      "expected": 4,
+      "actual": 4,
+      "severity": "high"
+    },
+    {
+      "check_id": "VX-03",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "MOVE/VIX ratio = MOVE / VIX",
+      "passed": true,
+      "detail": "MOVE=78.6, VIX=26.18, Ratio=3.0, Calc=3.0",
+      "expected": 3.0,
+      "actual": 3.0,
+      "severity": "medium"
+    },
+    {
+      "check_id": "VX-04",
+      "category": "accuracy",
+      "command": "vixanalysis",
+      "check_name": "VIX percentile in [0, 100]",
+      "passed": true,
+      "detail": "Percentile: 92.8",
+      "expected": "[0, 100]",
+      "actual": 92.8,
+      "severity": "low"
+    },
+    {
+      "check_id": "BBB-01",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "BBB ratio > 0 (was 0 in prior eval)",
+      "passed": true,
+      "detail": "Ratio: 0.0276 (prior was 0.0 due to claims in raw units)",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "BBB-02",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "Initial claims in thousands (not raw 213000)",
+      "passed": true,
+      "detail": "Claims: 213.0K",
+      "expected": "100-1000K",
+      "actual": 213.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "BBB-03",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "Copper price in plausible range ($2-$10/lb)",
+      "passed": true,
+      "detail": "Copper: $5.87/lb",
+      "expected": "[2, 10]",
+      "actual": 5.87,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BBB-04",
+      "category": "accuracy",
+      "command": "bbb",
+      "check_name": "BBB ratio = copper_price / initial_claims",
+      "passed": true,
+      "detail": "Copper=5.87, Claims=213.0, Ratio=0.0276, Calc=0.0276",
+      "expected": 0.0276,
+      "actual": 0.0276,
+      "severity": "high"
+    },
+    {
+      "check_id": "FSMI-01",
+      "category": "accuracy",
+      "command": "fsmi",
+      "check_name": "FSMI runs without crashing (prior: TypeError)",
+      "passed": true,
+      "detail": "FSMI z-score: 1.55 (prior: crashed with TypeError)",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "FSMI-02",
+      "category": "accuracy",
+      "command": "fsmi",
+      "check_name": "Consumer sentiment data available",
+      "passed": false,
+      "detail": "MISSING \u2014 null",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "FSMI-03",
+      "category": "accuracy",
+      "command": "fsmi",
+      "check_name": "FSMI z-score = avg of available z-scores",
+      "passed": true,
+      "detail": "Components: [('copper_crb_proxy', 1.55), ('consumer_sentiment', None), ('sp500', 0.6)], Avg=1.07, Reported=1.55",
+      "expected": 1.07,
+      "actual": 1.55,
+      "severity": "medium"
+    },
+    {
+      "check_id": "DD-01",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "Drawdown % = (price - ATH) / ATH \u00d7 100",
+      "passed": true,
+      "detail": "Price=6722.5, ATH=7016.5, DD=-4.19%, Calc=-4.19%",
+      "expected": -4.19,
+      "actual": -4.19,
+      "severity": "high"
+    },
+    {
+      "check_id": "DD-02",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "Classification matches drawdown magnitude",
+      "passed": true,
+      "detail": "DD=-4.19%, Class='panic_attack', Expected='panic_attack'",
+      "expected": "panic_attack",
+      "actual": "panic_attack",
+      "severity": "high"
+    },
+    {
+      "check_id": "DD-03",
+      "category": "accuracy",
+      "command": "drawdown",
+      "check_name": "52wk high \u2248 ATH (if ATH within 52 weeks)",
+      "passed": true,
+      "detail": "52wk_high=7016.5, ATH=7016.5",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "CC-R2-01",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Drivers HY OAS \u2248 Latecycle HY OAS",
+      "passed": true,
+      "detail": "Drivers: 306bps, Latecycle: 306bps",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-R2-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "VIX consistent: /drivers \u2248 /vixanalysis",
+      "passed": true,
+      "detail": "Drivers VIX: 25.8, VIX analysis: 26.18",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-R2-03",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "BBB recession signal consistent with late-cycle warning level",
+      "passed": true,
+      "detail": "BBB: recession_warning=True, Latecycle: 4/13 firing, conf='early warning'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R2-04",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Housing affordability stress reflected in consumer signals",
+      "passed": true,
+      "detail": "Affordability: stretched, Consumer composite: 6.87, Health: None",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "CC-R2-05",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Bond curve shape \u2194 late-cycle yield curve signal",
+      "passed": true,
+      "detail": "Curve: 'normal \u2014 no recession signal', LC curve signal firing: False",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R2-06",
+      "category": "coherence",
+      "command": "labor",
+      "check_name": "Labor core CPI YoY uses same data as /macro (informational)",
+      "passed": true,
+      "detail": "Labor CPI: -12.88% (macro was -12.88% in round 1 reeval)",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GR-R2-01",
+      "category": "grounding",
+      "command": "drivers",
+      "check_name": "DXY interpretation coherent with level",
+      "passed": true,
+      "detail": "DXY=99.51, Interp='DXY at 99.50800323486328 \u2014 weak range, stable'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-R2-02",
+      "category": "grounding",
+      "command": "vixanalysis",
+      "check_name": "VIX tier description matches tier number",
+      "passed": true,
+      "detail": "Tier=4, Desc='Risk-off \u2014 hedging demand rising', Expected contains 'risk-off'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-03",
+      "category": "grounding",
+      "command": "bbb",
+      "check_name": "BBB interpretation matches ratio level",
+      "passed": true,
+      "detail": "Ratio=0.0276, Interp='contraction_signal \u2014 recessionary dynamics'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-04",
+      "category": "grounding",
+      "command": "drawdown",
+      "check_name": "Drawdown description reflects classification",
+      "passed": true,
+      "detail": "Class='panic_attack', Desc='4.2% pullback \u2014 Yardeni 'panic attack'. 66 such events occurred 2009-2020. Typic...'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-05",
+      "category": "grounding",
+      "command": "latecycle",
+      "check_name": "Late-cycle confidence label matches firing count",
+      "passed": true,
+      "detail": "Count=4, Confidence='early warning'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-06",
+      "category": "grounding",
+      "command": "consumer",
+      "check_name": "Consumer health label present",
+      "passed": false,
+      "detail": "Score=6.87, Health label: None",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-07",
+      "category": "grounding",
+      "command": "housing",
+      "check_name": "Housing cycle phase consistent with underlying trends",
+      "passed": true,
+      "detail": "Phase='mixed', Starts direction='improving', Sales='flat'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R2-08",
+      "category": "grounding",
+      "command": "fsmi",
+      "check_name": "FSMI interpretation matches z-score level",
+      "passed": true,
+      "detail": "Z-score=1.55, Interp='strong_economy \u2014 commodity demand + consumer confidence elevated'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LLM-DBV",
+      "category": "llm_judge",
+      "command": "drivers_bonds_vix",
+      "check_name": "LLM Judge: /drivers + /bonds + /vixanalysis",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-CHL",
+      "category": "llm_judge",
+      "command": "consumer_housing_labor",
+      "check_name": "LLM Judge: /consumer + /housing + /labor",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-YLC",
+      "category": "llm_judge",
+      "command": "yardeni_latecycle",
+      "check_name": "LLM Judge: /bbb + /fsmi + /drawdown + /latecycle",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {
+    "drivers_bonds_vix": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "consumer_housing_labor": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "yardeni_latecycle": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    }
+  }
+}

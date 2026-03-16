@@ -1,0 +1,612 @@
+{
+  "timestamp": "2026-03-12T16:19:19.737887",
+  "commands": [
+    "btc",
+    "pmregime",
+    "usdregime",
+    "ta_NVDA",
+    "synthesis_NVDA",
+    "sl_gold",
+    "grahamscreen",
+    "netnet",
+    "compare"
+  ],
+  "summary": {
+    "total_checks": 40,
+    "passed": 33,
+    "failed": 7,
+    "rate": "82.5%",
+    "critical_failures": 2,
+    "by_category": {
+      "accuracy": {
+        "total": 25,
+        "passed": 21,
+        "failed": 4
+      },
+      "coherence": {
+        "total": 7,
+        "passed": 5,
+        "failed": 2
+      },
+      "grounding": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "llm_judge": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "by_command": {
+      "btc": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "pmregime": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "usdregime": {
+        "total": 5,
+        "passed": 3,
+        "failed": 2
+      },
+      "ta": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "synthesis": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "sl": {
+        "total": 4,
+        "passed": 3,
+        "failed": 1
+      },
+      "grahamscreen": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "netnet": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "compare": {
+        "total": 2,
+        "passed": 1,
+        "failed": 1
+      },
+      "cross-command": {
+        "total": 2,
+        "passed": 1,
+        "failed": 1
+      },
+      "btc/pm/usd": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "ta/synthesis/sl": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "screens/compare": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check_id": "BTC-01",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "All 5 timeframes present (5min, 30min, 1H, 4H, 1D)",
+      "passed": true,
+      "detail": "Present: ['5min', '30min', '1H', '4H', '1D']",
+      "expected": 5,
+      "actual": 5,
+      "severity": "high"
+    },
+    {
+      "check_id": "BTC-02",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "RSI values in [0, 100] for all timeframes",
+      "passed": true,
+      "detail": "RSIs: {'5min': 66.31, '30min': 44.36, '1H': 30.73, '4H': 52.09, '1D': 54.89}",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BTC-03",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "Composite bias reflects timeframe majority",
+      "passed": true,
+      "detail": "Biases: {'5min': 'bullish', '30min': 'bearish', '1H': 'bearish', '4H': 'bullish', '1D': 'bullish'}, Composite: 'leaning_bullish', Majority: bullish",
+      "expected": "bullish",
+      "actual": "leaning_bullish",
+      "severity": "medium"
+    },
+    {
+      "check_id": "BTC-04",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "Current price consistent across timeframes",
+      "passed": true,
+      "detail": "Prices: {69691.6}",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "PM-01",
+      "category": "accuracy",
+      "command": "pmregime",
+      "check_name": "Gold price in plausible range ($1000-$10000)",
+      "passed": true,
+      "detail": "Gold: $5192.3",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "PM-02",
+      "category": "accuracy",
+      "command": "pmregime",
+      "check_name": "Silver/Gold ratio = silver_price / gold_price",
+      "passed": true,
+      "detail": "Silver=87.21, Gold=5192.3, Expected=0.0168, Got=0.0168",
+      "expected": 0.0168,
+      "actual": 0.0168,
+      "severity": "medium"
+    },
+    {
+      "check_id": "PM-03",
+      "category": "accuracy",
+      "command": "pmregime",
+      "check_name": "Correction risk score in [0, 10]",
+      "passed": true,
+      "detail": "Correction risk: 3.1",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "USD-01",
+      "category": "accuracy",
+      "command": "usdregime",
+      "check_name": "DXY level in plausible range (80-120)",
+      "passed": true,
+      "detail": "DXY: 99.33",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "USD-02",
+      "category": "accuracy",
+      "command": "usdregime",
+      "check_name": "DXY pct vs 50SMA arithmetic",
+      "passed": true,
+      "detail": "DXY=99.33, SMA50=98.07, Expected=1.3%, Got=1.3%",
+      "expected": 1.3,
+      "actual": 1.3,
+      "severity": "medium"
+    },
+    {
+      "check_id": "USD-03",
+      "category": "accuracy",
+      "command": "usdregime",
+      "check_name": "Death cross = SMA50 < SMA200",
+      "passed": true,
+      "detail": "SMA50=98.07, SMA200=98.39, Death cross: expected=True, got=True",
+      "expected": true,
+      "actual": true,
+      "severity": "medium"
+    },
+    {
+      "check_id": "TA-01",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "Major Murphy TA frameworks present",
+      "passed": false,
+      "detail": "Present: 9/11 (['1_trend', '2_support_resistance', '3_volume', '4_moving_averages', '5_macd']...)",
+      "expected": 11,
+      "actual": 9,
+      "severity": "high"
+    },
+    {
+      "check_id": "TA-02",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "RSI value in [0, 100]",
+      "passed": true,
+      "detail": "RSI: 48.17",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "TA-03",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "SMA50/200 crossover label matches values",
+      "passed": true,
+      "detail": "SMA50=185.7, SMA200=176.89, Crossover: 'SMA50 above SMA200 (bullish alignment)'",
+      "expected": "bullish",
+      "actual": "SMA50 above SMA200 (bullish alignment)",
+      "severity": "medium"
+    },
+    {
+      "check_id": "SYN-01",
+      "category": "accuracy",
+      "command": "synthesis",
+      "check_name": "Fundamental metrics available (PE, margins, growth)",
+      "passed": false,
+      "detail": "6/6 metrics are null \u2014 ALL NULL, synthesis crippled",
+      "expected": "some metrics available",
+      "actual": "6 null",
+      "severity": "critical"
+    },
+    {
+      "check_id": "SYN-02",
+      "category": "accuracy",
+      "command": "synthesis",
+      "check_name": "Synthesis alignment reflects signal combination",
+      "passed": true,
+      "detail": "Fund=NEUTRAL, Tech=NEUTRAL, Alignment='NEUTRAL'",
+      "expected": "NEUTRAL",
+      "actual": "NEUTRAL",
+      "severity": "medium"
+    },
+    {
+      "check_id": "SL-01",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "Percent-based stop = entry \u00d7 (1 - risk%)",
+      "passed": true,
+      "detail": "Entry=3348.0, Risk=1.5%, Expected=3297.78, Got=3297.78",
+      "expected": 3297.78,
+      "actual": 3297.78,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SL-02",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "ATR-based and swing-based stops computed",
+      "passed": false,
+      "detail": "ATR: MISSING, Swing: MISSING",
+      "expected": "both present",
+      "actual": "ATR=False, Swing=False",
+      "severity": "high"
+    },
+    {
+      "check_id": "SL-03",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "Recommended stop below entry for long trade",
+      "passed": true,
+      "detail": "Entry=3348.0, Stop=3297.78",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GS-01",
+      "category": "accuracy",
+      "command": "grahamscreen",
+      "check_name": "MoS formula correct (CMG): (GN-Price)/Price\u00d7100",
+      "passed": true,
+      "detail": "GN=128.85, Price=33.85, Correct MoS=280.65%, Got=280.65%",
+      "expected": 280.65,
+      "actual": 280.65,
+      "severity": "high"
+    },
+    {
+      "check_id": "GS-02",
+      "category": "accuracy",
+      "command": "grahamscreen",
+      "check_name": "P/E \u00d7 P/B product (CMG)",
+      "passed": true,
+      "detail": "PE=2.71, PB=0.57, Expected=1.54, Got=1.54",
+      "expected": 1.54,
+      "actual": 1.54,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GS-03",
+      "category": "accuracy",
+      "command": "grahamscreen",
+      "check_name": "Results sorted by margin of safety descending",
+      "passed": true,
+      "detail": "Top 3 MoS: [280.65, 100.08, 67.96]",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "NN-01",
+      "category": "accuracy",
+      "command": "netnet",
+      "check_name": "Price/NCAV ratio arithmetic (CSGP)",
+      "passed": true,
+      "detail": "Price=45.34, NCAV=23.07, Expected=1.97, Got=1.97",
+      "expected": 1.97,
+      "actual": 1.97,
+      "severity": "medium"
+    },
+    {
+      "check_id": "NN-02",
+      "category": "accuracy",
+      "command": "netnet",
+      "check_name": "Identifies any true net-net candidates (price < 2/3 NCAV)",
+      "passed": true,
+      "detail": "True net-nets found: 0/20. None in S&P 500 \u2014 expected for large-caps",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "CMP-01",
+      "category": "accuracy",
+      "command": "compare",
+      "check_name": "All requested tickers in comparison",
+      "passed": true,
+      "detail": "Requested: ['NVDA', 'AAPL', 'MSFT'], Found: ['NVDA', 'AAPL', 'MSFT']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CMP-02",
+      "category": "accuracy",
+      "command": "compare",
+      "check_name": "Comparison data freshness (recent quarters)",
+      "passed": false,
+      "detail": "3/3 tickers using stale (2019-2020) data: ['2020-Q2', '2019-Q4', '2020-Q1']",
+      "expected": "2024+ data",
+      "actual": [
+        "2020-Q2",
+        "2019-Q4",
+        "2020-Q1"
+      ],
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC4-01",
+      "category": "coherence",
+      "command": "btc",
+      "check_name": "BTC price in plausible range ($10K-$200K)",
+      "passed": true,
+      "detail": "BTC: $69,691.6",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC4-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Gold price consistent: /pmregime vs /sl current_price",
+      "passed": false,
+      "detail": "PM gold: $5192.3, SL current: $3348.0",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC4-03",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "NVDA price consistent: /ta vs /synthesis",
+      "passed": true,
+      "detail": "TA price: 186.03, Synthesis price: 186.03",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC4-04",
+      "category": "coherence",
+      "command": "usdregime",
+      "check_name": "Death cross signal consistent with strength classification",
+      "passed": false,
+      "detail": "Death cross=True (bearish) but classification='cyclical_strength' (bullish). Contradiction.",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC4-05",
+      "category": "coherence",
+      "command": "grahamscreen",
+      "check_name": "Graham screen MoS uses correct denominator (price, not GN)",
+      "passed": true,
+      "detail": "CMG: GN=128.85, Price=33.85, MoS=280.65%, correct=280.65%, wrong_formula=73.73%",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC4-06",
+      "category": "coherence",
+      "command": "synthesis",
+      "check_name": "Null fundamentals \u2192 low conviction synthesis",
+      "passed": true,
+      "detail": "All 6 fundamental metrics null, conviction='LOW'",
+      "expected": "LOW",
+      "actual": "LOW",
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC4-07",
+      "category": "coherence",
+      "command": "netnet",
+      "check_name": "Positive NCAV count plausible for S&P 500",
+      "passed": true,
+      "detail": "30/504 companies with positive NCAV",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GR4-01",
+      "category": "grounding",
+      "command": "btc",
+      "check_name": "BTC composite bias label reflects timeframe majority",
+      "passed": true,
+      "detail": "Bull=3, Bear=2, Composite='leaning_bullish'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR4-02",
+      "category": "grounding",
+      "command": "pmregime",
+      "check_name": "PM regime classification matches gold-DXY correlation",
+      "passed": true,
+      "detail": "Classification: 'macro_driven', Gold-DXY corr: -0.48",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GR4-03",
+      "category": "grounding",
+      "command": "usdregime",
+      "check_name": "USD regime label consistent with death cross status",
+      "passed": false,
+      "detail": "Death cross: True, Classification: 'cyclical_strength' \u2014 CONTRADICTION: death cross but 'strength'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR4-05",
+      "category": "grounding",
+      "command": "sl",
+      "check_name": "Recommended stop method is one of the available methods",
+      "passed": true,
+      "detail": "Recommended: 'percent_based', Available: ['percent_based']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR4-06",
+      "category": "grounding",
+      "command": "grahamscreen",
+      "check_name": "Criteria passed format consistent (N/7)",
+      "passed": true,
+      "detail": "Sample: ['4/7', '5/7', '5/7', '4/7', '4/7']",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "LLM-BTC_PM_USD",
+      "category": "llm_judge",
+      "command": "btc/pm/usd",
+      "check_name": "LLM Judge: Btc Pm Usd",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-TA_SYNTHESIS",
+      "category": "llm_judge",
+      "command": "ta/synthesis/sl",
+      "check_name": "LLM Judge: Ta Synthesis Sl",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-SCREENS_COMP",
+      "category": "llm_judge",
+      "command": "screens/compare",
+      "check_name": "LLM Judge: Screens Compare",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {
+    "btc_pm_usd": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "ta_synthesis_sl": {
+      "weighted_score": 5.0,
+      "dimensions": [
+        [
+          "TA Framework Coverage",
+          7.0,
+          "10 of ~13 Murphy frameworks present (trend, S/R, volume, MAs, MACD, RSI, BB, Fib, stoch, patterns); missing key ones like Ichimoku, ATR, trendlines, volume profile"
+        ],
+        [
+          "Synthesis Quality",
+          5.0,
+          "Fundamentals entirely null (PE, revenue, EPS, margins all missing); tech synthesis just restates TA without adding insight; low conviction neutral signal"
+        ],
+        [
+          "Stop-Loss Framework",
+          8.0,
+          "Percent-based stop with 1.5% risk provided; position sizing detailed ($50.22/unit); 1:1 trailing rule and 8 risk management rules included; but only one explicit stop"
+        ]
+      ]
+    },
+    "screens_compare": {
+      "weighted_score": 5.0,
+      "dimensions": [
+        [
+          "Screening Methodology",
+          6.0,
+          "The Graham defensive screen is applied with criteria_passed counts, but NCAV formula is not shown and the 7 criteria are not explicitly defined, reducing transparency"
+        ],
+        [
+          "Data Freshness",
+          3.0,
+          "The \"as_of\" date of 2026-03-12 is a future date, indicating either projected/forward data or data quality issues; concerning for real-world applicability"
+        ],
+        [
+          "Coverage",
+          7.0,
+          "Universe of 504 with 420 screened and 20 results is reasonable breadth, though limiting to top 20 may exclude valid candidates"
+        ],
+        [
+          "Formula Accuracy",
+          9.0,
+          "Graham Number, Margin of Safety %, and PE\u00d7PB calculations all check out correctly (e.g., CMG: 280.65% MoS, 1.54 PE\u00d7PB)"
+        ],
+        [
+          "Investment Utility",
+          6.0,
+          "Top candidates like CMG, ARE, AMZN show strong value metrics with high MoS, but negative MoS stocks included and no valuation"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "approach": "10_ta_benchmark",
+  "timestamp": "2026-03-13T20:59:49.904859",
+  "llm_enabled": true,
+  "rubric": [
+    {
+      "name": "S/R Quality",
+      "weight": 0.2
+    },
+    {
+      "name": "Entry/Exit Clarity",
+      "weight": 0.2
+    },
+    {
+      "name": "Indicator Interpretation",
+      "weight": 0.15
+    },
+    {
+      "name": "Signal Synthesis",
+      "weight": 0.15
+    },
+    {
+      "name": "Risk Management",
+      "weight": 0.15
+    },
+    {
+      "name": "Pattern Detection",
+      "weight": 0.05
+    },
+    {
+      "name": "Professional Presentation",
+      "weight": 0.1
+    }
+  ],
+  "results": {
+    "btc": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 6.0,
+          "explanation": "The analysis provides good contextual details for some indicators (MACD",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 4.0,
+          "explanation": "The composite presents a bullish signal but fails to reconcile the explicit Bearish_CROSS in Stochastic, the weak volume",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 10.0,
+          "explanation": "The output provides multiple stop-loss methods (swing, ATR, percent), explicit position sizing rules with risk percentag",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 6.0,
+          "explanation": "The head-and-shoulders pattern is plausibly identified with head level and neckline, but lacks price targets, confirmati",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 7.0,
+          "explanation": "Well-organized with correct TA terminology, but significant truncation issues in follow-up suggestions and incomplete se",
+          "asset": "btc"
+        }
+      ],
+      "weighted_score": 6.0
+    },
+    "gold": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 6.0,
+          "explanation": "The composite signal acknowledges conflicts (3 bullish vs 2 bearish) and provides framework breakdown, but fails to expl",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 10.0,
+          "explanation": "The output provides multiple stop-loss methods (swing, ATR, percent), explicit position sizing rules with risk percentag",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 6.0,
+          "explanation": "While the TA terminology is correct and the analysis is comprehensive, the truncated/cut-off sections and disconnected J",
+          "asset": "gold"
+        }
+      ],
+      "weighted_score": 6.0
+    },
+    "AAPL": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 6.0,
+          "explanation": "The output provides multiple stop-loss levels with position sizing guidance, but lacks explicit entry instructions and p",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 7.0,
+          "explanation": "",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 4.0,
+          "explanation": "** The output lists individual indicator signals with a composite tally but fails to explicitly reconcile the conflicts ",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 10.0,
+          "explanation": "Comprehensive risk management with three stop-loss methods (swing, ATR, percent), explicit position sizing rules, traili",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 6.0,
+          "explanation": "The pattern was identified with specific levels and directional signal, but lacked price targets, confirmation criteria,",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 8.0,
+          "explanation": "Well-organized output with correct TA terminology and actionable stop-loss levels, but suffers from truncation issues th",
+          "asset": "AAPL"
+        }
+      ],
+      "weighted_score": 6.45
+    }
+  }
+}

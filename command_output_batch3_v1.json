@@ -1,0 +1,1041 @@
+{
+  "bbb": {
+    "as_of": "2026-03-12",
+    "copper_price": 5.88,
+    "initial_claims": 213000.0,
+    "bbb_ratio": 0.0,
+    "interpretation": "contraction_signal \u2014 recessionary dynamics",
+    "signals": [
+      "RECESSION_WARNING"
+    ],
+    "copper_1y_change_pct": 19.9,
+    "methodology": "Yardeni Boom-Bust Barometer: CRB Raw Industrials (copper proxy) / Initial Claims. Peaks at end of booms, troughs at end of recessions. Unlike monthly CEI, this is available weekly with minimal lag."
+  },
+  "fsmi": {
+    "error": "float() argument must be a string or a real number, not 'Timestamp'"
+  },
+  "vigilantes": {
+    "as_of": "2026-03-12",
+    "yield_10y": null,
+    "nominal_gdp_yoy_pct": null,
+    "regime": "insufficient_data",
+    "methodology": "Yardeni Bond Vigilantes Model (coined 1983): 10Y Treasury yield vs. Nominal GDP YoY growth. When yield exceeds GDP growth, bond vigilantes are enforcing fiscal discipline. When yield is suppressed below GDP growth, central bank policy dominates."
+  },
+  "drawdown": {
+    "as_of": "2026-03-12",
+    "current_price": 6733.8,
+    "all_time_high": 7016.5,
+    "peak_date": "2026-01-12 00:00:00",
+    "drawdown_pct": -4.03,
+    "classification": "panic_attack",
+    "description": "4.0% pullback \u2014 Yardeni 'panic attack'. 66 such events occurred 2009-2020. Typically short-lived within bull markets.",
+    "52wk_high": 7016.5,
+    "52wk_low": 5020.2,
+    "pct_from_52wk_high": -4.03,
+    "methodology": "Yardeni Market Decline Classification: <10% = panic attack (short-lived dip within a bull market), 10-20% = correction, >20% = bear market (typically recession-linked). Key differentiator: if forward EPS continues rising during the drawdown, it's more likely a correction. If forward EPS is falling, bear market risk is elevated."
+  },
+  "peers_NVDA": {
+    "reference_ticker": "NVDA",
+    "sector": "Information Technology",
+    "industry_group": "Semiconductors & Semiconductor Equipment",
+    "peer_level": "industry_group",
+    "peers_found": 17,
+    "peers_shown": 8,
+    "peer_medians": {
+      "gross_margin_pct": 51.08,
+      "operating_margin_pct": 23.55,
+      "net_margin_pct": 18.06,
+      "roe_quarterly_pct": 4.71,
+      "fcf_margin_pct": 23.78,
+      "revenue_yoy_growth_pct": -25.09
+    },
+    "comparison": [
+      {
+        "ticker": "NVDA",
+        "is_reference": true,
+        "company": "NVIDIA CORP",
+        "quarter": "2020-Q2",
+        "revenue": 3080000000.0,
+        "net_income": 917000000.0,
+        "gross_margin_pct": 65.06,
+        "operating_margin_pct": 31.69,
+        "net_margin_pct": 29.77,
+        "roe_quarterly_pct": 7.0,
+        "ocf_to_ni": 0.99,
+        "fcf_margin_pct": 24.48,
+        "debt_to_equity": 0.53,
+        "current_ratio": 10.29,
+        "revenue_yoy_growth_pct": -45.59
+      },
+      {
+        "ticker": "ADI",
+        "is_reference": false,
+        "company": "Analog Devices, Inc.",
+        "quarter": "2020-Q2",
+        "revenue": 1317060000.0,
+        "net_income": 267696000.0,
+        "gross_margin_pct": 64.29,
+        "operating_margin_pct": 26.12,
+        "net_margin_pct": 20.33,
+        "roe_quarterly_pct": 2.31,
+        "ocf_to_ni": 1.6,
+        "fcf_margin_pct": 28.01,
+        "debt_to_equity": null,
+        "current_ratio": 1.3,
+        "revenue_yoy_growth_pct": -20.73
+      },
+      {
+        "ticker": "AMAT",
+        "is_reference": false,
+        "company": "APPLIED MATERIALS INC /DE",
+        "quarter": "2020-Q2",
+        "revenue": 3957000000.0,
+        "net_income": 755000000.0,
+        "gross_margin_pct": 44.2,
+        "operating_margin_pct": 23.55,
+        "net_margin_pct": 19.08,
+        "roe_quarterly_pct": 8.37,
+        "ocf_to_ni": 0.84,
+        "fcf_margin_pct": 14.25,
+        "debt_to_equity": null,
+        "current_ratio": 2.67,
+        "revenue_yoy_growth_pct": -29.11
+      },
+      {
+        "ticker": "AMD",
+        "is_reference": false,
+        "company": "ADVANCED MICRO DEVICES, INC.",
+        "quarter": "2019-Q4",
+        "revenue": 2127000000.0,
+        "net_income": 170000000.0,
+        "gross_margin_pct": 44.62,
+        "operating_margin_pct": 16.36,
+        "net_margin_pct": 7.99,
+        "roe_quarterly_pct": 6.01,
+        "ocf_to_ni": 2.6,
+        "fcf_margin_pct": 18.81,
+        "debt_to_equity": 0.17,
+        "current_ratio": 1.95,
+        "revenue_yoy_growth_pct": -34.43
+      },
+      {
+        "ticker": "AVGO",
+        "is_reference": false,
+        "company": "Broadcom Inc.",
+        "quarter": "2020-Q2",
+        "revenue": 5742000000.0,
+        "net_income": 563000000.0,
+        "gross_margin_pct": 55.54,
+        "operating_margin_pct": 13.34,
+        "net_margin_pct": 9.8,
+        "roe_quarterly_pct": 2.35,
+        "ocf_to_ni": 5.71,
+        "fcf_margin_pct": 53.38,
+        "debt_to_equity": 1.91,
+        "current_ratio": 2.15,
+        "revenue_yoy_growth_pct": -13.13
+      },
+      {
+        "ticker": "FSLR",
+        "is_reference": false,
+        "company": "First Solar, Inc.",
+        "quarter": "2020-Q1",
+        "revenue": 532124000.0,
+        "net_income": 90704000.0,
+        "gross_margin_pct": 16.98,
+        "operating_margin_pct": 0.31,
+        "net_margin_pct": 17.05,
+        "roe_quarterly_pct": 1.75,
+        "ocf_to_ni": -5.57,
+        "fcf_margin_pct": -116.03,
+        "debt_to_equity": 0.09,
+        "current_ratio": 3.75,
+        "revenue_yoy_growth_pct": -33.76
+      },
+      {
+        "ticker": "INTC",
+        "is_reference": false,
+        "company": "INTEL CORPORATION",
+        "quarter": "2019-Q3",
+        "revenue": 19190000000.0,
+        "net_income": 5990000000.0,
+        "gross_margin_pct": 58.86,
+        "operating_margin_pct": 33.6,
+        "net_margin_pct": 31.21,
+        "roe_quarterly_pct": 8.07,
+        "ocf_to_ni": 1.79,
+        "fcf_margin_pct": 31.47,
+        "debt_to_equity": null,
+        "current_ratio": 1.2,
+        "revenue_yoy_growth_pct": 4.67
+      },
+      {
+        "ticker": "KLAC",
+        "is_reference": false,
+        "company": "KLA CORP",
+        "quarter": "2020-Q1",
+        "revenue": 1423964000.0,
+        "net_income": 78452000.0,
+        "gross_margin_pct": 58.56,
+        "operating_margin_pct": null,
+        "net_margin_pct": 5.51,
+        "roe_quarterly_pct": 3.4,
+        "ocf_to_ni": 5.63,
+        "fcf_margin_pct": 27.99,
+        "debt_to_equity": 1.49,
+        "current_ratio": 2.61,
+        "revenue_yoy_growth_pct": -21.06
+      },
+      {
+        "ticker": "LRCX",
+        "is_reference": false,
+        "company": "LAM RESEARCH CORPORATION",
+        "quarter": "2020-Q1",
+        "revenue": 2503625000.0,
+        "net_income": 574781000.0,
+        "gross_margin_pct": 46.61,
+        "operating_margin_pct": 27.72,
+        "net_margin_pct": 22.96,
+        "roe_quarterly_pct": 12.67,
+        "ocf_to_ni": 0.94,
+        "fcf_margin_pct": 19.57,
+        "debt_to_equity": 1.12,
+        "current_ratio": 4.47,
+        "revenue_yoy_growth_pct": -34.93
+      }
+    ]
+  },
+  "allocation_NVDA": {
+    "ticker": "NVDA",
+    "company": "NVIDIA CORP",
+    "quarters_analyzed": 24,
+    "quarterly_data": [
+      {
+        "quarter": "2020-Q2",
+        "dividends_paid": -98000000.0,
+        "stock_based_compensation": 224000000.0,
+        "free_cash_flow": 754000000.0,
+        "diluted_shares": 622000000.0,
+        "sbc_to_fcf_pct": 29.71
+      },
+      {
+        "quarter": "2020-Q3",
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 374000000.0,
+        "free_cash_flow": 1350000000.0,
+        "diluted_shares": 2504000000.0,
+        "sbc_to_fcf_pct": 27.7
+      },
+      {
+        "quarter": "2020-Q4",
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 383000000.0,
+        "free_cash_flow": 806000000.0,
+        "diluted_shares": 2520000000.0,
+        "sbc_to_fcf_pct": 47.52
+      },
+      {
+        "quarter": "2021-Q1",
+        "share_repurchases": -0.0,
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 416000000.0,
+        "free_cash_flow": 2067000000.0,
+        "diluted_shares": -3136000000.0,
+        "sbc_to_fcf_pct": 20.13,
+        "net_buyback_less_sbc": -416000000.0
+      },
+      {
+        "quarter": "2021-Q2",
+        "share_repurchases": -0.0,
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 429000000.0,
+        "free_cash_flow": 1576000000.0,
+        "diluted_shares": 2528000000.0,
+        "sbc_to_fcf_pct": 27.22,
+        "net_buyback_less_sbc": -429000000.0
+      },
+      {
+        "quarter": "2021-Q3",
+        "share_repurchases": -0.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 465000000.0,
+        "free_cash_flow": 2499000000.0,
+        "diluted_shares": 2532000000.0,
+        "sbc_to_fcf_pct": 18.61,
+        "net_buyback_less_sbc": -465000000.0
+      },
+      {
+        "quarter": "2021-Q4",
+        "share_repurchases": -0.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 559000000.0,
+        "free_cash_flow": 1297000000.0,
+        "diluted_shares": 2538000000.0,
+        "sbc_to_fcf_pct": 43.1,
+        "net_buyback_less_sbc": -559000000.0
+      },
+      {
+        "quarter": "2022-Q1",
+        "share_repurchases": -0.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 551000000.0,
+        "free_cash_flow": 2760000000.0,
+        "diluted_shares": -5063000000.0,
+        "sbc_to_fcf_pct": 19.96,
+        "net_buyback_less_sbc": -551000000.0
+      },
+      {
+        "quarter": "2022-Q2",
+        "share_repurchases": -1996000000.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 578000000.0,
+        "free_cash_flow": 1731000000.0,
+        "diluted_shares": 2537000000.0,
+        "buyback_to_fcf_pct": 115.31,
+        "sbc_to_fcf_pct": 33.39,
+        "net_buyback_less_sbc": 1418000000.0
+      },
+      {
+        "quarter": "2022-Q3",
+        "share_repurchases": -3345000000.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 649000000.0,
+        "free_cash_flow": 1270000000.0,
+        "diluted_shares": 2516000000.0,
+        "buyback_to_fcf_pct": 263.39,
+        "sbc_to_fcf_pct": 51.1,
+        "net_buyback_less_sbc": 2696000000.0
+      },
+      {
+        "quarter": "2022-Q4",
+        "share_repurchases": -3485000000.0,
+        "dividends_paid": -100000000.0,
+        "stock_based_compensation": 745000000.0,
+        "free_cash_flow": -932000000.0,
+        "diluted_shares": 2499000000.0,
+        "buyback_to_fcf_pct": -373.93,
+        "sbc_to_fcf_pct": -79.94,
+        "net_buyback_less_sbc": 2740000000.0
+      },
+      {
+        "quarter": "2023-Q1",
+        "share_repurchases": -1213000000.0,
+        "dividends_paid": -98000000.0,
+        "stock_based_compensation": 737000000.0,
+        "free_cash_flow": 1739000000.0,
+        "diluted_shares": 17518000000.0,
+        "buyback_to_fcf_pct": 69.75,
+        "sbc_to_fcf_pct": 42.38,
+        "net_buyback_less_sbc": 476000000.0
+      },
+      {
+        "quarter": "2023-Q2",
+        "share_repurchases": -0.0,
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 735000000.0,
+        "free_cash_flow": 2663000000.0,
+        "diluted_shares": 2490000000.0,
+        "sbc_to_fcf_pct": 27.6,
+        "net_buyback_less_sbc": -735000000.0
+      },
+      {
+        "quarter": "2023-Q3",
+        "share_repurchases": -3067000000.0,
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 842000000.0,
+        "free_cash_flow": 6059000000.0,
+        "diluted_shares": 24994000000.0,
+        "buyback_to_fcf_pct": 50.62,
+        "sbc_to_fcf_pct": 13.9,
+        "net_buyback_less_sbc": 2225000000.0
+      },
+      {
+        "quarter": "2023-Q4",
+        "share_repurchases": -3807000000.0,
+        "dividends_paid": -99000000.0,
+        "stock_based_compensation": 979000000.0,
+        "free_cash_flow": 7054000000.0,
+        "diluted_shares": 24940000000.0,
+        "buyback_to_fcf_pct": 53.97,
+        "sbc_to_fcf_pct": 13.88,
+        "net_buyback_less_sbc": 2828000000.0
+      },
+      {
+        "quarter": "2024-Q1",
+        "share_repurchases": -2659000000.0,
+        "dividends_paid": -98000000.0,
+        "stock_based_compensation": 993000000.0,
+        "free_cash_flow": 11245000000.0,
+        "diluted_shares": -27484000000.0,
+        "buyback_to_fcf_pct": 23.65,
+        "sbc_to_fcf_pct": 8.83,
+        "net_buyback_less_sbc": 1666000000.0
+      },
+      {
+        "quarter": "2024-Q2",
+        "share_repurchases": -7740000000.0,
+        "dividends_paid": -98000000.0,
+        "stock_based_compensation": 1011000000.0,
+        "free_cash_flow": 14976000000.0,
+        "diluted_shares": 24890000000.0,
+        "buyback_to_fcf_pct": 51.68,
+        "sbc_to_fcf_pct": 6.75,
+        "net_buyback_less_sbc": 6729000000.0
+      },
+      {
+        "quarter": "2024-Q3",
+        "share_repurchases": -7158000000.0,
+        "dividends_paid": -246000000.0,
+        "stock_based_compensation": 1154000000.0,
+        "free_cash_flow": 13511000000.0,
+        "diluted_shares": 24848000000.0,
+        "buyback_to_fcf_pct": 52.98,
+        "sbc_to_fcf_pct": 8.54,
+        "net_buyback_less_sbc": 6004000000.0
+      },
+      {
+        "quarter": "2024-Q4",
+        "share_repurchases": -10997000000.0,
+        "dividends_paid": -245000000.0,
+        "stock_based_compensation": 1252000000.0,
+        "free_cash_flow": 16814000000.0,
+        "diluted_shares": 24774000000.0,
+        "buyback_to_fcf_pct": 65.4,
+        "sbc_to_fcf_pct": 7.45,
+        "net_buyback_less_sbc": 9745000000.0
+      },
+      {
+        "quarter": "2025-Q1",
+        "share_repurchases": -7811000000.0,
+        "dividends_paid": -245000000.0,
+        "stock_based_compensation": 1320000000.0,
+        "free_cash_flow": 15552000000.0,
+        "diluted_shares": -49708000000.0,
+        "buyback_to_fcf_pct": 50.23,
+        "sbc_to_fcf_pct": 8.49,
+        "net_buyback_less_sbc": 6491000000.0
+      },
+      {
+        "quarter": "2025-Q2",
+        "share_repurchases": -14095000000.0,
+        "dividends_paid": -244000000.0,
+        "stock_based_compensation": 1474000000.0,
+        "free_cash_flow": 26187000000.0,
+        "diluted_shares": 24611000000.0,
+        "buyback_to_fcf_pct": 53.82,
+        "sbc_to_fcf_pct": 5.63,
+        "net_buyback_less_sbc": 12621000000.0
+      },
+      {
+        "quarter": "2025-Q3",
+        "share_repurchases": -9720000000.0,
+        "dividends_paid": -244000000.0,
+        "stock_based_compensation": 1624000000.0,
+        "free_cash_flow": 13470000000.0,
+        "diluted_shares": 24532000000.0,
+        "buyback_to_fcf_pct": 72.16,
+        "sbc_to_fcf_pct": 12.06,
+        "net_buyback_less_sbc": 8096000000.0
+      },
+      {
+        "quarter": "2025-Q4",
+        "share_repurchases": -12456000000.0,
+        "stock_based_compensation": 1655000000.0,
+        "free_cash_flow": 22115000000.0,
+        "diluted_shares": 24483000000.0,
+        "buyback_to_fcf_pct": 56.32,
+        "sbc_to_fcf_pct": 7.48,
+        "net_buyback_less_sbc": 10801000000.0
+      },
+      {
+        "quarter": "2026-Q1",
+        "share_repurchases": -3815000000.0,
+        "stock_based_compensation": 1633000000.0,
+        "free_cash_flow": 34904000000.0,
+        "diluted_shares": -49112000000.0,
+        "buyback_to_fcf_pct": 10.93,
+        "sbc_to_fcf_pct": 4.68,
+        "net_buyback_less_sbc": 2182000000.0
+      }
+    ],
+    "share_count_trend": "volatile",
+    "latest_quarter_summary": {
+      "total_shareholder_return": 98000000.0,
+      "buyback_strategy": "inactive",
+      "dividend_strategy": "active"
+    }
+  },
+  "balance_NVDA": {
+    "ticker": "NVDA",
+    "company": "NVIDIA CORP",
+    "quarters_analyzed": 24,
+    "quarterly_data": [
+      {
+        "days_sales_outstanding": 55.72,
+        "days_payable_outstanding": 63.65,
+        "inventory_turnover": 0.95,
+        "days_inventory_outstanding": 94.35,
+        "cash_conversion_cycle": 86.42,
+        "working_capital": 17681000000.0,
+        "working_capital_to_revenue_pct": 574.06,
+        "quarter": "2020-Q2",
+        "net_debt": -8535000000.0,
+        "net_cash_position": 8535000000.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 48.52,
+        "days_payable_outstanding": 50.52,
+        "inventory_turnover": 1.14,
+        "days_inventory_outstanding": 79.25,
+        "cash_conversion_cycle": 77.25,
+        "working_capital": 12271000000.0,
+        "working_capital_to_revenue_pct": 317.41,
+        "quarter": "2020-Q3",
+        "net_debt": 3686000000.0,
+        "net_cash_position": -3686000000.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 48.48,
+        "days_payable_outstanding": 55.91,
+        "inventory_turnover": 1.18,
+        "days_inventory_outstanding": 76.19,
+        "cash_conversion_cycle": 68.76,
+        "working_capital": 10724000000.0,
+        "working_capital_to_revenue_pct": 226.91,
+        "quarter": "2020-Q4",
+        "net_debt": 4710000000.0,
+        "net_cash_position": -4710000000.0,
+        "long_term_debt_pct": 85.66,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 43.7,
+        "days_payable_outstanding": 56.02,
+        "inventory_turnover": 1.01,
+        "days_inventory_outstanding": 89.02,
+        "cash_conversion_cycle": 76.7,
+        "working_capital": 12130000000.0,
+        "working_capital_to_revenue_pct": 242.45,
+        "quarter": "2021-Q1",
+        "net_debt": 6116000000.0,
+        "net_cash_position": -6116000000.0,
+        "long_term_debt_pct": 85.65,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 48.08,
+        "days_payable_outstanding": 53.95,
+        "inventory_turnover": 1.02,
+        "days_inventory_outstanding": 88.23,
+        "cash_conversion_cycle": 82.36,
+        "working_capital": 14123000000.0,
+        "working_capital_to_revenue_pct": 249.48,
+        "quarter": "2021-Q2",
+        "net_debt": 5985000000.0,
+        "net_cash_position": -5985000000.0,
+        "long_term_debt_pct": 85.65,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 49.6,
+        "days_payable_outstanding": 57.88,
+        "inventory_turnover": 1.08,
+        "days_inventory_outstanding": 83.01,
+        "cash_conversion_cycle": 74.73,
+        "working_capital": 21358000000.0,
+        "working_capital_to_revenue_pct": 328.23,
+        "quarter": "2021-Q3",
+        "net_debt": 6315000000.0,
+        "net_cash_position": -6315000000.0,
+        "long_term_debt_pct": 91.63,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 50.1,
+        "days_payable_outstanding": 60.58,
+        "inventory_turnover": 1.11,
+        "days_inventory_outstanding": 81.3,
+        "cash_conversion_cycle": 70.82,
+        "working_capital": 22194000000.0,
+        "working_capital_to_revenue_pct": 312.46,
+        "quarter": "2021-Q4",
+        "net_debt": 9656000000.0,
+        "net_cash_position": -9656000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 54.76,
+        "days_payable_outstanding": 60.72,
+        "inventory_turnover": 1.01,
+        "days_inventory_outstanding": 88.71,
+        "cash_conversion_cycle": 82.75,
+        "working_capital": 24494000000.0,
+        "working_capital_to_revenue_pct": 320.48,
+        "quarter": "2022-Q1",
+        "net_debt": 8956000000.0,
+        "net_cash_position": -8956000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 59.05,
+        "days_payable_outstanding": 62.97,
+        "inventory_turnover": 0.9,
+        "days_inventory_outstanding": 99.64,
+        "cash_conversion_cycle": 95.72,
+        "working_capital": 24013000000.0,
+        "working_capital_to_revenue_pct": 289.73,
+        "quarter": "2022-Q2",
+        "net_debt": 7060000000.0,
+        "net_cash_position": -7060000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 71.38,
+        "days_payable_outstanding": 57.51,
+        "inventory_turnover": 0.97,
+        "days_inventory_outstanding": 92.38,
+        "cash_conversion_cycle": 106.25,
+        "working_capital": 19845000000.0,
+        "working_capital_to_revenue_pct": 296.02,
+        "quarter": "2022-Q3",
+        "net_debt": 7936000000.0,
+        "net_cash_position": -7936000000.0,
+        "long_term_debt_pct": 88.59,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 74.48,
+        "days_payable_outstanding": 48.73,
+        "inventory_turnover": 0.62,
+        "days_inventory_outstanding": 145.56,
+        "cash_conversion_cycle": 171.31,
+        "working_capital": 16368000000.0,
+        "working_capital_to_revenue_pct": 275.97,
+        "quarter": "2022-Q4",
+        "net_debt": 8150000000.0,
+        "net_cash_position": -8150000000.0,
+        "long_term_debt_pct": 88.59,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 56.92,
+        "days_payable_outstanding": 48.41,
+        "inventory_turnover": 0.43,
+        "days_inventory_outstanding": 209.34,
+        "cash_conversion_cycle": 217.85,
+        "working_capital": 16510000000.0,
+        "working_capital_to_revenue_pct": 272.85,
+        "quarter": "2023-Q1",
+        "net_debt": 7564000000.0,
+        "net_cash_position": -7564000000.0,
+        "long_term_debt_pct": 88.59,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 51.06,
+        "days_payable_outstanding": 40.37,
+        "inventory_turnover": 0.55,
+        "days_inventory_outstanding": 163.12,
+        "cash_conversion_cycle": 173.81,
+        "working_capital": 17623000000.0,
+        "working_capital_to_revenue_pct": 245.04,
+        "quarter": "2023-Q2",
+        "net_debt": 5875000000.0,
+        "net_cash_position": -5875000000.0,
+        "long_term_debt_pct": 88.59,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 47.08,
+        "days_payable_outstanding": 42.92,
+        "inventory_turnover": 0.94,
+        "days_inventory_outstanding": 96.1,
+        "cash_conversion_cycle": 100.26,
+        "working_capital": 18463000000.0,
+        "working_capital_to_revenue_pct": 136.69,
+        "quarter": "2023-Q3",
+        "net_debt": 3922000000.0,
+        "net_cash_position": -3922000000.0,
+        "long_term_debt_pct": 87.13,
+        "current_debt_pct": 12.87
+      },
+      {
+        "days_sales_outstanding": 41.27,
+        "days_payable_outstanding": 45.38,
+        "inventory_turnover": 0.99,
+        "days_inventory_outstanding": 91.12,
+        "cash_conversion_cycle": 87.01,
+        "working_capital": 23557000000.0,
+        "working_capital_to_revenue_pct": 130.01,
+        "quarter": "2023-Q4",
+        "net_debt": 4187000000.0,
+        "net_cash_position": -4187000000.0,
+        "long_term_debt_pct": 87.13,
+        "current_debt_pct": 12.87
+      },
+      {
+        "days_sales_outstanding": 40.71,
+        "days_payable_outstanding": 45.73,
+        "inventory_turnover": 1.01,
+        "days_inventory_outstanding": 89.49,
+        "cash_conversion_cycle": 84.47,
+        "working_capital": 33714000000.0,
+        "working_capital_to_revenue_pct": 152.53,
+        "quarter": "2024-Q1",
+        "net_debt": 2429000000.0,
+        "net_cash_position": -2429000000.0,
+        "long_term_debt_pct": 87.13,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 42.73,
+        "days_payable_outstanding": 43.34,
+        "inventory_turnover": 0.96,
+        "days_inventory_outstanding": 93.61,
+        "cash_conversion_cycle": 93.0,
+        "working_capital": 38506000000.0,
+        "working_capital_to_revenue_pct": 147.85,
+        "quarter": "2024-Q2",
+        "net_debt": 2123000000.0,
+        "net_cash_position": -2123000000.0,
+        "long_term_debt_pct": 87.13,
+        "current_debt_pct": 12.87
+      },
+      {
+        "days_sales_outstanding": 42.34,
+        "days_payable_outstanding": 44.36,
+        "inventory_turnover": 1.12,
+        "days_inventory_outstanding": 80.46,
+        "cash_conversion_cycle": 78.44,
+        "working_capital": 45664000000.0,
+        "working_capital_to_revenue_pct": 152.01,
+        "quarter": "2024-Q3",
+        "net_debt": -102000000.0,
+        "net_cash_position": 102000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 45.39,
+        "days_payable_outstanding": 53.97,
+        "inventory_turnover": 1.17,
+        "days_inventory_outstanding": 77.17,
+        "cash_conversion_cycle": 68.59,
+        "working_capital": 51161000000.0,
+        "working_capital_to_revenue_pct": 145.83,
+        "quarter": "2024-Q4",
+        "net_debt": -645000000.0,
+        "net_cash_position": 645000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 52.78,
+        "days_payable_outstanding": 53.53,
+        "inventory_turnover": 1.05,
+        "days_inventory_outstanding": 85.51,
+        "cash_conversion_cycle": 84.76,
+        "working_capital": 62079000000.0,
+        "working_capital_to_revenue_pct": 157.84,
+        "quarter": "2025-Q1",
+        "net_debt": -126000000.0,
+        "net_cash_position": 126000000.0,
+        "long_term_debt_pct": 100.0,
+        "current_debt_pct": 0.0
+      },
+      {
+        "days_sales_outstanding": 45.21,
+        "days_payable_outstanding": 37.93,
+        "inventory_turnover": 1.53,
+        "days_inventory_outstanding": 58.64,
+        "cash_conversion_cycle": 65.92,
+        "working_capital": 63393000000.0,
+        "working_capital_to_revenue_pct": 143.87,
+        "quarter": "2025-Q2",
+        "net_debt": -6770000000.0,
+        "net_cash_position": 6770000000.0,
+        "long_term_debt_pct": 100.0
+      },
+      {
+        "days_sales_outstanding": 53.54,
+        "days_payable_outstanding": 63.29,
+        "inventory_turnover": 0.86,
+        "days_inventory_outstanding": 104.47,
+        "cash_conversion_cycle": 94.72,
+        "working_capital": 77962000000.0,
+        "working_capital_to_revenue_pct": 166.79,
+        "quarter": "2025-Q3",
+        "net_debt": -3173000000.0,
+        "net_cash_position": 3173000000.0,
+        "long_term_debt_pct": 100.0
+      },
+      {
+        "days_sales_outstanding": 52.72,
+        "days_payable_outstanding": 51.21,
+        "inventory_turnover": 0.77,
+        "days_inventory_outstanding": 117.47,
+        "cash_conversion_cycle": 118.98,
+        "working_capital": 90417000000.0,
+        "working_capital_to_revenue_pct": 158.61,
+        "quarter": "2025-Q4",
+        "net_debt": -3019000000.0,
+        "net_cash_position": 3019000000.0,
+        "long_term_debt_pct": 88.2,
+        "current_debt_pct": 11.8
+      },
+      {
+        "days_sales_outstanding": 50.82,
+        "days_payable_outstanding": 51.84,
+        "inventory_turnover": 0.8,
+        "days_inventory_outstanding": 113.08,
+        "cash_conversion_cycle": 112.06,
+        "working_capital": 93442000000.0,
+        "working_capital_to_revenue_pct": 137.16,
+        "quarter": "2026-Q1",
+        "net_debt": -2137000000.0,
+        "net_cash_position": 2137000000.0,
+        "long_term_debt_pct": 88.2,
+        "current_debt_pct": 11.8
+      }
+    ],
+    "days_sales_outstanding_trend": "volatile",
+    "inventory_turnover_trend": "volatile",
+    "cash_conversion_cycle_trend": "volatile",
+    "working_capital_trend": "declining",
+    "latest_summary": {
+      "days_sales_outstanding": 55.72,
+      "days_payable_outstanding": 63.65,
+      "inventory_turnover": 0.95,
+      "days_inventory_outstanding": 94.35,
+      "cash_conversion_cycle": 86.42,
+      "working_capital": 17681000000.0,
+      "working_capital_to_revenue_pct": 574.06,
+      "quarter": "2020-Q2",
+      "net_debt": -8535000000.0,
+      "net_cash_position": 8535000000.0,
+      "current_debt_pct": 0.0
+    }
+  },
+  "riskpremium": {
+    "as_of": "2026-03-12",
+    "vix_regime": {
+      "level": 25.3,
+      "percentile_1y": 92.1,
+      "tier": 5,
+      "direction": "rising",
+      "days_since_peak": 6,
+      "peak_60d": 29.5
+    },
+    "vanna_charm_regime": {
+      "state": "selling_pressure",
+      "interpretation": "VIX rising rapidly \u2014 dealers adding hedges creating selling pressure. Vanna+charm flows negative for equities."
+    },
+    "cta_proxy": {
+      "state": "partially_deployed",
+      "es_price": 6733.8,
+      "sma_50": 6914.1,
+      "sma_200": 6628.1,
+      "es_vs_200sma_pct": 1.6,
+      "es_vs_50sma_pct": -2.6,
+      "interpretation": "ES +1.6% above 200SMA \u2014 CTAs partially deployed. Some remaining buying potential if trend strengthens."
+    },
+    "credit_state": {
+      "hy_oas_bps": 306.0,
+      "hy_oas_pct": 3.06,
+      "direction": "stable",
+      "stress_level": "elevated",
+      "interpretation": "HY spread at 306bps \u2014 above average \u2014 watchful (65th pctile, 1Y)"
+    },
+    "wall_of_worry_phase": "fear",
+    "wall_of_worry_interpretation": "Fear phase \u2014 VIX elevated + credit widening. Opportunities building for contrarian longs once flow reverses.",
+    "risk_premium_state": "expanding",
+    "opportunity_score": 4.8,
+    "opportunity_components": {
+      "vix_opportunity": 5,
+      "vanna_charm_opportunity": 4,
+      "cta_buying_potential": 4,
+      "credit_opportunity": 6
+    },
+    "vol_compression": {
+      "vix_bb_width_20d": 11.67,
+      "vix_bb_width_percentile_60d": 88.0,
+      "compressed": false,
+      "interpretation": "VIX Bollinger Band width at 88th percentile \u2014 normal volatility regime."
+    },
+    "signals": [
+      "CREDIT_STRESS_ELEVATED",
+      "WALL_FEAR"
+    ],
+    "summary": "Risk premium expanding. VIX at 25.3 (tier 5, rising), wall of worry in 'fear' phase. Opportunity score: 4.8/10."
+  },
+  "crossasset": {
+    "as_of": "2026-03-12",
+    "returns_20d": {
+      "spx": -3.26,
+      "gold": 2.23,
+      "silver": 4.02,
+      "copper": -1.24,
+      "dxy": 2.67,
+      "btc": 2.75
+    },
+    "relative_strength": {
+      "btc_vs_spx": {
+        "ratio_current": 10.3734,
+        "ratio_20d_ago": 9.6336,
+        "pct_change": 7.7,
+        "trend": "btc_outperforming",
+        "signal": null
+      },
+      "gold_vs_spx": {
+        "ratio_current": 0.77,
+        "ratio_20d_ago": 0.7286,
+        "pct_change": 5.7,
+        "trend": "gold_outperforming",
+        "signal": null
+      },
+      "btc_vs_gold": {
+        "ratio_current": 13.4727,
+        "ratio_20d_ago": 13.2215,
+        "pct_change": 1.9,
+        "trend": "stable",
+        "signal": null
+      },
+      "silver_vs_gold": {
+        "ratio_current": 0.0168,
+        "ratio_20d_ago": 0.0165,
+        "pct_change": 1.7,
+        "trend": "stable",
+        "signal": null
+      }
+    },
+    "correlations_20d": {
+      "btc_spx": 0.59,
+      "gold_spx": 0.16,
+      "gold_dxy": -0.48,
+      "silver_gold": 0.83,
+      "copper_spx": 0.6
+    },
+    "divergences": [],
+    "momentum_failures": [],
+    "regime_summary": "risk_on_selective",
+    "signals": [
+      "SELECTIVE_RISK_ON"
+    ],
+    "summary": "Cross-asset regime: risk on selective. Leader: SILVER (+4.0%), Laggard: SPX (-3.3%)."
+  },
+  "intermarket": {
+    "analysis": "murphy_intermarket",
+    "as_of": "2026-03-12",
+    "available": true,
+    "relationships": [
+      {
+        "pair": "Copper vs 10Y Yield",
+        "murphy_theory": "Positive (rising commodities \u2192 rising yields)",
+        "actual_correlation": 0.213,
+        "aligned": true
+      },
+      {
+        "pair": "DXY vs Gold",
+        "murphy_theory": "Negative (strong dollar \u2192 weaker commodities)",
+        "actual_correlation": -0.444,
+        "aligned": true
+      },
+      {
+        "pair": "DXY vs Crude Oil",
+        "murphy_theory": "Negative (strong dollar \u2192 weaker oil)",
+        "actual_correlation": 0.412,
+        "aligned": false
+      },
+      {
+        "pair": "10Y Yield vs S&P 500",
+        "murphy_theory": "Context-dependent (growth: positive / inflation: negative)",
+        "actual_correlation": 0.362,
+        "context": "positive"
+      },
+      {
+        "pair": "Gold vs 10Y Yield",
+        "murphy_theory": "Negative (gold = inflation hedge, competes with yield)",
+        "actual_correlation": 0.203,
+        "aligned": false
+      }
+    ],
+    "alignment_score": "2/5 relationships aligned with Murphy theory",
+    "regime": "Anomalous regime \u2014 intermarket relationships breaking down",
+    "dow_theory": {
+      "available": true,
+      "sp500_trend": "bearish",
+      "russell_2000_trend": "bearish",
+      "sp500_vs_sma50": "below",
+      "russell_vs_sma50": "below",
+      "confirmation": "CONFIRMED_BEARISH \u2014 both averages in downtrend (Dow Theory sell signal)"
+    }
+  },
+  "synthesize": {
+    "as_of": "2026-03-12 08:05 UTC",
+    "regime_summary": {
+      "growth": "contraction",
+      "inflation": "rising_from_low_base",
+      "employment": "moderate",
+      "rates": "easing",
+      "credit": "elevated",
+      "credit_stress_level": "elevated",
+      "housing": "data_unavailable",
+      "financial_stress_score": 4.0,
+      "late_cycle_signals": "4/13",
+      "consumer_health": "?"
+    },
+    "contradictions": [],
+    "contradiction_count": 0,
+    "coherence_status": "CLEAN",
+    "historical_analogues": [
+      {
+        "period": "Q4 2018 (Fed overtightening)",
+        "match_pct": 50.0,
+        "what_followed": "20% SPX drawdown (Sep-Dec 2018), Fed pivot to cuts in 2019",
+        "lesson": "Tight labor + Fed hiking + credit widening = equity correction. Fed pivot was the catalyst for recovery."
+      },
+      {
+        "period": "H2 2021 (peak euphoria)",
+        "match_pct": 50.0,
+        "what_followed": "2022 bear market (-25% SPX), worst bond year in decades, Fed hiked aggressively",
+        "lesson": "Ultra-tight spreads + rising inflation + accommodative Fed = mispriced risk. Inflation was not transitory."
+      },
+      {
+        "period": "2024-2025 (higher-for-longer)",
+        "match_pct": 50.0,
+        "what_followed": "Narrow AI-driven rally, broadening concerns, rate cut debate, carry trade unwind (Aug 2024)",
+        "lesson": "Narrow markets with sticky inflation and high rates are fragile. Concentration risk + vol compression = sharp corrections on catalysts."
+      }
+    ],
+    "so_what_chains": [
+      {
+        "observation": "Credit spreads: elevated (306bps)",
+        "because": "Risk repricing \u2014 either fundamental deterioration or liquidity withdrawal",
+        "so_what": "Credit leads equity by 2-3 months. Widening spreads precede earnings downgrades and equity selloffs.",
+        "portfolio_action": "Reduce HY and leveraged loan exposure. Move up in quality. Add Treasury allocation."
+      },
+      {
+        "observation": "Growth regime: contraction",
+        "because": "ISM decomposition suggests weakening new orders and/or rising inventories",
+        "so_what": "Earnings growth will decelerate. Forward guidance likely to disappoint. Cyclicals most exposed.",
+        "portfolio_action": "Defensive rotation: Healthcare > Discretionary, Staples > Cyclicals, Quality > Momentum"
+      }
+    ],
+    "recommendations": {
+      "equity_positioning": [],
+      "fixed_income": [
+        "Credit spreads elevated \u2014 avoid HY, favor IG or Treasuries"
+      ],
+      "sector_tilts": [],
+      "risk_management": [],
+      "conviction": "MODERATE",
+      "conviction_note": "Some uncertainty. Reduce position sizes by 30-50%."
+    },
+    "executive_summary": "Growth: contraction, Inflation: rising_from_low_base, Credit: elevated. Stress: 4.0/10, Late-cycle: 4/13. Closest analogue: Q4 2018 (Fed overtightening) (50% match). Conviction: MODERATE."
+  }
+}

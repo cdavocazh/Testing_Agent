@@ -1,0 +1,6 @@
+# Plan D — Custom Python Orchestrator
+# Minimal dependencies: only the OpenAI client for the fixer LLM.
+# All other deps are inherited from the Testing Agent / Financial Agent.
+
+openai>=1.0
+python-dotenv>=1.0

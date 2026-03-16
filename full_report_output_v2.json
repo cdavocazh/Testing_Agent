@@ -1,0 +1,930 @@
+{
+  "scan_all_indicators": {
+    "scan_time": "2026-03-11T22:38:32.225365",
+    "mode": "short",
+    "total_indicators": 27,
+    "flagged_count": 23,
+    "flagged_indicators": [
+      {
+        "indicator": "VIX / MOVE Index",
+        "key": "vix_move",
+        "latest": 24.52,
+        "daily_pct": -1.65,
+        "top_flags": [
+          "vix: ELEVATED_FEAR: VIX above 20 \u2014 elevated concern; fear regime",
+          "move: CALM_BONDS: MOVE below 80 \u2014 calm bond markets"
+        ]
+      },
+      {
+        "indicator": "US Dollar Index (DXY)",
+        "key": "dxy",
+        "latest": 99.08,
+        "daily_pct": 0.25,
+        "top_flags": [
+          "dxy: NEAR_52W_LOW: Within 3% of 52-week low (96.22)"
+        ]
+      },
+      {
+        "indicator": "US 2-Year Treasury Yield",
+        "key": "us_2y_yield",
+        "latest": 3.56,
+        "daily_pct": -0.28,
+        "top_flags": [
+          "us_2y_yield: STATISTICAL_WATCH: us_2y_yield elevated (z=1.74, 20-day)",
+          "us_2y_yield: WEEKLY_BPS_MOVE: +18 bps WoW"
+        ]
+      },
+      {
+        "indicator": "Gold Futures",
+        "key": "gold",
+        "latest": 5195.0,
+        "daily_pct": -0.66,
+        "top_flags": [
+          "gold_price: NEAR_52W_HIGH: Within 3% of 52-week high (5318.4)"
+        ]
+      },
+      {
+        "indicator": "Silver Futures",
+        "key": "silver",
+        "latest": 85.54,
+        "daily_pct": -3.98,
+        "top_flags": [
+          "silver_price: NOTABLE_SILVER_MOVE: Silver moved -3.98% \u2014 notable"
+        ]
+      },
+      {
+        "indicator": "Crude Oil Futures",
+        "key": "crude_oil",
+        "latest": 86.61,
+        "daily_pct": 3.79,
+        "top_flags": [
+          "crude_oil_price: OIL_ELEVATED: Oil above $80 \u2014 elevated; inflationary pressure",
+          "crude_oil_price: NOTABLE_OIL_MOVE: Oil moved +3.79%",
+          "crude_oil_price: WEEKLY_PCT_MOVE: +16.01% WoW"
+        ]
+      },
+      {
+        "indicator": "ES Futures (S&P 500)",
+        "key": "es_futures",
+        "latest": 6771.0,
+        "daily_pct": -0.24,
+        "top_flags": [
+          "es_price: AT_52W_LOW: Within 1% of 52-week low (6743.75)",
+          "es_price: STATISTICAL_WATCH: es_price depressed (z=-1.58, 20-day)"
+        ]
+      },
+      {
+        "indicator": "RTY Futures (Russell 2000)",
+        "key": "rty_futures",
+        "latest": 2536.5,
+        "daily_pct": -0.55,
+        "top_flags": [
+          "rty_price: NEAR_52W_LOW: Within 3% of 52-week low (2498.0)",
+          "rty_price: STATISTICAL_WATCH: rty_price depressed (z=-1.82, 20-day)"
+        ]
+      },
+      {
+        "indicator": "USD/JPY Exchange Rate",
+        "key": "jpy",
+        "latest": 158.6,
+        "daily_pct": 0.48,
+        "top_flags": [
+          "jpy_rate: AT_52W_HIGH: Within 1% of 52-week high (159.18)",
+          "jpy_rate: STATISTICAL_WATCH: jpy_rate elevated (z=1.51, 20-day)",
+          "jpy_rate: JPY_WEAK: USD/JPY above 155 \u2014 intervention warning zone"
+        ]
+      },
+      {
+        "indicator": "Russell 2000 Index",
+        "key": "russell_2000",
+        "latest": 190.84,
+        "daily_pct": -0.12,
+        "top_flags": [
+          "value_growth_ratio: NEAR_52W_HIGH: Within 3% of 52-week high (0.6)",
+          "russell_2000_value: STATISTICAL_WATCH: russell_2000_value depressed (z=-1.75, 20-day)",
+          "value_growth_ratio: STATISTICAL_WATCH: value_growth_ratio depressed (z=-1.57, 20-day)"
+        ]
+      },
+      {
+        "indicator": "S&P 500 / 200-day MA",
+        "key": "sp500_ma200",
+        "latest": 6776.03,
+        "daily_pct": -0.08,
+        "top_flags": [
+          "sp500_ma200: AT_52W_HIGH: Within 1% of 52-week high (6596.16)",
+          "sp500_close: NEAR_52W_HIGH: Within 3% of 52-week high (6978.6)",
+          "price_to_ma200_ratio: STATISTICAL_WATCH: price_to_ma200_ratio depressed (z=-1.62, 20-day)"
+        ]
+      },
+      {
+        "indicator": "Shiller CAPE Ratio",
+        "key": "shiller_cape",
+        "latest": 30.81,
+        "daily_pct": 1.12,
+        "top_flags": [
+          "cape_ratio: EXPENSIVE_CAPE: CAPE above 30 \u2014 extreme overvaluation by historical standards",
+          "cape_ratio: ELEVATED_CAPE: CAPE above 25 \u2014 only exceeded before 1929, 1999, 2007 peaks"
+        ]
+      },
+      {
+        "indicator": "S&P 500 P/E & P/B",
+        "key": "sp500_fundamentals",
+        "latest": 27.3,
+        "daily_pct": 0.0,
+        "top_flags": [
+          "pe_ratio_trailing: ELEVATED_PE: Trailing P/E above 25 \u2014 expensive; associated with market peaks",
+          "pe_ratio_trailing: NEAR_52W_HIGH: Within 3% of 52-week high (27.64)",
+          "pb_ratio: NEAR_52W_HIGH: Within 3% of 52-week high (1.6)"
+        ]
+      },
+      {
+        "indicator": "CBOE SKEW Index",
+        "key": "cboe_skew",
+        "latest": 154.46,
+        "daily_pct": -2.23,
+        "top_flags": [
+          "cboe_skew: HIGH_SKEW: SKEW above 140 \u2014 extreme tail risk (1998 Russian crisis = 147)",
+          "cboe_skew: ELEVATED_SKEW: SKEW above 130 \u2014 elevated tail risk; significant hedging activity",
+          "cboe_skew: NEAR_52W_HIGH: Within 3% of 52-week high (157.98)"
+        ]
+      },
+      {
+        "indicator": "US GDP",
+        "key": "us_gdp",
+        "latest": 31490.07,
+        "daily_pct": 1.26,
+        "top_flags": [
+          "us_gdp: AT_52W_HIGH: Within 1% of 52-week high (31490.07)",
+          "us_gdp: STATISTICAL_WATCH: us_gdp elevated (z=1.52, 20-day)"
+        ]
+      },
+      {
+        "indicator": "Treasury General Account Balance",
+        "key": "tga_balance",
+        "latest": 832053.0,
+        "daily_pct": -6.26,
+        "top_flags": [
+          "tga_balance: WEEKLY_FLOW: Treasury General Account Balance falling by $91B WoW",
+          "tga_balance: LIQUIDITY_SIGNAL: risk-off",
+          "tga_balance: TGA_HIGH: TGA above $800B \u2014 repo tightening risk"
+        ]
+      },
+      {
+        "indicator": "Fed Net Liquidity",
+        "key": "net_liquidity",
+        "latest": 5796509.0,
+        "daily_pct": 0.02,
+        "top_flags": [
+          "net_liquidity: STATISTICAL_WATCH: net_liquidity elevated (z=1.91, 20-day)",
+          "net_liquidity: WEEKLY_FLOW: Fed Net Liquidity rising by $71B WoW",
+          "net_liquidity: LIQUIDITY_SIGNAL: risk-on"
+        ]
+      },
+      {
+        "indicator": "SOFR Rate",
+        "key": "sofr",
+        "latest": 3.65,
+        "daily_pct": -0.27,
+        "top_flags": [
+          "sofr: AT_52W_LOW: Within 1% of 52-week low (3.63)"
+        ]
+      },
+      {
+        "indicator": "COT Gold Positioning",
+        "key": "cot_gold",
+        "latest": 97917.0,
+        "daily_pct": 2.02,
+        "top_flags": [
+          "managed_money_net: VERY_EXTREME_SHORT: Positioning at 8th percentile \u2014 contrarian bullish signal",
+          "open_interest: LARGE_WEEKLY_MOVE: -16.11% WoW",
+          "open_interest: LARGE_MONTHLY_MOVE: -15.61% MoM"
+        ]
+      },
+      {
+        "indicator": "COT Silver Positioning",
+        "key": "cot_silver",
+        "latest": 7766.0,
+        "daily_pct": -8.88,
+        "top_flags": [
+          "managed_money_net: VERY_EXTREME_SHORT: Positioning at 8th percentile \u2014 contrarian bullish signal",
+          "open_interest: LARGE_DAILY_MOVE: -9.67%",
+          "open_interest: LARGE_WEEKLY_MOVE: +213.02% WoW"
+        ]
+      },
+      {
+        "indicator": "US 2Y - Japan 2Y Spread",
+        "key": "us2y_jp2y_spread",
+        "latest": 2.32,
+        "daily_pct": 0.17,
+        "top_flags": [
+          "spread: STATISTICAL_WATCH: spread elevated (z=1.62, 20-day)",
+          "spread: DECLINING_CARRY: US-JP 2Y spread below 300 bps \u2014 carry trade attractiveness declining"
+        ]
+      },
+      {
+        "indicator": "Total Market Cap",
+        "key": "market_cap",
+        "latest": 108454.57,
+        "daily_pct": 8.57,
+        "top_flags": [
+          "market_cap: LARGE_DAILY_MOVE: +8.57%",
+          "market_cap: LARGE_WEEKLY_MOVE: +24.70% WoW",
+          "market_cap: LARGE_MONTHLY_MOVE: +108.74% MoM"
+        ]
+      },
+      {
+        "indicator": "Market Cap / GDP (Buffett Indicator)",
+        "key": "marketcap_to_gdp",
+        "latest": 31490.07,
+        "daily_pct": 1.26,
+        "top_flags": [
+          "marketcap_to_gdp_ratio: EXTREME_BUFFETT: Buffett Indicator above 200% \u2014 extreme; 'playing with fire' (Buffett)",
+          "marketcap_to_gdp_ratio: HIGH_BUFFETT: Buffett Indicator above 150% \u2014 significantly overvalued",
+          "market_cap: LARGE_DAILY_MOVE: -99.86%"
+        ]
+      }
+    ],
+    "cross_asset_signals": [],
+    "normal_count": 4,
+    "follow_up_suggestions": [
+      {
+        "trigger": "VIX/MOVE flagged",
+        "commands": [
+          "/stress",
+          "/vixanalysis"
+        ],
+        "reason": "Volatility elevated \u2014 check composite stress score and VIX opportunity tier"
+      },
+      {
+        "trigger": "DXY flagged",
+        "commands": [
+          "/macro",
+          "/drivers SPX"
+        ],
+        "reason": "Dollar move \u2014 check macro regime and equity impact"
+      },
+      {
+        "trigger": "2Y yield flagged",
+        "commands": [
+          "/bonds",
+          "/termpremium"
+        ],
+        "reason": "Front-end yield move \u2014 check curve shape and Fed policy stance"
+      },
+      {
+        "trigger": "Gold flagged",
+        "commands": [
+          "/commodity gold"
+        ],
+        "reason": "Gold move \u2014 check commodity outlook and safe-haven flows"
+      },
+      {
+        "trigger": "Silver flagged",
+        "commands": [
+          "/commodity silver"
+        ],
+        "reason": "Silver move \u2014 check commodity outlook and gold/silver ratio"
+      },
+      {
+        "trigger": "Crude oil flagged",
+        "commands": [
+          "/commodity crude_oil",
+          "/oil"
+        ],
+        "reason": "Oil abnormality \u2014 check fundamentals, inventories, and XLE/XOP divergence"
+      },
+      {
+        "trigger": "S&P 500 futures flagged",
+        "commands": [
+          "/drawdown"
+        ],
+        "reason": "S&P 500 move \u2014 check equity drivers, stress, and drawdown classification"
+      },
+      {
+        "trigger": "Russell 2000 futures flagged",
+        "commands": [
+          "/drivers russell_2000"
+        ],
+        "reason": "Small-cap move \u2014 check equity index drivers for breadth signal"
+      },
+      {
+        "trigger": "Shiller CAPE flagged",
+        "commands": [
+          "/valuation"
+        ],
+        "reason": "Valuation extreme \u2014 check Yardeni valuation frameworks"
+      },
+      {
+        "trigger": "GDP flagged",
+        "commands": [
+          "/vigilantes"
+        ],
+        "reason": "GDP move \u2014 check macro regime and bond vigilantes model"
+      }
+    ]
+  },
+  "analyze_macro_regime": {
+    "timestamp": "2026-03-11",
+    "regimes": {
+      "inflation": {
+        "classification": "cooling",
+        "value": 0.28,
+        "evidence": "Core PCE YoY = 0.28",
+        "trend": "rising",
+        "breakeven_5y": 2.56
+      },
+      "employment": {
+        "classification": "moderate",
+        "value": 4.4,
+        "evidence": "Unemployment Rate = 4.40",
+        "claims_trend": "flat",
+        "latest_nfp_thousands": -92.0,
+        "labor_breadth": {
+          "job_openings_thousands": 6542.0,
+          "job_openings_interpretation": "Labor demand weakening \u2014 fewer openings",
+          "quits_rate_pct": 2.0,
+          "quits_rate_interpretation": "Quits rate in normal range",
+          "continuing_claims_momentum_pct": -0.65,
+          "nfp_3m_avg_thousands": 5.7,
+          "nfp_decelerating": false
+        }
+      },
+      "growth": {
+        "classification": "contraction",
+        "value": 49.12,
+        "evidence": "ISM Manufacturing PMI = 49.12",
+        "ism_decomposition": {
+          "new_orders": 319898.0,
+          "new_orders_interpretation": "Manufacturing demand stable",
+          "employment": 12573.0,
+          "employment_breadth": "contracting",
+          "inventories": 1.36,
+          "inventory_flip": false,
+          "inventories_too_high": false,
+          "pull_forward_detected": false
+        }
+      },
+      "rates": {
+        "value": 3.64,
+        "classification": "easing",
+        "evidence": "Fed funds = 3.64%, trend = falling",
+        "curve_shape": "normal \u2014 no recession signal",
+        "stance": "Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)"
+      },
+      "credit": {
+        "metric": "HY OAS",
+        "value": 3.13,
+        "value_bps": 313,
+        "classification": "elevated",
+        "stress_level": "elevated",
+        "evidence": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "spread_direction": "widening",
+        "one_year_percentile": 72.7
+      },
+      "housing": {
+        "classification": "data_unavailable",
+        "evidence": "Housing starts data unavailable",
+        "permits_trend": "flat",
+        "mortgage_rate": 6.0
+      }
+    },
+    "composite_outlook": "Recessionary \u2014 contracting growth with tight credit conditions.",
+    "signals": [
+      "INFLATION_COOLING",
+      "JOLTS_OPENINGS_DECLINING",
+      "LABOR_MODERATE",
+      "ISM_CONTRACTION",
+      "GROWTH_CONTRACTION",
+      "FED_EASING",
+      "CREDIT_TIGHT",
+      "EXISTING_SALES_PLUNGING"
+    ],
+    "inflation_detail": {
+      "cpi": {
+        "latest_value": 2.8287,
+        "trend": "flat",
+        "yoy_change_pct": -1.46,
+        "interpretation": "Below target at -1.46% \u2014 disinflation risk"
+      },
+      "core_cpi": {
+        "latest_value": 2.9493,
+        "trend": "flat",
+        "yoy_change_pct": -8.22,
+        "interpretation": "Below target at -8.22% \u2014 disinflation risk"
+      },
+      "pce": {
+        "latest_value": 128.605,
+        "trend": "rising",
+        "yoy_change_pct": 2.9,
+        "interpretation": "Moderately above target at 2.9%"
+      },
+      "core_pce": {
+        "latest_value": 2.9969,
+        "trend": "rising",
+        "yoy_change_pct": 0.28,
+        "interpretation": "Below target at 0.28% \u2014 disinflation risk"
+      },
+      "ppi": {
+        "latest_value": 2.8376,
+        "trend": "flat",
+        "yoy_change_pct": -25.07
+      }
+    }
+  },
+  "analyze_financial_stress": {
+    "as_of": "2026-03-11",
+    "composite_score": 3.9,
+    "stress_level": "moderate",
+    "components": {
+      "nfci": {
+        "value": -0.524,
+        "score": 1,
+        "weight": 0.18,
+        "interpretation": "NFCI at -0.524 \u2014 looser than average"
+      },
+      "hy_oas": {
+        "value": 3.13,
+        "score": 5,
+        "weight": 0.18,
+        "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "stress_level": "elevated"
+      },
+      "vix": {
+        "value": 24.5,
+        "score": 5,
+        "weight": 0.14,
+        "interpretation": "VIX at 24.5"
+      },
+      "yield_curve_2s10s": {
+        "value": 0.58,
+        "score": 2,
+        "weight": 0.14,
+        "interpretation": "2s10s at 0.58% \u2014 normal"
+      },
+      "initial_claims": {
+        "value": 213000.0,
+        "score": 9,
+        "weight": 0.1,
+        "interpretation": "Initial claims at 213000K"
+      },
+      "sahm_rule": {
+        "value": 0.27,
+        "score": 3,
+        "weight": 0.1,
+        "interpretation": "Sahm Rule at 0.27"
+      },
+      "consumer_sentiment": {
+        "value": 56.4,
+        "score": 7,
+        "weight": 0.08,
+        "interpretation": "U of Michigan Sentiment at 56.4"
+      },
+      "consumer_credit": {
+        "value": 1.48,
+        "score": 1,
+        "weight": 0.08,
+        "interpretation": "All-loan delinquency rate at 1.48%"
+      }
+    },
+    "supplemental": {
+      "private_credit_proxy": {
+        "stress_level": "watch",
+        "interpretation": "HY OAS elevated/widening at 313bps but bank lending not yet tightening sharply. Monitor for confirmation.",
+        "hy_oas_bps": 313,
+        "hy_direction": "widening",
+        "bank_tightening_net_pct": 5.3
+      },
+      "bank_equity_vs_credit": {
+        "kbe_latest": 58.74,
+        "kbe_1w_pct": -5.0,
+        "kbe_1m_pct": -12.65,
+        "hy_oas_bps": 313,
+        "diagnosis": "systemic_risk",
+        "interpretation": "Bank equities falling (KBE -5.0% 1W) AND credit spreads stressed (313bps HY OAS) \u2014 SYSTEMIC risk. Both equity and credit markets pricing bank deterioration."
+      }
+    },
+    "signals": [
+      "STRESS_MODERATE",
+      "BANK_SYSTEMIC_STRESS"
+    ],
+    "summary": "Financial Stress Score: 3.9/10 (moderate). Based on 8/8 available components. Supplemental: bank systemic risk detected. Signals: STRESS_MODERATE, BANK_SYSTEMIC_STRESS."
+  },
+  "detect_late_cycle_signals": {
+    "as_of": "2026-03-11",
+    "signals_firing": [
+      {
+        "name": "ISM Manufacturing contraction",
+        "status": "firing",
+        "evidence": "Headline PMI at 49.1 \u2014 below 50 contraction threshold"
+      },
+      {
+        "name": "ISM New Orders declining",
+        "status": "not_firing",
+        "evidence": "New orders stable or rising"
+      },
+      {
+        "name": "NFP deceleration",
+        "status": "not_firing",
+        "evidence": "3M avg 5.7K vs prior 3M avg -7.7K"
+      },
+      {
+        "name": "Rising continuing claims",
+        "status": "not_firing",
+        "evidence": "Continuing claims momentum -0.7%"
+      },
+      {
+        "name": "Credit spreads widening",
+        "status": "firing",
+        "evidence": "HY OAS at 313bps, direction: widening"
+      },
+      {
+        "name": "Term premium rising",
+        "status": "not_firing",
+        "evidence": "Term premium proxy: 0.010% (10Y nom 4.15% - real 1.8% - BE 2.34%)"
+      },
+      {
+        "name": "JOLTS quits declining",
+        "status": "not_firing",
+        "evidence": "Quits rate at 2.0%, trend: rising"
+      },
+      {
+        "name": "Yield curve inversion",
+        "status": "not_firing",
+        "evidence": "2s10s spread at 0.58% \u2014 normal"
+      },
+      {
+        "name": "Housing permits declining",
+        "status": "not_firing",
+        "evidence": "Building permits at 1448K SAAR, trend: flat"
+      },
+      {
+        "name": "Delinquencies rising",
+        "status": "not_firing",
+        "evidence": "Delinquency rate at 1.48%, trend: falling"
+      },
+      {
+        "name": "Bank lending tightening",
+        "status": "not_firing",
+        "evidence": "Net 5.3% of banks tightening lending standards"
+      },
+      {
+        "name": "Labor share near record lows",
+        "status": "firing",
+        "evidence": "Labor share at 42.7%, 0th percentile \u2014 near historical lows, late-cycle tell"
+      },
+      {
+        "name": "Manufacturing recession (labor hoarding)",
+        "status": "not_firing",
+        "evidence": "Durable goods orders unknown, mfg hours 41.5h \u2014 no manufacturing recession signal"
+      }
+    ],
+    "count": 3,
+    "total": 13,
+    "confidence_level": "late-early warning",
+    "interpretation": "3/13 signals firing \u2014 early late-cycle warning signs emerging",
+    "assessment": "3/13 late-cycle signals firing. Confidence: late-early warning. 3/13 signals firing \u2014 early late-cycle warning signs emerging."
+  },
+  "analyze_equity_drivers": {
+    "timestamp": "2026-03-11",
+    "index": "both",
+    "equity_risk_premium": {
+      "status": "data_unavailable"
+    },
+    "erp_pct": null,
+    "real_yield_impact": {
+      "real_yield_10y": 1.8,
+      "trend": "rising",
+      "daily_change_bps": -2.0,
+      "interpretation": "Real yields at 1.8% \u2014 moderate level"
+    },
+    "credit_equity_link": {
+      "hy_oas_pct": 3.13,
+      "hy_oas_bps": 313,
+      "spread_direction": "widening",
+      "wow_change_bps": 1.0,
+      "stress_level": "elevated",
+      "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)"
+    },
+    "dxy_impact": {
+      "latest_dxy": 99.08,
+      "wow_change_pct": 0.31,
+      "interpretation": "Weak dollar \u2014 tailwind for multinationals, EM"
+    },
+    "inflation_rotation": {
+      "cpi_yoy_pct": -1.46,
+      "cpi_trend": "flat",
+      "rotation_signal": "No strong rotation signal"
+    },
+    "volatility_regime": {
+      "vix": 24.5,
+      "move": 76.3,
+      "tier": 3,
+      "regime": "Elevated caution \u2014 protection costs rising"
+    },
+    "rolling_correlations": {
+      "sp500": {
+        "dxy": {
+          "latest_20d": -0.02,
+          "avg_60d": -0.02,
+          "interpretation": "near zero"
+        },
+        "10y_yield": {
+          "latest_20d": 0.4,
+          "avg_60d": 0.4,
+          "interpretation": "moderate positive"
+        },
+        "2y_yield": {
+          "latest_20d": 0.37,
+          "avg_60d": 0.37,
+          "interpretation": "moderate positive"
+        },
+        "vix": {
+          "latest_20d": -0.93,
+          "avg_60d": -0.93,
+          "interpretation": "strong inverse"
+        },
+        "move": {
+          "latest_20d": -0.82,
+          "avg_60d": -0.82,
+          "interpretation": "strong inverse"
+        },
+        "gold": {
+          "latest_20d": 0.17,
+          "avg_60d": 0.17,
+          "interpretation": "weak positive"
+        },
+        "crude_oil": {
+          "latest_20d": -0.18,
+          "avg_60d": -0.18,
+          "interpretation": "weak inverse"
+        },
+        "copper": {
+          "latest_20d": 0.63,
+          "avg_60d": 0.63,
+          "interpretation": "strong positive"
+        }
+      },
+      "russell_2000": {
+        "dxy": {
+          "latest_20d": 0.04,
+          "avg_60d": 0.04,
+          "interpretation": "near zero"
+        },
+        "10y_yield": {
+          "latest_20d": 0.26,
+          "avg_60d": 0.26,
+          "interpretation": "weak positive"
+        },
+        "2y_yield": {
+          "latest_20d": 0.22,
+          "avg_60d": 0.22,
+          "interpretation": "weak positive"
+        },
+        "vix": {
+          "latest_20d": -0.81,
+          "avg_60d": -0.81,
+          "interpretation": "strong inverse"
+        },
+        "move": {
+          "latest_20d": -0.73,
+          "avg_60d": -0.73,
+          "interpretation": "strong inverse"
+        },
+        "gold": {
+          "latest_20d": 0.17,
+          "avg_60d": 0.17,
+          "interpretation": "weak positive"
+        },
+        "crude_oil": {
+          "latest_20d": -0.3,
+          "avg_60d": -0.3,
+          "interpretation": "weak inverse"
+        },
+        "copper": {
+          "latest_20d": 0.44,
+          "avg_60d": 0.44,
+          "interpretation": "moderate positive"
+        }
+      }
+    },
+    "signals": [],
+    "summary": "10Y real yield 1.8%. HY spreads 313bps. DXY at 99.08."
+  },
+  "analyze_bond_market": {
+    "timestamp": "2026-03-11",
+    "yield_curve": {
+      "nominal_yields": {
+        "2y": {
+          "latest_value": 3.56,
+          "trend": "rising",
+          "daily_change_bps": -1.0,
+          "wow_change_bps": 18.0
+        },
+        "5y": {
+          "latest_value": 3.72,
+          "trend": "rising",
+          "daily_change_bps": 0.0,
+          "wow_change_bps": 21.0
+        },
+        "10y": {
+          "latest_value": 4.15,
+          "trend": "rising",
+          "daily_change_bps": 2.0,
+          "wow_change_bps": 18.0
+        },
+        "30y": {
+          "latest_value": 4.77,
+          "trend": "rising",
+          "daily_change_bps": 3.0,
+          "wow_change_bps": 13.0
+        }
+      },
+      "spreads": {
+        "2s10s": {
+          "latest_value": 0.58,
+          "curve_status": "normal",
+          "interpretation": "2s10s at 0.58% \u2014 normal",
+          "slope_trend": "steepening"
+        },
+        "3m10s": {
+          "latest_value": 0.41,
+          "curve_status": "normal",
+          "interpretation": "3m10s at 0.41% \u2014 normal",
+          "slope_trend": "steepening"
+        }
+      },
+      "shape": "normal \u2014 no recession signal"
+    },
+    "real_yields": {
+      "5y_real": {
+        "latest_value": 1.16,
+        "trend": "rising",
+        "interpretation": "Moderately positive real yield at 1.16%",
+        "daily_change_bps": -5.0
+      },
+      "10y_real": {
+        "latest_value": 1.8,
+        "trend": "rising",
+        "interpretation": "Moderately positive real yield at 1.8%",
+        "daily_change_bps": -2.0
+      }
+    },
+    "breakevens": {
+      "t5yie": {
+        "latest_value": 2.56,
+        "trend": "rising",
+        "interpretation": "5Y Breakeven Inflation at 2.56% \u2014 above Fed target, inflation risk"
+      },
+      "t10yie": {
+        "latest_value": 2.34,
+        "trend": "rising",
+        "interpretation": "10Y Breakeven Inflation at 2.34% \u2014 well-anchored near target"
+      },
+      "t5yifr": {
+        "latest_value": 2.12,
+        "trend": "falling",
+        "interpretation": "5Y5Y Forward Inflation Expectation at 2.12% \u2014 well-anchored near target"
+      }
+    },
+    "credit_spreads": {
+      "high_yield_oas": {
+        "latest_value": 3.13,
+        "wow_change_bps": 1.0,
+        "latest_value_bps": 313,
+        "stress_level": "elevated",
+        "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)",
+        "one_year_percentile": 72.7,
+        "spread_direction": "widening"
+      },
+      "ig_corporate_oas": {
+        "latest_value": 0.84,
+        "wow_change_bps": -2.0,
+        "latest_value_bps": 84,
+        "stress_level": "tight",
+        "interpretation": "IG spread at 84bps \u2014 tight, risk-on",
+        "one_year_percentile": 66.9,
+        "spread_direction": "tightening"
+      },
+      "bbb_oas": {
+        "latest_value": 1.06,
+        "wow_change_bps": -2.0,
+        "latest_value_bps": 106,
+        "one_year_percentile": 66.5,
+        "spread_direction": "widening"
+      },
+      "hy_ig_differential": {
+        "value_bps": 229,
+        "interpretation": "Tight differential \u2014 strong risk appetite"
+      }
+    },
+    "fed_policy": {
+      "effective_rate": 3.64,
+      "target_upper": 3.75,
+      "stance": "Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%)",
+      "rate_trend": "falling"
+    },
+    "duration_risk": {
+      "level": "moderate-high",
+      "interpretation": "Rising real yields increase mark-to-market risk for long-duration bonds"
+    },
+    "term_premium": {
+      "term_premium_pct": 0.01,
+      "components": {
+        "nominal_10y": 4.15,
+        "real_10y": 1.8,
+        "breakeven_10y": 2.34
+      },
+      "interpretation": "Term premium positive (0.01%) with rising breakevens \u2014 global discount rate adjustment signal"
+    },
+    "signals": [
+      "CURVE_STEEPENING",
+      "BREAKEVEN_RISING",
+      "BREAKEVEN_FALLING",
+      "GLOBAL_DISCOUNT_RATE_ADJUSTMENT"
+    ],
+    "summary": "Curve: normal \u2014 no recession signal. 10Y real yield: 1.8%. HY OAS: 3.13bps. Fed: Neutral-to-accommodative \u2014 Fed funds (3.64%) below 10Y (4.15%). Duration risk: moderate-high. Term premium: 0.01%. Signals: CURVE_STEEPENING, BREAKEVEN_RISING, BREAKEVEN_FALLING, GLOBAL_DISCOUNT_RATE_ADJUSTMENT."
+  },
+  "analyze_consumer_health": {
+    "as_of": "2026-03-11",
+    "components": {
+      "savings_rate": {
+        "value": 3.6,
+        "score": 5,
+        "weight": 0.3,
+        "interpretation": "Savings rate below average at 3.6% \u2014 moderate stress"
+      },
+      "credit_growth_velocity": {
+        "value": null,
+        "score": 0,
+        "weight": 0.25,
+        "interpretation": "Data unavailable"
+      },
+      "delinquency_rate": {
+        "value": 1.48,
+        "score": 1,
+        "weight": 0.25,
+        "interpretation": "Delinquency rate low at 1.48% \u2014 healthy credit quality"
+      },
+      "bank_lending_tightening": {
+        "value": 5.3,
+        "score": 3,
+        "weight": 0.2,
+        "interpretation": "Net 5.3% banks tightening \u2014 mild tightening"
+      }
+    },
+    "composite_score": 3.13,
+    "consumer_health_level": "stable",
+    "signals": [
+      "CONSUMER_STABLE",
+      "SAVINGS_RATE_LOW"
+    ],
+    "assessment": "Consumer Health Score: 3.13/10 (stable). Based on 3/4 available components. Signals: CONSUMER_STABLE, SAVINGS_RATE_LOW."
+  },
+  "analyze_housing_market": {
+    "as_of": "2026-03-11",
+    "starts_momentum": {
+      "latest_value": 1404.0,
+      "direction": "improving",
+      "level": "moderate",
+      "trend": "rising",
+      "interpretation": "Housing starts at 1404K SAAR \u2014 improving, moderate level"
+    },
+    "permits_pipeline": {
+      "latest_value": 1448.0,
+      "trend": "flat",
+      "permits_to_starts_ratio": 1.03,
+      "pipeline_assessment": "expansion",
+      "interpretation": "Building permits at 1448K SAAR, trend: flat, permits/starts ratio: 1.03"
+    },
+    "sales_trend": {
+      "latest_value": 3910000.0,
+      "trend": "flat",
+      "mom_change_pct": -8.43,
+      "interpretation": "Existing home sales plunging -8.4% MoM \u2014 demand collapsing"
+    },
+    "affordability": {
+      "mortgage_rate_pct": 6.0,
+      "median_price_usd": 405300.0,
+      "monthly_interest_payment_usd": 2026.0,
+      "affordability_level": "stretched",
+      "interpretation": "At 6.00% mortgage rate and $405,300 median price, monthly interest payment ~$2,026 \u2014 stretched"
+    },
+    "price_dynamics": {
+      "status": "data_unavailable"
+    },
+    "housing_cycle_phase": {
+      "phase": "mixed",
+      "interpretation": "Housing signals mixed \u2014 no clear directional trend"
+    },
+    "leading_indicator_signal": {
+      "signal": "NO_WARNING",
+      "interpretation": "Housing leading indicators not flagging recession risk"
+    },
+    "signals": [
+      "SALES_PLUNGING",
+      "AFFORDABILITY_STRESSED",
+      "EXISTING_SALES_PLUNGING"
+    ],
+    "assessment": "Housing starts at 1404K SAAR (moderate). Permits at 1448K, trend: flat. Existing sales MoM: -8.4%. Affordability: stretched. Cycle: mixed. Leading signal: NO_WARNING. Signals: SALES_PLUNGING, AFFORDABILITY_STRESSED, EXISTING_SALES_PLUNGING."
+  }
+}

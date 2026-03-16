@@ -1,0 +1,6 @@
+# Plan S — Superset.sh Hybrid Orchestrator
+# Only needs requests for the MCP API client.
+# Claude Code and Superset.sh must be installed separately.
+
+requests>=2.31
+python-dotenv>=1.0

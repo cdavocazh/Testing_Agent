@@ -1,0 +1,567 @@
+{
+  "timestamp": "2026-03-12T16:58:22.855553",
+  "commands": [
+    "analyze_NVDA",
+    "commodity_crude_oil",
+    "macro",
+    "graham_NVDA",
+    "valuation",
+    "stress"
+  ],
+  "summary": {
+    "total_checks": 39,
+    "passed": 29,
+    "failed": 10,
+    "rate": "74.4%",
+    "critical_failures": 6,
+    "by_category": {
+      "accuracy": {
+        "total": 26,
+        "passed": 17,
+        "failed": 9
+      },
+      "coherence": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "grounding": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "llm_judge": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "by_command": {
+      "analyze": {
+        "total": 6,
+        "passed": 5,
+        "failed": 1
+      },
+      "commodity": {
+        "total": 5,
+        "passed": 3,
+        "failed": 2
+      },
+      "macro": {
+        "total": 8,
+        "passed": 6,
+        "failed": 2
+      },
+      "graham": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "valuation": {
+        "total": 3,
+        "passed": 1,
+        "failed": 2
+      },
+      "stress": {
+        "total": 6,
+        "passed": 5,
+        "failed": 1
+      },
+      "cross-command": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "analyze_commodity": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "macro_stress_valuation": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "graham_nvda": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check_id": "AN-01",
+      "category": "accuracy",
+      "command": "analyze",
+      "check_name": "Data freshness (latest quarter \u2265 2024)",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2 \u2014 STALE",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "AN-02",
+      "category": "accuracy",
+      "command": "analyze",
+      "check_name": "Stale data warning present when data old",
+      "passed": true,
+      "detail": "Data from 2020-Q2, warning present: True",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "AN-03",
+      "category": "accuracy",
+      "command": "analyze",
+      "check_name": "OCF/NI ratio in plausible range",
+      "passed": true,
+      "detail": "OCF/NI = 0.99",
+      "expected": "[-5, 10]",
+      "actual": 0.99,
+      "severity": "high"
+    },
+    {
+      "check_id": "AN-04",
+      "category": "accuracy",
+      "command": "analyze",
+      "check_name": "Key margins (gross, operating, net) available",
+      "passed": true,
+      "detail": "GM=65.06, OM=31.69, NM=29.77",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "AN-05",
+      "category": "accuracy",
+      "command": "analyze",
+      "check_name": "Gross margin > Operating margin (logical)",
+      "passed": true,
+      "detail": "GM=65.06% > OM=31.69%: True",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "COM-02",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "Inventory/EIA data present",
+      "passed": true,
+      "detail": "Inventory fields: 8",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "COM-03",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "Seasonal pattern data present",
+      "passed": false,
+      "detail": "Seasonal fields: 6",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "COM-04",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "Support/resistance levels computed",
+      "passed": [
+        56.37,
+        59.27,
+        62.23
+      ],
+      "detail": "S/R data: ['supports', 'resistances', 'current_price']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "COM-05",
+      "category": "accuracy",
+      "command": "commodity",
+      "check_name": "DXY correlation present and valid",
+      "passed": false,
+      "detail": "DXY correlation: None",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "MA-01",
+      "category": "accuracy",
+      "command": "macro",
+      "check_name": "Core CPI YoY in plausible range (-5% to 15%)",
+      "passed": false,
+      "detail": "Core CPI YoY: -12.88% \u2014 IMPLAUSIBLE",
+      "expected": "[-5, 15]",
+      "actual": -12.88,
+      "severity": "critical"
+    },
+    {
+      "check_id": "MA-02",
+      "category": "accuracy",
+      "command": "macro",
+      "check_name": "Core PCE YoY plausible (> 1%)",
+      "passed": false,
+      "detail": "Core PCE YoY: 0.28%, Regime value: 0.28 \u2014 SUSPICIOUSLY LOW",
+      "expected": "> 1%",
+      "actual": 0.28,
+      "severity": "critical"
+    },
+    {
+      "check_id": "MA-03",
+      "category": "accuracy",
+      "command": "macro",
+      "check_name": "All 5 regime dimensions present",
+      "passed": true,
+      "detail": "All present",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "MA-04",
+      "category": "accuracy",
+      "command": "macro",
+      "check_name": "Macro signals generated",
+      "passed": true,
+      "detail": "7 signals: ['INFLATION_STABLE', 'JOLTS_OPENINGS_DECLINING', 'LABOR_MODERATE', 'ISM_CONTRACTION', 'GROWTH_CONTRACTION']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "MA-05",
+      "category": "accuracy",
+      "command": "macro",
+      "check_name": "Composite outlook generated",
+      "passed": true,
+      "detail": "Outlook: 'Recessionary \u2014 contracting growth with tight credit conditions.'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-01",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Graham data freshness (\u2265 2024)",
+      "passed": false,
+      "detail": "Latest quarter: 2020-Q2 \u2014 STALE",
+      "expected": "\u2265 2024",
+      "actual": "2020-Q2",
+      "severity": "critical"
+    },
+    {
+      "check_id": "GR-02",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "Graham Number = sqrt(22.5 \u00d7 EPS \u00d7 BVPS)",
+      "passed": true,
+      "detail": "EPS=1.73, BVPS=21.0595, Expected=28.63, Got=28.63",
+      "expected": 28.63,
+      "actual": 28.63,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-03",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "MoS formula = (GN - Price) / Price \u00d7 100",
+      "passed": true,
+      "detail": "GN=28.63, Price=186.03, MoS=-84.61%, Correct=-84.61%",
+      "expected": -84.61,
+      "actual": -84.61,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-04",
+      "category": "accuracy",
+      "command": "graham",
+      "check_name": "P/E \u00d7 P/B product correct",
+      "passed": true,
+      "detail": "PE=107.53, PB=8.83, Expected=949.49, Got=949.49",
+      "expected": 949.49,
+      "actual": 949.49,
+      "severity": "medium"
+    },
+    {
+      "check_id": "VAL-01",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "CPI YoY available for Yardeni frameworks",
+      "passed": false,
+      "detail": "MISSING \u2014 null CPI blocks Rule of 20/24",
+      "expected": "available",
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "VAL-02",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "Valuation produces results",
+      "passed": false,
+      "detail": "Assessment: 'insufficient_data'",
+      "expected": "has results",
+      "actual": "insufficient_data",
+      "severity": "critical"
+    },
+    {
+      "check_id": "VAL-03",
+      "category": "accuracy",
+      "command": "valuation",
+      "check_name": "P/E ratio available",
+      "passed": true,
+      "detail": "P/E: 26.8",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "ST-01",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Composite score in [0, 10]",
+      "passed": true,
+      "detail": "Score: 4.0",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "ST-02",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Initial claims units correct (not '213000K')",
+      "passed": true,
+      "detail": "Interpretation: 'Initial claims at 213K'",
+      "expected": "213K or similar",
+      "actual": "Initial claims at 213K",
+      "severity": "high"
+    },
+    {
+      "check_id": "ST-03",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Component weights sum to ~1.0",
+      "passed": true,
+      "detail": "Weight sum: 1.000",
+      "expected": 1.0,
+      "actual": 0.9999999999999999,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ST-04",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Composite = weighted sum of scores",
+      "passed": false,
+      "detail": "Calculated: 3.1, Reported: 4.0",
+      "expected": 3.1,
+      "actual": 4.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "ST-05",
+      "category": "accuracy",
+      "command": "stress",
+      "check_name": "Stress level label matches composite score",
+      "passed": true,
+      "detail": "Score=4.0, Level='elevated', Expected zone='moderate'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-01",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Inflation classification consistent with trend direction",
+      "passed": true,
+      "detail": "Classification: 'rising_from_low_base', Trend: 'rising' \u2014 consistent",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "CC-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Macro credit HY OAS \u2248 Stress HY OAS",
+      "passed": false,
+      "detail": "Macro: 306bps, Stress: 3.06bps, Diff: 302.94",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-03",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "High stress score aligns with recessionary outlook",
+      "passed": true,
+      "detail": "Stress=4.0, Outlook='Recessionary \u2014 contracting growth with tight credit conditio'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-04",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Graham and Analyze use same SEC EDGAR quarter",
+      "passed": true,
+      "detail": "Graham: 2020-Q2, Analyze: 2020-Q2",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-05",
+      "category": "coherence",
+      "command": "macro",
+      "check_name": "Growth classification \u2194 ISM value (<50 = contraction)",
+      "passed": true,
+      "detail": "ISM=49.12, Classification='contraction', Expected='contraction'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-01",
+      "category": "grounding",
+      "command": "macro",
+      "check_name": "Inflation label coherent with trend",
+      "passed": true,
+      "detail": "Label: 'rising_from_low_base', Trend: 'rising', Value: 0.28",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "GR-02",
+      "category": "grounding",
+      "command": "stress",
+      "check_name": "Stress level label matches score range",
+      "passed": true,
+      "detail": "Level: 'elevated', Score: 4.0",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-03",
+      "category": "grounding",
+      "command": "graham",
+      "check_name": "Graham assessment reflects negative MoS (overvalued)",
+      "passed": true,
+      "detail": "MoS=-84.61%, Assessment mentions overvalued: True",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-04",
+      "category": "grounding",
+      "command": "commodity",
+      "check_name": "Commodity summary reflects key data",
+      "passed": true,
+      "detail": "Summary: 'Crude Oil at $92.03. near 52-week high. up 13.6% WoW. seasonally bullish in Marc'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-05",
+      "category": "grounding",
+      "command": "analyze",
+      "check_name": "High margin flag present when GM > 50%",
+      "passed": true,
+      "detail": "GM=65.06%, High margin flag: True",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LLM-ANALYZE_COMM",
+      "category": "llm_judge",
+      "command": "analyze_commodity",
+      "check_name": "LLM Judge: /analyze NVDA + /commodity crude_oil",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-MACRO_STRESS",
+      "category": "llm_judge",
+      "command": "macro_stress_valuation",
+      "check_name": "LLM Judge: /macro + /stress + /valuation",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-GRAHAM_NVDA",
+      "category": "llm_judge",
+      "command": "graham_nvda",
+      "check_name": "LLM Judge: /graham NVDA",
+      "passed": true,
+      "detail": "Score: 5.0/10",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {
+    "analyze_commodity": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "macro_stress_valuation": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "graham_nvda": {
+      "weighted_score": 5.0,
+      "dimensions": [
+        [
+          "Graham_Number_Accuracy",
+          9.0,
+          "Calculation is correct (sqrt(22.5\u00d71.73\u00d721.0595)=28.63) but minor rounding could be improved"
+        ],
+        [
+          "Margin_of_Safety_Formula",
+          4.0,
+          "Uses (GN-Price)/Price (-84.61%) rather than Graham's standard (GN-Price)/GN (-549.7%)"
+        ],
+        [
+          "Data_Freshness",
+          2.0,
+          "Latest quarter shows 2020-Q2 despite as_of 2026-03-12\u2014data is ~6 years stale and unusable"
+        ],
+        [
+          "Defensive_Criteria",
+          7.0,
+          "All 7 Graham criteria checked with correct pass/fail logic; score 3/7 is accurate"
+        ],
+        [
+          "Investment_Clarity",
+          5.0,
+          "Assessment shows \"Partial Graham fit\" and \"Overvalued\" but no explicit buy/hold"
+        ]
+      ]
+    }
+  }
+}

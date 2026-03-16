@@ -1,0 +1,7 @@
+# Plan C — CrewAI Role-Based Team
+# CrewAI framework + OpenAI client.
+
+crewai>=0.100.0
+crewai-tools>=0.17.0
+openai>=1.0
+python-dotenv>=1.0

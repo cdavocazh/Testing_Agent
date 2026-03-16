@@ -1,0 +1,178 @@
+{
+  "approach": "10_ta_benchmark",
+  "timestamp": "2026-03-12T23:14:13.529632",
+  "llm_enabled": false,
+  "rubric": [
+    {
+      "name": "S/R Quality",
+      "weight": 0.2
+    },
+    {
+      "name": "Entry/Exit Clarity",
+      "weight": 0.2
+    },
+    {
+      "name": "Indicator Interpretation",
+      "weight": 0.15
+    },
+    {
+      "name": "Signal Synthesis",
+      "weight": 0.15
+    },
+    {
+      "name": "Risk Management",
+      "weight": 0.15
+    },
+    {
+      "name": "Pattern Detection",
+      "weight": 0.05
+    },
+    {
+      "name": "Professional Presentation",
+      "weight": 0.1
+    }
+  ],
+  "results": {
+    "btc": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "btc"
+        }
+      ],
+      "weighted_score": 5.0
+    },
+    "gold": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "gold"
+        }
+      ],
+      "weighted_score": 5.0
+    },
+    "AAPL": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 5.0,
+          "explanation": "Default score (LLM disabled)",
+          "asset": "AAPL"
+        }
+      ],
+      "weighted_score": 5.0
+    }
+  }
+}

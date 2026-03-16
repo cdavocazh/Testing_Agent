@@ -1,0 +1,961 @@
+{
+  "btc": {
+    "as_of": "2026-03-12 08:14 UTC",
+    "current_price": 69691.6,
+    "data_through": "2026-03-12 08:10:00+00:00",
+    "trend_context": {
+      "5min": {
+        "bias": "bullish",
+        "current_price": 69691.6,
+        "ema_9": 69694.8,
+        "ema_21": 69606.3,
+        "rsi_14": 66.31,
+        "recent_high": 69887.7,
+        "recent_low": 69354.2,
+        "range_pct": 0.77,
+        "ema_50": 69553.7
+      },
+      "30min": {
+        "bias": "bearish",
+        "current_price": 69691.6,
+        "ema_9": 69583.8,
+        "ema_21": 69715.3,
+        "rsi_14": 44.36,
+        "recent_high": 70488.0,
+        "recent_low": 69187.6,
+        "range_pct": 1.88,
+        "ema_50": 69875.8
+      },
+      "1H": {
+        "bias": "bearish",
+        "current_price": 69691.6,
+        "ema_9": 69684.1,
+        "ema_21": 69840.4,
+        "rsi_14": 30.73,
+        "recent_high": 71286.0,
+        "recent_low": 69187.6,
+        "range_pct": 3.03,
+        "ema_50": 69756.3
+      },
+      "4H": {
+        "bias": "bullish",
+        "current_price": 69691.6,
+        "ema_9": 69777.3,
+        "ema_21": 69472.8,
+        "rsi_14": 52.09,
+        "recent_high": 71748.1,
+        "recent_low": 66833.9,
+        "range_pct": 7.35,
+        "ema_50": 69006.7
+      },
+      "1D": {
+        "bias": "bullish",
+        "current_price": 69691.6,
+        "ema_9": 68933.5,
+        "ema_21": 68897.8,
+        "rsi_14": 54.89,
+        "recent_high": 74046.5,
+        "recent_low": 62592.1,
+        "range_pct": 18.3,
+        "ema_50": 72521.8
+      }
+    },
+    "composite_bias": "leaning_bullish",
+    "volume_oi": {
+      "volume_change_24h_pct": -23.1,
+      "current_oi_btc": 81824.6,
+      "current_oi_usd": 5715020657.0,
+      "oi_change_24h_pct": 0.43,
+      "price_change_24h_pct": 0.15,
+      "divergence": "neutral"
+    },
+    "funding": {
+      "current_rate": -0.0001,
+      "current_rate_pct": -0.01,
+      "annualized_pct": -5.9,
+      "avg_7d": -0.0,
+      "avg_30d": -0.0,
+      "regime": "neutral",
+      "mark_price": 69793.59
+    },
+    "positioning": {
+      "global_ls": {
+        "ls_ratio": 1.75,
+        "long_pct": 63.7,
+        "short_pct": 36.3,
+        "zscore": 0.53,
+        "signal": "neutral"
+      },
+      "top_trader_accounts": {
+        "ls_ratio": 1.47,
+        "long_pct": 59.5,
+        "short_pct": 40.5,
+        "zscore": -0.49
+      },
+      "top_trader_positions": {
+        "ls_ratio": 1.09,
+        "long_pct": 52.0,
+        "short_pct": 47.9,
+        "zscore": -0.74
+      },
+      "composite_signal": "balanced",
+      "avg_zscore": -0.23
+    },
+    "levels": {
+      "supports": [
+        69194.9,
+        68932.9,
+        68029.6
+      ],
+      "resistances": [
+        70070.0,
+        70557.7,
+        70938.5
+      ]
+    },
+    "trade_idea": {
+      "direction": "LONG",
+      "confidence": "low",
+      "reasoning": [
+        "Multi-TF trend is leaning_bullish"
+      ],
+      "entry": 69691.6,
+      "stop_loss": 68848.9,
+      "take_profit": 71376.9,
+      "risk_reward": "1:2.0",
+      "risk_usd_per_btc": 842.7,
+      "reward_usd_per_btc": 1685.3
+    },
+    "summary": "BTC at $69,691.6. Composite bias: leaning_bullish. 24h change: +0.15%. Funding: neutral. Trade idea: LONG from $69691.6, TP $71376.9, SL $68848.9, R:R 1:2.0."
+  },
+  "pmregime": {
+    "as_of": "2026-03-12",
+    "gold_regime": {
+      "classification": "macro_driven",
+      "gold_dxy_20d_corr": -0.48,
+      "gold_10y_20d_corr": 0.2,
+      "gold_spx_20d_corr": 0.16,
+      "gold_price": 5192.3,
+      "evidence": "Gold-DXY 20d correlation at -0.48 \u2014 normal inverse relationship intact. Gold following traditional macro drivers (yields, dollar)."
+    },
+    "silver_analysis": {
+      "silver_price": 87.21,
+      "gold_price": 5192.3,
+      "silver_gold_ratio": 0.0168,
+      "ratio_percentile_1y": 89.3,
+      "silver_beta_20d": 2.13,
+      "speculative_overlay": "high",
+      "interpretation": "Silver running 2.1x gold's moves \u2014 speculative positioning elevated. Vulnerable to hawkish Fed."
+    },
+    "parabolic_detection": {
+      "gold_roc_20d": 2.4,
+      "gold_roc_acceleration": 4.7,
+      "is_parabolic": false,
+      "rsi_14d": 56.3,
+      "rsi_extreme": false
+    },
+    "correction_risk": {
+      "score": 3.1,
+      "drawdown_from_high_pct": -2.4,
+      "days_since_high": 42,
+      "pct_above_50sma": 6.0,
+      "factors": [
+        "RSI neutral at 56",
+        "Acceleration elevated (4.7)"
+      ]
+    },
+    "seasonal": {
+      "china_golden_week": false,
+      "chinese_new_year": false,
+      "indian_wedding_season": false,
+      "current_seasonal_bias": "neutral",
+      "note": "No major seasonal effects currently active."
+    },
+    "signals": [
+      "SILVER_HIGH_BETA"
+    ],
+    "summary": "Gold in macro driven regime. Gold-DXY correlation: -0.48. Silver beta: 2.13x. Correction risk: 3.1/10."
+  },
+  "usdregime": {
+    "as_of": "2026-03-12",
+    "dxy_regime": {
+      "level": 99.33,
+      "sma_50": 98.07,
+      "sma_200": 98.39,
+      "pct_vs_50sma": 1.3,
+      "pct_vs_200sma": 1.0,
+      "direction_20d": "rising",
+      "death_cross": true,
+      "classification": "cyclical_strength"
+    },
+    "yield_30y": {
+      "level": 4.78,
+      "change_20d_bps": -7.0,
+      "near_5pct_ceiling": false,
+      "direction_20d": "stable",
+      "interpretation": "30Y yield at 4.78% \u2014 elevated but below 5% ceiling. Fiscal concerns reflected in term premium."
+    },
+    "bond_volatility": {
+      "move_level": 78.6,
+      "move_percentile_1y": 46.0,
+      "interpretation": "MOVE subdued \u2014 low bond market volatility."
+    },
+    "exodus_basket": {
+      "gold_20d_return": 2.4,
+      "dxy_20d_return": 2.6,
+      "yield_30y_20d_change_bps": -7.0,
+      "basket_confirmed": false,
+      "coherence": "absent",
+      "legs_active": 1,
+      "interpretation": "No exodus basket signal \u2014 fewer than 2 legs active."
+    },
+    "bond_equity_correlation": {
+      "spx_30y_20d_corr": 0.28,
+      "regime": "transitioning",
+      "interpretation": "SPX-30Y yield 20d correlation: 0.28 (near zero). Bond-equity relationship in transition."
+    },
+    "usd_regime": "cyclical_strength",
+    "signals": [],
+    "summary": "USD regime: cyclical strength. DXY at 99.3 (cyclical strength). 30Y yield at 4.78%."
+  },
+  "ta_NVDA": {
+    "asset": "nvda",
+    "timeframe": "1D",
+    "analysis": "murphy_technical_analysis",
+    "as_of": "2026-03-12 08:14 UTC",
+    "data_points": 251,
+    "current_price": 186.03,
+    "1_trend": {
+      "direction": "contracting_range",
+      "strength": "weak",
+      "current_price": 186.03,
+      "swing_highs_count": 38,
+      "swing_lows_count": 37,
+      "recent_swing_high": 184.69,
+      "recent_swing_low": 175.55
+    },
+    "2_support_resistance": {
+      "supports": [
+        183.01,
+        177.22,
+        170.28
+      ],
+      "resistances": [
+        189.3,
+        194.6,
+        199.92,
+        211.74
+      ],
+      "nearest_support": 183.01,
+      "nearest_resistance": 189.3,
+      "support_distance_pct": 1.62,
+      "resistance_distance_pct": 1.76
+    },
+    "3_volume": {
+      "available": true,
+      "price_direction": "down",
+      "volume_increasing": false,
+      "volume_ratio": 0.9,
+      "signal": "MIXED \u2014 price falling with declining volume (selling exhaustion?)"
+    },
+    "4_moving_averages": {
+      "sma_50": 185.7,
+      "price_vs_sma50": "above",
+      "sma50_slope": "rising",
+      "sma_200": 176.89,
+      "price_vs_sma200": "above",
+      "sma200_slope": "rising",
+      "crossover": "SMA50 above SMA200 (bullish alignment)",
+      "sma_20": 185.62
+    },
+    "5_macd": {
+      "available": true,
+      "macd_line": -0.7536,
+      "signal_line": -0.5811,
+      "histogram": -0.1724,
+      "crossover": "bearish",
+      "histogram_direction": "contracting",
+      "centerline": "below_zero"
+    },
+    "6_rsi": {
+      "available": true,
+      "rsi": 48.17,
+      "zone": "bearish_momentum",
+      "divergence": null
+    },
+    "7_bollinger_bands": {
+      "available": true,
+      "upper_band": 195.24,
+      "middle_band": 185.62,
+      "lower_band": 176.01,
+      "bandwidth_pct": 10.36,
+      "percent_b": 52.11,
+      "squeeze": false,
+      "position": "within_bands (neutral)"
+    },
+    "8_fibonacci": {
+      "swing_high": 197.62,
+      "swing_low": 170.3,
+      "fib_236": 191.17,
+      "fib_382": 187.18,
+      "fib_500": 183.96,
+      "fib_618": 180.74,
+      "fib_786": 176.15,
+      "current_price": 186.03,
+      "fibonacci_zone": "38.2%-50% \u2014 standard retracement",
+      "available": true
+    },
+    "9_stochastic": {
+      "available": true,
+      "percent_k": 49.59,
+      "percent_d": 42.83,
+      "zone": "neutral",
+      "crossover": "%K above %D"
+    },
+    "10_patterns": {
+      "patterns": [
+        {
+          "pattern": "HEAD_AND_SHOULDERS",
+          "head_level": 193.62,
+          "neckline_approx": 190.39,
+          "signal": "Bearish reversal pattern"
+        }
+      ]
+    },
+    "composite_signal": {
+      "signal": "NEUTRAL",
+      "confidence": "low",
+      "bullish_count": 2,
+      "bearish_count": 3,
+      "total_indicators": 8,
+      "score": -0.12,
+      "framework_breakdown": [
+        "Trend: NEUTRAL",
+        "SMA 50: BULLISH",
+        "SMA 200: BULLISH",
+        "MACD: BEARISH (hist=-0.17)",
+        "RSI: BEARISH (48.2)",
+        "Stochastic: BEARISH (%K=49.6)",
+        "Bollinger: MIDDLE (%B=52.1)"
+      ]
+    }
+  },
+  "synthesis_NVDA": {
+    "ticker": "NVDA",
+    "analysis": "fundamental_ta_synthesis",
+    "as_of": "2026-03-12 08:14 UTC",
+    "fundamental": {
+      "signal": "NEUTRAL",
+      "details": {
+        "pe_ratio": null,
+        "revenue_growth_yoy": null,
+        "eps_growth_yoy": null,
+        "roe": null,
+        "gross_margin": null,
+        "net_margin": null
+      },
+      "company": "NVIDIA CORP"
+    },
+    "technical": {
+      "signal": "NEUTRAL",
+      "details": {
+        "rsi_14": 48.17,
+        "rsi_zone": "bearish_momentum",
+        "trend_direction": "contracting_range",
+        "trend_strength": "weak",
+        "breakout_detected": false,
+        "breakout_confidence": null,
+        "position": "CLOSER_TO_SUPPORT"
+      },
+      "current_price": 186.03
+    },
+    "synthesis": {
+      "alignment": "NEUTRAL",
+      "conviction": "LOW",
+      "assessment": "Mixed or neutral signals for NVDA. No strong directional conviction."
+    },
+    "suggested_followups": [
+      "Peer comparison: /peers NVDA",
+      "Graham value analysis: /graham NVDA"
+    ]
+  },
+  "sl_gold": {
+    "asset_class": "gold",
+    "direction": "long",
+    "entry_price": 3348.0,
+    "current_price": 3348.0,
+    "stop_levels": {
+      "percent_based": {
+        "level": 3297.78,
+        "method": "1.5% below entry (gold default)",
+        "risk_pct": 1.5
+      }
+    },
+    "recommended_stop": 3297.78,
+    "recommended_method": "percent_based",
+    "position_sizing": {
+      "risk_per_trade_pct": 1.5,
+      "capital_at_risk_per_unit": 50.22,
+      "sizing_rule": "Wider stop -> reduce position size. Tighter stop -> can size up."
+    },
+    "trailing_rules": {
+      "trail_to_breakeven_after": "1R profit ($50.22 above entry = $3398.22)",
+      "trailing_method": "1:1 trailing -- trail stop by 1 unit for every 1 unit of profit above breakeven"
+    },
+    "risk_management_rules": [
+      "Cut before stop if thesis deteriorates",
+      "Tighten all stops if macro regime shifts to risk-off",
+      "Re-enter at different level if stopped out but thesis intact",
+      "Manage correlated positions -- don't double up on same factor"
+    ],
+    "asset_specific_notes": "Gold: 4H RSI oversold is historically a strong buy signal. Avoid buying when 4H RSI overbought. Stops typically 30-160 points below entry. Half size on wide stops.",
+    "fidenza_framework": {
+      "rule_1": "Risk 0.75-2.0% of capital per trade (0.7-1.0% for ES swings)",
+      "rule_2": "Stop = recent swing low/high (1-3 days prior)",
+      "rule_3": "Position size inversely proportional to stop width",
+      "rule_4": "Trail stop to breakeven after 1R profit",
+      "rule_5": "Cut before stop when thesis deteriorates",
+      "rule_6": "Tighten all stops during regime shift to risk-off",
+      "rule_7": "Manage correlation -- close overlapping positions",
+      "rule_8": "Use uncorrelated positions as hedges",
+      "rule_9": "Re-enter after stops if thesis intact",
+      "rule_10": "Adapt sizing to volatility regime -- higher vol = wider stop + smaller size"
+    },
+    "summary": "Gold long at $3,348.00. Recommended stop: $3,297.78 (percent-based, 1.5% risk). Trail to breakeven after $50.22 profit. Risk 1.5% of capital per trade."
+  },
+  "grahamscreen": {
+    "screen": "graham_defensive_investor",
+    "as_of": "2026-03-12",
+    "universe_size": 504,
+    "results_count": 20,
+    "screened": 420,
+    "top_value_candidates": [
+      {
+        "ticker": "CMG",
+        "price": 33.85,
+        "graham_number": 128.85,
+        "margin_of_safety_pct": 280.65,
+        "pe": 2.71,
+        "pb": 0.57,
+        "pe_x_pb": 1.54,
+        "current_ratio": 1.6154,
+        "criteria_passed": "4/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "ARE",
+        "price": 50.17,
+        "graham_number": 100.38,
+        "margin_of_safety_pct": 100.08,
+        "pe": 8.58,
+        "pb": 0.66,
+        "pe_x_pb": 5.66,
+        "current_ratio": null,
+        "criteria_passed": "5/7",
+        "debt_to_equity": 0.7836
+      },
+      {
+        "ticker": "CAG",
+        "price": 16.98,
+        "graham_number": 28.52,
+        "margin_of_safety_pct": 67.96,
+        "pe": 7.48,
+        "pb": 1.07,
+        "pe_x_pb": 8.0,
+        "current_ratio": 0.8664,
+        "criteria_passed": "5/7",
+        "debt_to_equity": 1.2871
+      },
+      {
+        "ticker": "AMZN",
+        "price": 212.65,
+        "graham_number": 348.19,
+        "margin_of_safety_pct": 63.74,
+        "pe": 5.09,
+        "pb": 1.65,
+        "pe_x_pb": 8.4,
+        "current_ratio": 1.0787,
+        "criteria_passed": "4/7",
+        "debt_to_equity": 0.3807
+      },
+      {
+        "ticker": "CNC",
+        "price": 35.86,
+        "graham_number": 54.72,
+        "margin_of_safety_pct": 52.59,
+        "pe": 11.49,
+        "pb": 0.84,
+        "pe_x_pb": 9.65,
+        "current_ratio": 1.1406,
+        "criteria_passed": "4/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "BAX",
+        "price": 18.05,
+        "graham_number": 26.8,
+        "margin_of_safety_pct": 48.48,
+        "pe": 8.43,
+        "pb": 1.21,
+        "pe_x_pb": 10.2,
+        "current_ratio": 2.7447,
+        "criteria_passed": "6/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "CPB",
+        "price": 22.94,
+        "graham_number": 32.78,
+        "margin_of_safety_pct": 42.89,
+        "pe": 3.94,
+        "pb": 2.8,
+        "pe_x_pb": 11.03,
+        "current_ratio": 0.6136,
+        "criteria_passed": "5/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "BXP",
+        "price": 52.15,
+        "graham_number": 69.68,
+        "margin_of_safety_pct": 33.61,
+        "pe": 9.41,
+        "pb": 1.34,
+        "pe_x_pb": 12.61,
+        "current_ratio": null,
+        "criteria_passed": "5/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "COO",
+        "price": 73.75,
+        "graham_number": 90.13,
+        "margin_of_safety_pct": 22.21,
+        "pe": 15.33,
+        "pb": 0.98,
+        "pe_x_pb": 15.02,
+        "current_ratio": 1.0762,
+        "criteria_passed": "4/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "BEN",
+        "price": 24.97,
+        "graham_number": 26.59,
+        "margin_of_safety_pct": 6.49,
+        "pe": 16.01,
+        "pb": 1.24,
+        "pe_x_pb": 19.85,
+        "current_ratio": null,
+        "criteria_passed": "4/7",
+        "debt_to_equity": 0.0704
+      },
+      {
+        "ticker": "BIIB",
+        "price": 190.48,
+        "graham_number": 199.69,
+        "margin_of_safety_pct": 4.84,
+        "pe": 7.79,
+        "pb": 2.63,
+        "pe_x_pb": 20.49,
+        "current_ratio": 1.7262,
+        "criteria_passed": "4/7",
+        "debt_to_equity": 0.3555
+      },
+      {
+        "ticker": "CMCSA",
+        "price": 30.57,
+        "graham_number": 30.09,
+        "margin_of_safety_pct": -1.57,
+        "pe": 13.41,
+        "pb": 1.73,
+        "pe_x_pb": 23.2,
+        "current_ratio": 0.8726,
+        "criteria_passed": "3/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "CHTR",
+        "price": 224.36,
+        "graham_number": 219.92,
+        "margin_of_safety_pct": -1.98,
+        "pe": 14.53,
+        "pb": 1.61,
+        "pe_x_pb": 23.39,
+        "current_ratio": 0.4358,
+        "criteria_passed": "3/7",
+        "debt_to_equity": 2.6898
+      },
+      {
+        "ticker": "CI",
+        "price": 260.87,
+        "graham_number": 249.32,
+        "margin_of_safety_pct": -4.43,
+        "pe": 11.36,
+        "pb": 2.17,
+        "pe_x_pb": 24.65,
+        "current_ratio": 0.7647,
+        "criteria_passed": "4/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "C",
+        "price": 109.19,
+        "graham_number": 98.3,
+        "margin_of_safety_pct": -9.97,
+        "pe": 23.13,
+        "pb": 1.2,
+        "pe_x_pb": 27.76,
+        "current_ratio": null,
+        "criteria_passed": "2/7",
+        "debt_to_equity": 1.3835
+      },
+      {
+        "ticker": "CFG",
+        "price": 58.51,
+        "graham_number": 50.53,
+        "margin_of_safety_pct": -13.64,
+        "pe": 26.36,
+        "pb": 1.14,
+        "pe_x_pb": 30.05,
+        "current_ratio": null,
+        "criteria_passed": "3/7",
+        "debt_to_equity": 0.7488
+      },
+      {
+        "ticker": "ALL",
+        "price": 205.59,
+        "graham_number": 171.72,
+        "margin_of_safety_pct": -16.47,
+        "pe": 11.76,
+        "pb": 2.74,
+        "pe_x_pb": 32.22,
+        "current_ratio": null,
+        "criteria_passed": "3/7",
+        "debt_to_equity": 0.2744
+      },
+      {
+        "ticker": "APTV",
+        "price": 70.32,
+        "graham_number": 54.52,
+        "margin_of_safety_pct": -22.47,
+        "pe": 10.34,
+        "pb": 3.62,
+        "pe_x_pb": 37.43,
+        "current_ratio": 1.6936,
+        "criteria_passed": "4/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "ALGN",
+        "price": 174.81,
+        "graham_number": 134.92,
+        "margin_of_safety_pct": -22.82,
+        "pe": 7.8,
+        "pb": 4.84,
+        "pe_x_pb": 37.75,
+        "current_ratio": 1.7311,
+        "criteria_passed": "3/7",
+        "debt_to_equity": null
+      },
+      {
+        "ticker": "BAC",
+        "price": 48.52,
+        "graham_number": 35.46,
+        "margin_of_safety_pct": -26.92,
+        "pe": 25.95,
+        "pb": 1.62,
+        "pe_x_pb": 42.04,
+        "current_ratio": null,
+        "criteria_passed": "2/7",
+        "debt_to_equity": 0.969
+      }
+    ],
+    "summary": {
+      "avg_margin_of_safety": 30.16,
+      "companies_with_positive_margin": 11,
+      "companies_passing_5plus_criteria": 5
+    }
+  },
+  "netnet": {
+    "screen": "graham_net_net_working_capital",
+    "as_of": "2026-03-12",
+    "formula": "NCAV = (Current Assets - Total Liabilities) / Shares",
+    "graham_rule": "Buy at < 2/3 of NCAV for deep value",
+    "universe_size": 504,
+    "positive_ncav_count": 30,
+    "results_count": 20,
+    "net_net_candidates": [
+      {
+        "ticker": "CSGP",
+        "ncav_per_share": 23.07,
+        "current_assets": 2070390000.0,
+        "total_liabilities": 1221786000.0,
+        "current_price": 45.34,
+        "price_to_ncav": 1.97,
+        "discount_pct": -96.53,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "SMCI",
+        "ncav_per_share": 13.53,
+        "current_assets": 1648359000.0,
+        "total_liabilities": 921841000.0,
+        "current_price": 31.79,
+        "price_to_ncav": 2.35,
+        "discount_pct": -134.96,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "TTD",
+        "ncav_per_share": 7.22,
+        "current_assets": 1441811000.0,
+        "total_liabilities": 1093170000.0,
+        "current_price": 27.28,
+        "price_to_ncav": 3.78,
+        "discount_pct": -277.84,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "ANET",
+        "ncav_per_share": 25.94,
+        "current_assets": 3336899000.0,
+        "total_liabilities": 1263019000.0,
+        "current_price": 138.23,
+        "price_to_ncav": 5.33,
+        "discount_pct": -432.88,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "EPAM",
+        "ncav_per_share": 14.5,
+        "current_assets": 1507737000.0,
+        "total_liabilities": 664399000.0,
+        "current_price": 141.98,
+        "price_to_ncav": 9.79,
+        "discount_pct": -879.17,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "HUM",
+        "ncav_per_share": 17.11,
+        "current_assets": 24551000000.0,
+        "total_liabilities": 22278000000.0,
+        "current_price": 170.95,
+        "price_to_ncav": 9.99,
+        "discount_pct": -899.12,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "MOH",
+        "ncav_per_share": 13.8,
+        "current_assets": 6324000000.0,
+        "total_liabilities": 5482000000.0,
+        "current_price": 146.8,
+        "price_to_ncav": 10.64,
+        "discount_pct": -963.77,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "NVDA",
+        "ncav_per_share": 15.16,
+        "current_assets": 19584000000.0,
+        "total_liabilities": 10155000000.0,
+        "current_price": 186.03,
+        "price_to_ncav": 12.27,
+        "discount_pct": -1127.11,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "DXCM",
+        "ncav_per_share": 5.13,
+        "current_assets": 1995700000.0,
+        "total_liabilities": 1513400000.0,
+        "current_price": 66.31,
+        "price_to_ncav": 12.93,
+        "discount_pct": -1192.59,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "ISRG",
+        "ncav_per_share": 27.8,
+        "current_assets": 4691500000.0,
+        "total_liabilities": 1360600000.0,
+        "current_price": 492.87,
+        "price_to_ncav": 17.73,
+        "discount_pct": -1672.91,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "REGN",
+        "ncav_per_share": 43.61,
+        "current_assets": 8644100000.0,
+        "total_liabilities": 3624500000.0,
+        "current_price": 774.66,
+        "price_to_ncav": 17.76,
+        "discount_pct": -1676.34,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "FSLR",
+        "ncav_per_share": 9.09,
+        "current_assets": 2747843000.0,
+        "total_liabilities": 1780519000.0,
+        "current_price": 200.25,
+        "price_to_ncav": 22.03,
+        "discount_pct": -2102.97,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "CTSH",
+        "ncav_per_share": 2.76,
+        "current_assets": 8325000000.0,
+        "total_liabilities": 6816000000.0,
+        "current_price": 62.43,
+        "price_to_ncav": 22.62,
+        "discount_pct": -2161.96,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "INCY",
+        "ncav_per_share": 4.16,
+        "current_assets": 1716169000.0,
+        "total_liabilities": 814701000.0,
+        "current_price": 94.66,
+        "price_to_ncav": 22.75,
+        "discount_pct": -2175.48,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "MRNA",
+        "ncav_per_share": 2.33,
+        "current_assets": 1249936000.0,
+        "total_liabilities": 426667000.0,
+        "current_price": 55.97,
+        "price_to_ncav": 24.02,
+        "discount_pct": -2302.15,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "ALGN",
+        "ncav_per_share": 5.88,
+        "current_assets": 1576525000.0,
+        "total_liabilities": 1111851000.0,
+        "current_price": 174.81,
+        "price_to_ncav": 29.73,
+        "discount_pct": -2872.96,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "LRCX",
+        "ncav_per_share": 6.88,
+        "current_assets": 9408785000.0,
+        "total_liabilities": 8389482000.0,
+        "current_price": 218.87,
+        "price_to_ncav": 31.81,
+        "discount_pct": -3081.25,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "VRTX",
+        "ncav_per_share": 11.44,
+        "current_assets": 5446400000.0,
+        "total_liabilities": 2431547000.0,
+        "current_price": 492.38,
+        "price_to_ncav": 43.04,
+        "discount_pct": -4204.02,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "META",
+        "ncav_per_share": 12.65,
+        "current_assets": 69349000000.0,
+        "total_liabilities": 33067000000.0,
+        "current_price": 654.86,
+        "price_to_ncav": 51.77,
+        "discount_pct": -5076.76,
+        "signal": "Above NCAV"
+      },
+      {
+        "ticker": "DDOG",
+        "ncav_per_share": 2.04,
+        "current_assets": 933065000.0,
+        "total_liabilities": 263761000.0,
+        "current_price": 127.49,
+        "price_to_ncav": 62.5,
+        "discount_pct": -6149.51,
+        "signal": "Above NCAV"
+      }
+    ],
+    "summary": {
+      "deep_value_count": 0,
+      "below_ncav_count": 0,
+      "note": "Few S&P 500 companies trade at net-net. This screen is more relevant for small/micro-caps."
+    }
+  },
+  "compare": {
+    "companies_compared": 3,
+    "comparison": [
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA CORP",
+        "quarter": "2020-Q2",
+        "revenue": 3080000000.0,
+        "net_income": 917000000.0,
+        "gross_margin_pct": 65.06,
+        "operating_margin_pct": 31.69,
+        "net_margin_pct": 29.77,
+        "debt_ratio": 0.4367,
+        "ocf_to_ni": 0.99,
+        "fcf": 754000000.0,
+        "fcf_margin_pct": 24.48,
+        "diluted_eps": 1.47,
+        "current_ratio": 10.29,
+        "revenue_yoy_growth_pct": -45.59,
+        "roe_quarterly_pct": 7.0,
+        "net_cash_position": 8535000000.0,
+        "sector": "Information Technology"
+      },
+      {
+        "ticker": "AAPL",
+        "company": "Apple Inc.",
+        "quarter": "2019-Q4",
+        "revenue": 91819000000.0,
+        "net_income": 22236000000.0,
+        "gross_margin_pct": 38.35,
+        "operating_margin_pct": 27.85,
+        "net_margin_pct": 24.22,
+        "debt_ratio": 0.7372,
+        "ocf_to_ni": 1.37,
+        "fcf": 28409000000.0,
+        "fcf_margin_pct": 30.94,
+        "diluted_eps": 1.25,
+        "current_ratio": 1.6,
+        "revenue_yoy_growth_pct": -17.61,
+        "roe_quarterly_pct": 24.84,
+        "net_cash_position": -63315000000.0,
+        "sector": "Information Technology"
+      },
+      {
+        "ticker": "MSFT",
+        "company": "MICROSOFT CORPORATION",
+        "quarter": "2020-Q1",
+        "revenue": 35021000000.0,
+        "net_income": 10752000000.0,
+        "gross_margin_pct": 68.66,
+        "operating_margin_pct": 37.05,
+        "net_margin_pct": 30.7,
+        "debt_ratio": 0.5989,
+        "ocf_to_ni": 1.63,
+        "fcf": 13737000000.0,
+        "fcf_margin_pct": 39.23,
+        "diluted_eps": 1.4,
+        "current_ratio": 2.9,
+        "revenue_yoy_growth_pct": -16.03,
+        "roe_quarterly_pct": 9.39,
+        "net_cash_position": -54900000000.0,
+        "sector": "Information Technology"
+      }
+    ]
+  }
+}

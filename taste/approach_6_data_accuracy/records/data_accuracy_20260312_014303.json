@@ -1,0 +1,847 @@
+{
+  "timestamp": "2026-03-12T01:43:03.779670",
+  "input_tools": [
+    "scan_all_indicators",
+    "analyze_macro_regime",
+    "analyze_bond_market",
+    "analyze_equity_drivers",
+    "analyze_financial_stress",
+    "detect_late_cycle_signals",
+    "analyze_consumer_health",
+    "analyze_housing_market"
+  ],
+  "results": {
+    "summary": {
+      "total_checks": 64,
+      "passed": 59,
+      "failed": 5,
+      "accuracy_rate": "92.2%",
+      "critical_failures": 2,
+      "by_category": {
+        "arithmetic": {
+          "passed": 10,
+          "failed": 0
+        },
+        "cross_tool": {
+          "passed": 8,
+          "failed": 0
+        },
+        "composite_score": {
+          "passed": 4,
+          "failed": 0
+        },
+        "flag_alignment": {
+          "passed": 18,
+          "failed": 1
+        },
+        "range_plausibility": {
+          "passed": 16,
+          "failed": 0
+        },
+        "internal_contradiction": {
+          "passed": 3,
+          "failed": 2
+        },
+        "temporal": {
+          "passed": 0,
+          "failed": 2
+        }
+      },
+      "elapsed": "0.0s"
+    },
+    "failures": [
+      {
+        "check_id": "F-03b",
+        "category": "flag_alignment",
+        "check_name": "Implausible monthly move: market_cap",
+        "passed": false,
+        "expected": "monthly move < 100%",
+        "actual": "108.74%",
+        "detail": "Flag claims market_cap moved 108.74% in a month. This is highly suspicious for most financial instruments.",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-05",
+        "category": "internal_contradiction",
+        "check_name": "Consumer health 'stable' vs score 3.13",
+        "passed": false,
+        "expected": "score in [5, 7]",
+        "actual": 3.13,
+        "detail": "Label 'stable' implies score range (5, 7), actual: 3.13",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-07",
+        "category": "internal_contradiction",
+        "check_name": "Housing: 'mixed' phase with multiple distress signals",
+        "passed": false,
+        "expected": "distressed or declining phase",
+        "actual": "phase=mixed, signals={'AFFORDABILITY_STRESSED', 'SALES_PLUNGING', 'EXISTING_SALES_PLUNGING'}",
+        "detail": "Multiple distress signals ({'AFFORDABILITY_STRESSED', 'SALES_PLUNGING', 'EXISTING_SALES_PLUNGING'}) firing but cycle phase is labeled 'mixed'. Should be 'declining' or 'distressed'.",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "T-01",
+        "category": "temporal",
+        "check_name": "All tools report same date",
+        "passed": false,
+        "expected": "single date",
+        "actual": {
+          "scan_all_indicators": "2026-03-12",
+          "analyze_macro_regime": "2026-03-12",
+          "analyze_bond_market": "2026-03-12",
+          "analyze_equity_drivers": "2026-03-12",
+          "analyze_financial_stress": "2026-03-11",
+          "detect_late_cycle_signals": "2026-03-11",
+          "analyze_consumer_health": "2026-03-11",
+          "analyze_housing_market": "2026-03-11"
+        },
+        "detail": "Tools report 2 different dates: {'scan_all_indicators': '2026-03-12', 'analyze_macro_regime': '2026-03-12', 'analyze_bond_market': '2026-03-12', 'analyze_equity_drivers': '2026-03-12', 'analyze_financial_stress': '2026-03-11', 'detect_late_cycle_signals': '2026-03-11', 'analyze_consumer_health': '2026-03-11', 'analyze_housing_market': '2026-03-11'}",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "T-02",
+        "category": "temporal",
+        "check_name": "Data availability (unavailable fields)",
+        "passed": false,
+        "expected": "< 3 unavailable fields",
+        "actual": "7 unavailable",
+        "detail": "Found 7 'data_unavailable' or null fields: ['analyze_macro_regime/regimes.housing.classification', 'analyze_macro_regime/regimes.housing.evidence', 'analyze_equity_drivers/equity_risk_premium', 'analyze_equity_drivers/erp_pct=null', 'analyze_consumer_health/components.credit_growth_velocity.value=null']...",
+        "severity": "medium",
+        "tolerance": 0.0
+      }
+    ],
+    "all_checks": [
+      {
+        "check_id": "A-01",
+        "category": "arithmetic",
+        "check_name": "2s10s spread = 10Y - 2Y",
+        "passed": true,
+        "expected": 0.59,
+        "actual": 0.58,
+        "detail": "10Y (4.15) - 2Y (3.56) = 0.59, reported: 0.58",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-02",
+        "category": "arithmetic",
+        "check_name": "Term premium = nominal - real - breakeven",
+        "passed": true,
+        "expected": 0.01,
+        "actual": 0.01,
+        "detail": "4.15 - 1.8 - 2.34 = 0.01, reported: 0.01",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-03",
+        "category": "arithmetic",
+        "check_name": "HY-IG differential = HY OAS - IG OAS",
+        "passed": true,
+        "expected": 229,
+        "actual": 229,
+        "detail": "HY (313bps) - IG (84bps) = 229, reported: 229",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-04",
+        "category": "arithmetic",
+        "check_name": "high_yield_oas: pct * 100 = bps",
+        "passed": true,
+        "expected": 313,
+        "actual": 313,
+        "detail": "high_yield_oas: 3.13% * 100 = 313bps, reported: 313bps",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-04",
+        "category": "arithmetic",
+        "check_name": "ig_corporate_oas: pct * 100 = bps",
+        "passed": true,
+        "expected": 84,
+        "actual": 84,
+        "detail": "ig_corporate_oas: 0.84% * 100 = 84bps, reported: 84bps",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-04",
+        "category": "arithmetic",
+        "check_name": "bbb_oas: pct * 100 = bps",
+        "passed": true,
+        "expected": 106,
+        "actual": 106,
+        "detail": "bbb_oas: 1.06% * 100 = 106bps, reported: 106bps",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-05",
+        "category": "arithmetic",
+        "check_name": "Permits/starts ratio",
+        "passed": true,
+        "expected": 1.03,
+        "actual": 1.03,
+        "detail": "1448.0 / 1404.0 = 1.03, reported: 1.03",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-06",
+        "category": "arithmetic",
+        "check_name": "Monthly interest payment \u2248 price \u00d7 rate / 12",
+        "passed": true,
+        "expected": 2026,
+        "actual": 2026.0,
+        "detail": "$405,300 \u00d7 6.0% / 12 = $2,026, reported: $2,026.0",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-07",
+        "category": "arithmetic",
+        "check_name": "10Y breakeven \u2248 nominal_10Y - real_10Y",
+        "passed": true,
+        "expected": 2.35,
+        "actual": 2.34,
+        "detail": "4.15 - 1.8 = 2.35, reported BE: 2.34",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "A-07b",
+        "category": "arithmetic",
+        "check_name": "5Y breakeven \u2248 nominal_5Y - real_5Y",
+        "passed": true,
+        "expected": 2.56,
+        "actual": 2.56,
+        "detail": "3.72 - 1.16 = 2.56, reported BE: 2.56",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-01",
+        "category": "cross_tool",
+        "check_name": "VIX: stress vs equity",
+        "passed": true,
+        "expected": 24.6,
+        "actual": 24.6,
+        "detail": "Stress VIX=24.6, Equity VIX=24.6",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-02",
+        "category": "cross_tool",
+        "check_name": "HY OAS pct across tools",
+        "passed": true,
+        "expected": "all \u2248 3.13",
+        "actual": {
+          "macro_regime": 3.13,
+          "stress": 3.13,
+          "equity": 3.13,
+          "bond": 3.13
+        },
+        "detail": "HY OAS (pct) across tools: {'macro_regime': 3.13, 'stress': 3.13, 'equity': 3.13, 'bond': 3.13}",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-03",
+        "category": "cross_tool",
+        "check_name": "Real yield 10Y: equity vs bond",
+        "passed": true,
+        "expected": 1.8,
+        "actual": 1.8,
+        "detail": "Equity real_yield_10y=1.8, Bond 10y_real=1.8",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-04",
+        "category": "cross_tool",
+        "check_name": "Fed funds rate: macro vs bond",
+        "passed": true,
+        "expected": 3.64,
+        "actual": 3.64,
+        "detail": "Macro fed_funds=3.64, Bond effective_rate=3.64",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-05",
+        "category": "cross_tool",
+        "check_name": "Nominal 10Y: yield curve vs term premium",
+        "passed": true,
+        "expected": 4.15,
+        "actual": 4.15,
+        "detail": "Yield curve 10Y=4.15, Term premium comp=4.15",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-06",
+        "category": "cross_tool",
+        "check_name": "Credit spread direction across tools",
+        "passed": true,
+        "expected": "all = widening",
+        "actual": {
+          "equity": "widening",
+          "bond": "widening",
+          "macro": "widening"
+        },
+        "detail": "Spread direction: {'equity': 'widening', 'bond': 'widening', 'macro': 'widening'}",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-07",
+        "category": "cross_tool",
+        "check_name": "Mortgage rate: macro vs housing",
+        "passed": true,
+        "expected": 6.0,
+        "actual": 6.0,
+        "detail": "Macro mortgage=6.0, Housing mortgage=6.0",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "X-08",
+        "category": "cross_tool",
+        "check_name": "Credit classification consistency across tools",
+        "passed": true,
+        "expected": "consistent labels",
+        "actual": {
+          "equity_interp": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile,",
+          "bond_stress_level": "elevated",
+          "macro_classification": "elevated"
+        },
+        "detail": "Labels: {'equity_interp': 'HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile,', 'bond_stress_level': 'elevated', 'macro_classification': 'elevated'}. Tight signals: False, Wide signals: True",
+        "severity": "critical",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "S-01",
+        "category": "composite_score",
+        "check_name": "Financial stress composite score decomposition",
+        "passed": true,
+        "expected": 3.9,
+        "actual": 3.9,
+        "detail": "Weighted sum=3.900, available weight=1.00, rescaled=3.9. Components: nfci: 1\u00d70.18=0.180; hy_oas: 5\u00d70.18=0.900; vix: 5\u00d70.14=0.700; yield_curve_2s10s: 2\u00d70.14=0.280; initial_claims: 9\u00d70.1=0.900; sahm_rule: 3\u00d70.1=0.300; consumer_sentiment: 7\u00d70.08=0.560; consumer_credit: 1\u00d70.08=0.080",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "S-02",
+        "category": "composite_score",
+        "check_name": "Consumer health composite score decomposition",
+        "passed": true,
+        "expected": 3.13,
+        "actual": 3.13,
+        "detail": "Weighted sum=2.350, available weight=0.75, rescaled=3.13. Components: savings_rate: 5\u00d70.3=1.500; delinquency_rate: 1\u00d70.25=0.250; bank_lending_tightening: 3\u00d70.2=0.600",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "S-03",
+        "category": "composite_score",
+        "check_name": "Late-cycle count matches firing signals",
+        "passed": true,
+        "expected": 3,
+        "actual": 3,
+        "detail": "Counted 3 'firing' entries, reported count: 3",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "S-04",
+        "category": "composite_score",
+        "check_name": "Scan flagged_count matches flagged list length",
+        "passed": true,
+        "expected": 22,
+        "actual": 22,
+        "detail": "Flagged indicators list has 22 entries, reported flagged_count: 22",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'OIL_ELEVATED' vs actual crude_oil=86.95",
+        "passed": true,
+        "expected": "Oil > $80 (True)",
+        "actual": "crude_oil=86.95 -> True",
+        "detail": "Flag says 'OIL_ELEVATED' which requires Oil > $80. Actual value: 86.95. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'EXPENSIVE_CAPE' vs actual shiller_cape=30.81",
+        "passed": true,
+        "expected": "CAPE > 30 (True)",
+        "actual": "shiller_cape=30.81 -> True",
+        "detail": "Flag says 'EXPENSIVE_CAPE' which requires CAPE > 30. Actual value: 30.81. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'ELEVATED_CAPE' vs actual shiller_cape=30.81",
+        "passed": true,
+        "expected": "CAPE > 25 (True)",
+        "actual": "shiller_cape=30.81 -> True",
+        "detail": "Flag says 'ELEVATED_CAPE' which requires CAPE > 25. Actual value: 30.81. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'ELEVATED_PE' vs actual sp500_fundamentals=27.3",
+        "passed": true,
+        "expected": "P/E > 25 (True)",
+        "actual": "sp500_fundamentals=27.3 -> True",
+        "detail": "Flag says 'ELEVATED_PE' which requires P/E > 25. Actual value: 27.3. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'HIGH_SKEW' vs actual cboe_skew=154.46",
+        "passed": true,
+        "expected": "SKEW > 140 (True)",
+        "actual": "cboe_skew=154.46 -> True",
+        "detail": "Flag says 'HIGH_SKEW' which requires SKEW > 140. Actual value: 154.46. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'ELEVATED_SKEW' vs actual cboe_skew=154.46",
+        "passed": true,
+        "expected": "SKEW > 130 (True)",
+        "actual": "cboe_skew=154.46 -> True",
+        "detail": "Flag says 'ELEVATED_SKEW' which requires SKEW > 130. Actual value: 154.46. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-01",
+        "category": "flag_alignment",
+        "check_name": "Flag 'TGA_HIGH' vs actual tga_balance=832053.0",
+        "passed": true,
+        "expected": "TGA > $800B (True)",
+        "actual": "tga_balance=832053.0 -> True",
+        "detail": "Flag says 'TGA_HIGH' which requires TGA > $800B. Actual value: 832053.0. Match: True",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: gold",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "2.63% from high",
+        "detail": "gold=5178.7, 52w high=5318.4, gap=2.63%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W low proximity: es_futures",
+        "passed": true,
+        "expected": "within 1.0%",
+        "actual": "0.52% from low",
+        "detail": "es_futures=6778.75, 52w low=6743.75, gap=0.52%. Flag says AT (\u22641.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W low proximity: rty_futures",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "1.60% from low",
+        "detail": "rty_futures=2537.9, 52w low=2498.0, gap=1.60%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: jpy",
+        "passed": true,
+        "expected": "within 1.0%",
+        "actual": "0.16% from high",
+        "detail": "jpy=158.92, 52w high=159.18, gap=0.16%. Flag says AT (\u22641.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: russell_2000",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "-31451.67% from high",
+        "detail": "russell_2000=189.31, 52w high=0.6, gap=-31451.67%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: sp500_ma200",
+        "passed": true,
+        "expected": "within 1.0%",
+        "actual": "-2.40% from high",
+        "detail": "sp500_ma200=6754.46, 52w high=6596.05, gap=-2.40%. Flag says AT (\u22641.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: sp500_fundamentals",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "1.23% from high",
+        "detail": "sp500_fundamentals=27.3, 52w high=27.64, gap=1.23%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: sp500_fundamentals",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "-1606.25% from high",
+        "detail": "sp500_fundamentals=27.3, 52w high=1.6, gap=-1606.25%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: cboe_skew",
+        "passed": true,
+        "expected": "within 3.0%",
+        "actual": "2.23% from high",
+        "detail": "cboe_skew=154.46, 52w high=157.98, gap=2.23%. Flag says NEAR (\u22643.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W high proximity: us_gdp",
+        "passed": true,
+        "expected": "within 1.0%",
+        "actual": "0.00% from high",
+        "detail": "us_gdp=31490.07, 52w high=31490.07, gap=0.00%. Flag says AT (\u22641.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-02",
+        "category": "flag_alignment",
+        "check_name": "52W low proximity: sofr",
+        "passed": true,
+        "expected": "within 1.0%",
+        "actual": "0.55% from low",
+        "detail": "sofr=3.65, 52w low=3.63, gap=0.55%. Flag says AT (\u22641.0%)",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "F-03b",
+        "category": "flag_alignment",
+        "check_name": "Implausible monthly move: market_cap",
+        "passed": false,
+        "expected": "monthly move < 100%",
+        "actual": "108.74%",
+        "detail": "Flag claims market_cap moved 108.74% in a month. This is highly suspicious for most financial instruments.",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "vix = 24.6 in plausible range [8, 90]",
+        "passed": true,
+        "expected": "[8, 90]",
+        "actual": 24.6,
+        "detail": "VIX historically ranges 9-80 (2008 peak ~80). Actual: 24.6",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "fed_funds_rate = 3.64 in plausible range [0, 7]",
+        "passed": true,
+        "expected": "[0, 7]",
+        "actual": 3.64,
+        "detail": "Fed funds rate 0-6.5% in modern era. Actual: 3.64",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "cpi_yoy_pct = 2.8287 in plausible range [-3, 15]",
+        "passed": true,
+        "expected": "[-3, 15]",
+        "actual": 2.8287,
+        "detail": "CPI YoY -2% to 14.8% (1980 peak). Actual: 2.8287",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "unemployment_pct = 4.4 in plausible range [2, 15]",
+        "passed": true,
+        "expected": "[2, 15]",
+        "actual": 4.4,
+        "detail": "Unemployment 2.5-14.7% (2020 peak). Actual: 4.4",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "hy_oas_bps = 313 in plausible range [200, 2500]",
+        "passed": true,
+        "expected": "[200, 2500]",
+        "actual": 313,
+        "detail": "HY OAS 230-2000 bps historically. Actual: 313",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "ig_oas_bps = 84 in plausible range [40, 600]",
+        "passed": true,
+        "expected": "[40, 600]",
+        "actual": 84,
+        "detail": "IG OAS 45-600 bps historically. Actual: 84",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "real_yield_10y = 1.8 in plausible range [-2, 5]",
+        "passed": true,
+        "expected": "[-2, 5]",
+        "actual": 1.8,
+        "detail": "10Y real yield -1.5% to 4%. Actual: 1.8",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "stress_score = 3.9 in plausible range [0, 10]",
+        "passed": true,
+        "expected": "[0, 10]",
+        "actual": 3.9,
+        "detail": "Composite stress score 0-10. Actual: 3.9",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "consumer_health_score = 3.13 in plausible range [0, 10]",
+        "passed": true,
+        "expected": "[0, 10]",
+        "actual": 3.13,
+        "detail": "Consumer health score 0-10. Actual: 3.13",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "late_cycle_count = 3 in plausible range [0, 13]",
+        "passed": true,
+        "expected": "[0, 13]",
+        "actual": 3,
+        "detail": "Late-cycle signals 0-13. Actual: 3",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "mortgage_rate = 6.0 in plausible range [2, 10]",
+        "passed": true,
+        "expected": "[2, 10]",
+        "actual": 6.0,
+        "detail": "Mortgage rate 2-10% in modern era. Actual: 6.0",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "housing_starts_k = 1404.0 in plausible range [400, 2500]",
+        "passed": true,
+        "expected": "[400, 2500]",
+        "actual": 1404.0,
+        "detail": "Housing starts 400K-2200K SAAR. Actual: 1404.0",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "existing_sales = 3910000.0 in plausible range [1000000, 8000000]",
+        "passed": true,
+        "expected": "[1000000, 8000000]",
+        "actual": 3910000.0,
+        "detail": "Existing sales 1M-7M SAAR. Actual: 3910000.0",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "ism_pmi = 49.12 in plausible range [30, 70]",
+        "passed": true,
+        "expected": "[30, 70]",
+        "actual": 49.12,
+        "detail": "ISM PMI 30-65 historically. Actual: 49.12",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "savings_rate = 3.6 in plausible range [0, 35]",
+        "passed": true,
+        "expected": "[0, 35]",
+        "actual": 3.6,
+        "detail": "Personal savings rate 0-33%. Actual: 3.6",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "R-01",
+        "category": "range_plausibility",
+        "check_name": "breakeven_inflation = 2.34 in plausible range [0, 5]",
+        "passed": true,
+        "expected": "[0, 5]",
+        "actual": 2.34,
+        "detail": "Breakeven inflation 0-3.5% typically. Actual: 2.34",
+        "severity": "low",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-01",
+        "category": "internal_contradiction",
+        "check_name": "Bond: no contradictory breakeven signals",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "{'CURVE_STEEPENING', 'GLOBAL_DISCOUNT_RATE_ADJUSTMENT', 'BREAKEVEN_MIXED', 'BREAKEVEN_RISING'}",
+        "detail": "Breakeven signals are internally consistent.",
+        "severity": "critical",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-02",
+        "category": "internal_contradiction",
+        "check_name": "Macro: credit signal vs regime classification",
+        "passed": true,
+        "expected": "consistent",
+        "actual": "signal_loose=False, class_tight=False",
+        "detail": "Credit signal and regime classification are consistent.",
+        "severity": "critical",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-05",
+        "category": "internal_contradiction",
+        "check_name": "Consumer health 'stable' vs score 3.13",
+        "passed": false,
+        "expected": "score in [5, 7]",
+        "actual": 3.13,
+        "detail": "Label 'stable' implies score range (5, 7), actual: 3.13",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-06",
+        "category": "internal_contradiction",
+        "check_name": "Stress level 'moderate' vs score 3.9",
+        "passed": true,
+        "expected": "score in [2.5, 5]",
+        "actual": 3.9,
+        "detail": "Label 'moderate' implies score range (2.5, 5), actual: 3.9",
+        "severity": "high",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "I-07",
+        "category": "internal_contradiction",
+        "check_name": "Housing: 'mixed' phase with multiple distress signals",
+        "passed": false,
+        "expected": "distressed or declining phase",
+        "actual": "phase=mixed, signals={'AFFORDABILITY_STRESSED', 'SALES_PLUNGING', 'EXISTING_SALES_PLUNGING'}",
+        "detail": "Multiple distress signals ({'AFFORDABILITY_STRESSED', 'SALES_PLUNGING', 'EXISTING_SALES_PLUNGING'}) firing but cycle phase is labeled 'mixed'. Should be 'declining' or 'distressed'.",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "T-01",
+        "category": "temporal",
+        "check_name": "All tools report same date",
+        "passed": false,
+        "expected": "single date",
+        "actual": {
+          "scan_all_indicators": "2026-03-12",
+          "analyze_macro_regime": "2026-03-12",
+          "analyze_bond_market": "2026-03-12",
+          "analyze_equity_drivers": "2026-03-12",
+          "analyze_financial_stress": "2026-03-11",
+          "detect_late_cycle_signals": "2026-03-11",
+          "analyze_consumer_health": "2026-03-11",
+          "analyze_housing_market": "2026-03-11"
+        },
+        "detail": "Tools report 2 different dates: {'scan_all_indicators': '2026-03-12', 'analyze_macro_regime': '2026-03-12', 'analyze_bond_market': '2026-03-12', 'analyze_equity_drivers': '2026-03-12', 'analyze_financial_stress': '2026-03-11', 'detect_late_cycle_signals': '2026-03-11', 'analyze_consumer_health': '2026-03-11', 'analyze_housing_market': '2026-03-11'}",
+        "severity": "medium",
+        "tolerance": 0.0
+      },
+      {
+        "check_id": "T-02",
+        "category": "temporal",
+        "check_name": "Data availability (unavailable fields)",
+        "passed": false,
+        "expected": "< 3 unavailable fields",
+        "actual": "7 unavailable",
+        "detail": "Found 7 'data_unavailable' or null fields: ['analyze_macro_regime/regimes.housing.classification', 'analyze_macro_regime/regimes.housing.evidence', 'analyze_equity_drivers/equity_risk_premium', 'analyze_equity_drivers/erp_pct=null', 'analyze_consumer_health/components.credit_growth_velocity.value=null']...",
+        "severity": "medium",
+        "tolerance": 0.0
+      }
+    ]
+  }
+}

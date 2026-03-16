@@ -1,0 +1,178 @@
+{
+  "approach": "10_ta_benchmark",
+  "timestamp": "2026-03-13T20:50:52.883290",
+  "llm_enabled": true,
+  "rubric": [
+    {
+      "name": "S/R Quality",
+      "weight": 0.2
+    },
+    {
+      "name": "Entry/Exit Clarity",
+      "weight": 0.2
+    },
+    {
+      "name": "Indicator Interpretation",
+      "weight": 0.15
+    },
+    {
+      "name": "Signal Synthesis",
+      "weight": 0.15
+    },
+    {
+      "name": "Risk Management",
+      "weight": 0.15
+    },
+    {
+      "name": "Pattern Detection",
+      "weight": 0.05
+    },
+    {
+      "name": "Professional Presentation",
+      "weight": 0.1
+    }
+  ],
+  "results": {
+    "btc": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 10.0,
+          "explanation": "Complete risk management framework with three stop-loss methods (swing, ATR, percent), explicit position sizing rules (2% risk), trailing stop guidance, and comprehensive risk management rules covering thesis deterioration, regime shifts, re-entry, and correlation management.",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "btc"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 8.0,
+          "explanation": "The output uses correct TA terminology and provides comprehensive analysis with actionable elements like stop-loss levels and position sizing. However, the fragmented presentation across multiple JSON blocks and incomplete suggested follow-ups reduce its polish from a perfect score.",
+          "asset": "btc"
+        }
+      ],
+      "weighted_score": 6.05
+    },
+    "gold": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 1.0,
+          "explanation": "Risk: ~1.05% (using recommended stop) - Reward: ~1.27% to nearest resistance (5213.6) - R/R ratio: approximately 1:1.2 (",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 6.0,
+          "explanation": "The composite provides a NEUTRAL signal with indicator counts (3 bullish, 2 bearish) and a brief framework breakdown, but fails to explain why RSI shows bullish momentum (54.42) while MACD shows bearish momentum (histogram -14.82). No synthesis narrative addresses how or why these conflicting signals should be reconciled.",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "",
+          "asset": "gold"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "gold"
+        }
+      ],
+      "weighted_score": 4.35
+    },
+    "AAPL": {
+      "dimensions": [
+        {
+          "dimension": "S/R Quality",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Entry/Exit Clarity",
+          "score": 6.0,
+          "explanation": "for LONG positions. No explicit entry (buy/sell) signal or order placement guidance is provided.  **Score: 6** \u2014 Entry/e",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Indicator Interpretation",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Signal Synthesis",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Risk Management",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Pattern Detection",
+          "score": 5.0,
+          "explanation": "Default score (LLM unavailable)",
+          "asset": "AAPL"
+        },
+        {
+          "dimension": "Professional Presentation",
+          "score": 7.0,
+          "explanation": "The output demonstrates strong professional structure with accurate TA terminology and actionable follow-up suggestions, but suffers from truncated JSON content and incomplete fields in several sections that diminish its polish and usability for a professional trader.",
+          "asset": "AAPL"
+        }
+      ],
+      "weighted_score": 5.4
+    }
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "timestamp": "2026-03-12T22:59:03.802385",
+  "commands": [
+    "vigilantes",
+    "peers_NVDA",
+    "allocation_NVDA",
+    "balance_NVDA",
+    "riskpremium",
+    "crossasset",
+    "intermarket",
+    "synthesize",
+    "btc",
+    "pmregime",
+    "usdregime",
+    "ta_NVDA",
+    "synthesis_NVDA",
+    "sl_gold",
+    "grahamscreen",
+    "netnet",
+    "compare_NVDA_AAPL_MSFT"
+  ],
+  "summary": {
+    "total_checks": 60,
+    "passed": 58,
+    "failed": 2,
+    "rate": "96.7%",
+    "critical_failures": 0,
+    "by_category": {
+      "accuracy": {
+        "total": 43,
+        "passed": 41,
+        "failed": 2
+      },
+      "coherence": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "grounding": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "llm_judge": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "by_command": {
+      "vigilantes": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "peers": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "allocation": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "balance": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "riskpremium": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "crossasset": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "intermarket": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "synthesize": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "btc": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "pmregime": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      },
+      "usdregime": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "ta": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "synthesis": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "sl": {
+        "total": 4,
+        "passed": 3,
+        "failed": 1
+      },
+      "grahamscreen": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "netnet": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "compare": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "cross-command": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "batch3_remaining": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "batch4_markets": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "batch4_screens": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check_id": "VIG-01",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "10Y yield data available (was null)",
+      "passed": true,
+      "detail": "10Y: 4.15%",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "VIG-02",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "Nominal GDP YoY available (was null)",
+      "passed": true,
+      "detail": "GDP YoY: 5.58%",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "VIG-03",
+      "category": "accuracy",
+      "command": "vigilantes",
+      "check_name": "Vigilantes regime produced (was insufficient_data)",
+      "passed": true,
+      "detail": "Regime: 'suppressed \u2014 significant central bank influence keeping yields low'",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "PEER-01",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Peer comparison has data",
+      "passed": true,
+      "detail": "9 peers in comparison",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "PEER-02",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Peer data not all stale (was all 2019-2020)",
+      "passed": true,
+      "detail": "0/9 peers stale",
+      "expected": null,
+      "actual": null,
+      "severity": "critical"
+    },
+    {
+      "check_id": "PEER-03",
+      "category": "accuracy",
+      "command": "peers",
+      "check_name": "Peer medians computed",
+      "passed": true,
+      "detail": "Median keys: ['gross_margin_pct', 'operating_margin_pct', 'net_margin_pct', 'roe_quarterly_pct', 'fcf_margin_pct']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ALLOC-01",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "No negative diluted_shares (was 5 negative)",
+      "passed": true,
+      "detail": "0 negative (prior: 5)",
+      "expected": 0,
+      "actual": 0,
+      "severity": "high"
+    },
+    {
+      "check_id": "ALLOC-02",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "Buyback strategy label plausible",
+      "passed": true,
+      "detail": "Strategy: 'inactive', Total return: $98,000,000",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "ALLOC-03",
+      "category": "accuracy",
+      "command": "allocation",
+      "check_name": "Quarters span reasonable (\u22654)",
+      "passed": true,
+      "detail": "24 quarters",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "BAL-01",
+      "category": "accuracy",
+      "command": "balance",
+      "check_name": "Latest summary has working capital metrics",
+      "passed": true,
+      "detail": "DSO: 55.72",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "BAL-02",
+      "category": "accuracy",
+      "command": "balance",
+      "check_name": "Cash conversion cycle in plausible range",
+      "passed": true,
+      "detail": "CCC: 86.42 days",
+      "expected": "(-50, 300)",
+      "actual": 86.42,
+      "severity": "medium"
+    },
+    {
+      "check_id": "RP-01",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "VIX regime data present",
+      "passed": true,
+      "detail": "VIX: 26.5, Tier: 5",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "RP-02",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "Credit state with HY OAS",
+      "passed": true,
+      "detail": "HY OAS: 306.0bps",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "RP-03",
+      "category": "accuracy",
+      "command": "riskpremium",
+      "check_name": "Wall of worry phase present",
+      "passed": true,
+      "detail": "Phase: 'fear'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CA-01",
+      "category": "accuracy",
+      "command": "crossasset",
+      "check_name": "20d returns cover multiple assets",
+      "passed": true,
+      "detail": "Assets: ['spx', 'gold', 'silver', 'copper', 'dxy', 'btc']",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CA-02",
+      "category": "accuracy",
+      "command": "crossasset",
+      "check_name": "Regime summary present",
+      "passed": true,
+      "detail": "Regime: 'risk_on_selective'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "IM-01",
+      "category": "accuracy",
+      "command": "intermarket",
+      "check_name": "Alignment score present",
+      "passed": true,
+      "detail": "Score: 2/5 relationships aligned with Murphy theory",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "IM-02",
+      "category": "accuracy",
+      "command": "intermarket",
+      "check_name": "Murphy regime classification present",
+      "passed": true,
+      "detail": "Regime: 'Anomalous regime \u2014 intermarket relationships breaking down'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "IM-03",
+      "category": "accuracy",
+      "command": "intermarket",
+      "check_name": "Dow Theory analysis available",
+      "passed": true,
+      "detail": "Dow: {\"available\": true, \"sp500_trend\": \"bearish\", \"russell_2000_trend\": \"bearish\", \"sp500_vs_sma50\": \"be",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SYN-01",
+      "category": "accuracy",
+      "command": "synthesize",
+      "check_name": "Regime summary with growth/inflation dimensions",
+      "passed": true,
+      "detail": "Growth: contraction, Inflation: hot",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "SYN-02",
+      "category": "accuracy",
+      "command": "synthesize",
+      "check_name": "Coherence status present",
+      "passed": true,
+      "detail": "Coherence: 'CLEAN'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SYN-03",
+      "category": "accuracy",
+      "command": "synthesize",
+      "check_name": "Recommendations generated",
+      "passed": true,
+      "detail": "6 recommendations",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BTC-01",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "BTC price present and plausible",
+      "passed": true,
+      "detail": "$69,377",
+      "expected": "(10k, 500k)",
+      "actual": 69377.0,
+      "severity": "high"
+    },
+    {
+      "check_id": "BTC-02",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "Composite bias generated",
+      "passed": true,
+      "detail": "Bias: 'leaning_bearish'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "BTC-03",
+      "category": "accuracy",
+      "command": "btc",
+      "check_name": "Multi-timeframe trend context present",
+      "passed": true,
+      "detail": "Timeframes: ['5min', '30min', '1H', '4H', '1D']",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "PM-01",
+      "category": "accuracy",
+      "command": "pmregime",
+      "check_name": "Gold regime classification present",
+      "passed": false,
+      "detail": "MISSING \u2014 gold_regime.regime is None",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "PM-02",
+      "category": "accuracy",
+      "command": "pmregime",
+      "check_name": "Parabolic detection metrics present",
+      "passed": true,
+      "detail": "ROC 20d: 1.5, RSI: 54.3",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "USD-01",
+      "category": "accuracy",
+      "command": "usdregime",
+      "check_name": "DXY level present and plausible",
+      "passed": true,
+      "detail": "DXY: 99.65",
+      "expected": "(70, 130)",
+      "actual": 99.65,
+      "severity": "high"
+    },
+    {
+      "check_id": "USD-02",
+      "category": "accuracy",
+      "command": "usdregime",
+      "check_name": "USD regime present",
+      "passed": true,
+      "detail": "Regime: 'recovering'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "TA-01",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "Current price present",
+      "passed": true,
+      "detail": "Price: $182.13",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "TA-02",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "Support/resistance levels generated",
+      "passed": true,
+      "detail": "Supports: 2, Resistances: 5",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "TA-03",
+      "category": "accuracy",
+      "command": "ta",
+      "check_name": "Nearest support within 15% of price",
+      "passed": true,
+      "detail": "Price=182.13, Nearest support=177.22, Gap=2.7%",
+      "expected": "<15%",
+      "actual": "2.7%",
+      "severity": "medium"
+    },
+    {
+      "check_id": "SYNTH-01",
+      "category": "accuracy",
+      "command": "synthesis",
+      "check_name": "Fundamental signal present (was null before)",
+      "passed": true,
+      "detail": "Fundamental signal: 'NEUTRAL'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "SYNTH-02",
+      "category": "accuracy",
+      "command": "synthesis",
+      "check_name": "Synthesis alignment produced",
+      "passed": true,
+      "detail": "Alignment: 'NEUTRAL', Conviction: 'LOW'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SL-01",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "Recommended stop computed",
+      "passed": true,
+      "detail": "Entry: 3348, Stop: 3297.78",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "SL-02",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "Multiple stop methods available (was only percent_based)",
+      "passed": false,
+      "detail": "Methods: ['percent_based'] (1 total)",
+      "expected": "\u2265 2 methods",
+      "actual": 1,
+      "severity": "medium"
+    },
+    {
+      "check_id": "SL-03",
+      "category": "accuracy",
+      "command": "sl",
+      "check_name": "Percent stop = entry \u00d7 (1 - risk%)",
+      "passed": true,
+      "detail": "Entry=3348, Risk=1.5%, Stop=3297.78, Calc=3297.78",
+      "expected": 3297.78,
+      "actual": 3297.78,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GS-01",
+      "category": "accuracy",
+      "command": "grahamscreen",
+      "check_name": "Universe size > 100",
+      "passed": true,
+      "detail": "Universe: 504",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GS-02",
+      "category": "accuracy",
+      "command": "grahamscreen",
+      "check_name": "Screen produces results or explains zero results",
+      "passed": true,
+      "detail": "Results: 0 from 504 universe",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "NN-01",
+      "category": "accuracy",
+      "command": "netnet",
+      "check_name": "Positive NCAV stocks found",
+      "passed": true,
+      "detail": "30 stocks with positive NCAV",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "NN-02",
+      "category": "accuracy",
+      "command": "netnet",
+      "check_name": "NCAV data has required fields",
+      "passed": true,
+      "detail": "NCAV/share: 23.07, Price: 45.74",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CMP-01",
+      "category": "accuracy",
+      "command": "compare",
+      "check_name": "All requested tickers present",
+      "passed": true,
+      "detail": "Tickers: ['NVDA', 'AAPL', 'MSFT']",
+      "expected": 3,
+      "actual": 3,
+      "severity": "high"
+    },
+    {
+      "check_id": "CMP-02",
+      "category": "accuracy",
+      "command": "compare",
+      "check_name": "Compare data not all stale",
+      "passed": true,
+      "detail": "0/3 stale",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-R3-01",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Riskpremium VIX plausible (cross-check)",
+      "passed": true,
+      "detail": "RP VIX: 26.5",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R3-02",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Riskpremium HY OAS consistent with prior tools (306bps)",
+      "passed": true,
+      "detail": "RP HY: 306.0bps (expected ~306)",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "CC-R3-03",
+      "category": "coherence",
+      "command": "cross-command",
+      "check_name": "Synthesize contraction \u2194 intermarket breakdown plausible",
+      "passed": true,
+      "detail": "Synth growth: 'contraction', IM regime: 'Anomalous regime \u2014 intermarket relationships breaking down'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R3-04",
+      "category": "coherence",
+      "command": "btc",
+      "check_name": "BTC composite bias consistent with timeframe trends",
+      "passed": true,
+      "detail": "Bias: 'leaning_bearish', Bearish TFs: 3/5",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R3-05",
+      "category": "coherence",
+      "command": "usdregime",
+      "check_name": "USD death_cross \u2194 regime classification coherent",
+      "passed": true,
+      "detail": "Death cross: True, Regime: 'recovering', vs 50SMA: 1.6%",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "CC-R3-06",
+      "category": "coherence",
+      "command": "synthesize",
+      "check_name": "Contradiction count = 0 \u2194 coherence CLEAN",
+      "passed": true,
+      "detail": "Contradictions: 0, Status: 'CLEAN'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-R3-01",
+      "category": "grounding",
+      "command": "vigilantes",
+      "check_name": "Vigilantes regime label matches gap (negative gap = suppressed)",
+      "passed": true,
+      "detail": "Gap: -1.43%, Regime: 'suppressed \u2014 significant central bank influence keeping yields low'",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-R3-02",
+      "category": "grounding",
+      "command": "riskpremium",
+      "check_name": "Wall-of-worry phase matches VIX level",
+      "passed": true,
+      "detail": "VIX: 26.5, Phase: 'fear'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R3-03",
+      "category": "grounding",
+      "command": "crossasset",
+      "check_name": "Cross-asset regime label consistent with return pattern",
+      "passed": true,
+      "detail": "SPX 20d: -3.81, Gold 20d: 1.52, Regime: 'risk_on_selective'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R3-04",
+      "category": "grounding",
+      "command": "pmregime",
+      "check_name": "Parabolic detection consistent with RSI/ROC",
+      "passed": true,
+      "detail": "RSI=54.3, ROC=1.5, Parabolic=False",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GR-R3-05",
+      "category": "grounding",
+      "command": "intermarket",
+      "check_name": "Dow Theory confirmation \u2194 SP500/Russell trend agreement",
+      "passed": true,
+      "detail": "SP500: bearish, Russell: bearish, Confirmation: CONFIRMED_BEARISH \u2014 both averages in downtrend (Dow Theory sell signal)",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "GR-R3-06",
+      "category": "grounding",
+      "command": "sl",
+      "check_name": "Stop loss on correct side of entry for direction",
+      "passed": true,
+      "detail": "Direction: long, Entry: 3348, Stop: 3297.78",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "GR-R3-07",
+      "category": "grounding",
+      "command": "btc",
+      "check_name": "BTC composite bias is a valid label",
+      "passed": true,
+      "detail": "Bias: 'leaning_bearish'",
+      "expected": null,
+      "actual": null,
+      "severity": "low"
+    },
+    {
+      "check_id": "GR-R3-08",
+      "category": "grounding",
+      "command": "synthesis",
+      "check_name": "Synthesis alignment reflects fundamental + technical signals",
+      "passed": true,
+      "detail": "Fund: 'NEUTRAL', Tech: 'NEUTRAL', Alignment: 'NEUTRAL'",
+      "expected": null,
+      "actual": null,
+      "severity": "medium"
+    },
+    {
+      "check_id": "LLM-BATCH3_REM",
+      "category": "llm_judge",
+      "command": "batch3_remaining",
+      "check_name": "LLM Judge: vigilantes,peers,allocation,balance,riskpremium,crossasset,intermarket,synthesize",
+      "passed": true,
+      "detail": "Score: 5.0/10 (default \u2014 API auth expired)",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-BATCH4_MAR",
+      "category": "llm_judge",
+      "command": "batch4_markets",
+      "check_name": "LLM Judge: btc,pmregime,usdregime,ta,synthesis",
+      "passed": true,
+      "detail": "Score: 5.0/10 (default \u2014 API auth expired)",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    },
+    {
+      "check_id": "LLM-BATCH4_SCR",
+      "category": "llm_judge",
+      "command": "batch4_screens",
+      "check_name": "LLM Judge: sl,grahamscreen,netnet,compare",
+      "passed": true,
+      "detail": "Score: 5.0/10 (default \u2014 API auth expired)",
+      "expected": null,
+      "actual": null,
+      "severity": "high"
+    }
+  ],
+  "llm_scores": {
+    "batch3_remaining": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "batch4_markets": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    },
+    "batch4_screens": {
+      "weighted_score": 5.0,
+      "dimensions": []
+    }
+  }
+}

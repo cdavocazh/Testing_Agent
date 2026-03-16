@@ -1,0 +1,519 @@
+{
+  "analyze_equity_valuation_NVDA": {
+    "ticker": "NVDA",
+    "company": "NVIDIA CORP",
+    "data_source": "SEC EDGAR",
+    "schema": "expanded_53col",
+    "quarters_analyzed": 24,
+    "latest_quarter": "2020-Q2",
+    "latest_metrics": {
+      "revenue": 3080000000.0,
+      "cost_of_revenue": 1076000000.0,
+      "gross_profit": 2004000000.0,
+      "operating_income": 976000000.0,
+      "net_income": 917000000.0,
+      "ebitda": 976000000.0,
+      "total_assets": 23254000000.0,
+      "total_liabilities": 10155000000.0,
+      "operating_cash_flow": 909000000.0,
+      "free_cash_flow": 754000000.0,
+      "capital_expenditure": -155000000.0,
+      "debt_ratio": 0.4367,
+      "diluted_eps": 1.47,
+      "diluted_shares": 622000000.0,
+      "stock_based_compensation": 224000000.0,
+      "research_development": 735000000.0
+    },
+    "margins": {
+      "gross_margin_pct": 65.06,
+      "operating_margin_pct": 31.69,
+      "net_margin_pct": 29.77,
+      "ebitda_margin_pct": 31.69,
+      "rd_to_revenue_pct": 23.86,
+      "sbc_to_revenue_pct": 7.27
+    },
+    "cash_flow_quality": {
+      "ocf_to_net_income": 0.99,
+      "interpretation": "Weak \u2014 earnings may not be backed by cash",
+      "fcf_margin_pct": 24.48,
+      "capex_to_ocf_pct": 17.05,
+      "sbc_to_revenue_pct": 7.27,
+      "fcf_to_net_income": 0.82,
+      "ocf_to_revenue_pct": 29.51
+    },
+    "balance_sheet": {
+      "total_equity": 13099000000.0,
+      "equity_ratio": 0.5633,
+      "leverage_ratio": 0.78,
+      "current_ratio": 10.29,
+      "debt_to_equity": 0.53,
+      "total_debt": 6959000000.0,
+      "net_debt": -8535000000.0
+    },
+    "growth_trend": [
+      {
+        "from": "2020-Q3",
+        "to": "2020-Q2",
+        "total_revenue_growth_pct": -20.33,
+        "net_income_growth_pct": 47.43,
+        "operating_cash_flow_growth_pct": -41.99,
+        "free_cash_flow_growth_pct": -44.15,
+        "ebitda_growth_pct": 49.92,
+        "gross_profit_growth_pct": -11.91
+      },
+      {
+        "from": "2020-Q4",
+        "to": "2020-Q3",
+        "total_revenue_growth_pct": -18.2,
+        "net_income_growth_pct": -53.44,
+        "operating_cash_flow_growth_pct": 22.52,
+        "free_cash_flow_growth_pct": 67.49,
+        "ebitda_growth_pct": -53.43,
+        "gross_profit_growth_pct": -23.14
+      },
+      {
+        "from": "2021-Q1",
+        "to": "2020-Q4",
+        "total_revenue_growth_pct": -5.54,
+        "net_income_growth_pct": -8.3,
+        "operating_cash_flow_growth_pct": -38.12,
+        "free_cash_flow_growth_pct": -61.01,
+        "ebitda_growth_pct": -7.23,
+        "gross_profit_growth_pct": -6.24
+      },
+      {
+        "from": "2021-Q2",
+        "to": "2021-Q1",
+        "total_revenue_growth_pct": -11.62,
+        "net_income_growth_pct": -23.8,
+        "operating_cash_flow_growth_pct": 10.3,
+        "free_cash_flow_growth_pct": 31.15,
+        "ebitda_growth_pct": -32.63,
+        "gross_profit_growth_pct": -13.01
+      }
+    ],
+    "year_over_year": {
+      "current_quarter": "2020-Q2",
+      "year_ago_quarter": "2021-Q2",
+      "total_revenue_yoy_growth_pct": -45.59,
+      "net_income_yoy_growth_pct": -52.04,
+      "operating_cash_flow_yoy_growth_pct": -51.49,
+      "free_cash_flow_yoy_growth_pct": -52.16,
+      "ebitda_yoy_growth_pct": -56.37,
+      "gross_profit_yoy_growth_pct": -44.78,
+      "operating_income_yoy_growth_pct": -50.1
+    },
+    "return_on_capital": {
+      "roe_quarterly_pct": 7.0,
+      "roe_annualized_pct": 28.0,
+      "roic_quarterly_pct": 19.99,
+      "roic_annualized_pct": 79.96,
+      "effective_tax_rate_pct": 6.52,
+      "roa_quarterly_pct": 3.94,
+      "roa_annualized_pct": 15.77
+    },
+    "margin_trends": {
+      "gross_margin": {
+        "values_pct": [
+          75.0,
+          73.41,
+          72.42,
+          60.52,
+          73.03,
+          74.56,
+          75.15,
+          78.35,
+          75.97,
+          73.95,
+          70.05,
+          64.63,
+          63.34,
+          53.57,
+          43.48,
+          65.53,
+          65.42,
+          65.2,
+          64.78,
+          64.11,
+          63.1,
+          62.63,
+          58.85,
+          65.06
+        ],
+        "trend": "declining"
+      },
+      "operating_margin": {
+        "values_pct": [
+          65.02,
+          63.17,
+          60.84,
+          49.11,
+          61.1,
+          62.34,
+          62.06,
+          64.92,
+          61.6,
+          57.49,
+          50.34,
+          29.76,
+          20.76,
+          10.13,
+          7.44,
+          22.54,
+          38.86,
+          37.6,
+          37.56,
+          34.55,
+          30.12,
+          29.58,
+          16.84,
+          31.69
+        ],
+        "trend": "declining"
+      },
+      "net_margin": {
+        "values_pct": [
+          63.06,
+          55.98,
+          56.53,
+          42.61,
+          56.17,
+          55.04,
+          55.26,
+          57.14,
+          55.59,
+          51.01,
+          45.81,
+          28.41,
+          23.37,
+          11.47,
+          9.79,
+          19.52,
+          39.28,
+          34.69,
+          36.48,
+          33.77,
+          29.12,
+          28.27,
+          16.09,
+          29.77
+        ],
+        "trend": "volatile"
+      },
+      "ebitda_margin": {
+        "values_pct": [
+          65.02,
+          63.17,
+          60.84,
+          50.49,
+          61.1,
+          62.34,
+          62.06,
+          66.5,
+          61.6,
+          57.49,
+          50.34,
+          35.09,
+          20.76,
+          10.13,
+          7.44,
+          26.57,
+          38.86,
+          37.6,
+          37.56,
+          39.52,
+          30.12,
+          29.58,
+          16.84,
+          31.69
+        ],
+        "trend": "volatile"
+      }
+    },
+    "net_cash_position": {
+      "cash_and_equivalents": 15494000000.0,
+      "cash_and_short_term_investments": 16354000000.0,
+      "total_debt": 6959000000.0,
+      "net_debt": -8535000000.0,
+      "net_cash_position": 8535000000.0,
+      "position": "net_cash"
+    },
+    "capital_allocation": {
+      "dividends_paid": -98000000.0,
+      "dividend_to_revenue_pct": 3.18,
+      "sbc": 224000000.0
+    },
+    "balance_sheet_efficiency": {
+      "days_sales_outstanding": 55.72,
+      "days_payable_outstanding": 63.65,
+      "inventory_turnover": 0.95,
+      "days_inventory_outstanding": 94.35,
+      "cash_conversion_cycle": 86.42,
+      "working_capital": 17681000000.0,
+      "working_capital_to_revenue_pct": 574.06
+    },
+    "sector_classification": {
+      "gics_sector": "Information Technology",
+      "gics_industry_group": "Semiconductors & Semiconductor Equipment"
+    },
+    "flags": [
+      "HIGH_MARGIN: Operating margin 31.69% \u2014 premium business",
+      "HIGH_GROSS_MARGIN: 65.06% \u2014 strong pricing power",
+      "HIGH_RD_SPEND: R&D at 23.86% of revenue \u2014 heavy investment phase",
+      "REVENUE_DECLINE: YoY revenue down -45.59%",
+      "HIGH_ROIC: 79.96% annualized \u2014 strong value creation",
+      "LARGE_NET_CASH: Net cash is 277.11% of quarterly revenue",
+      "MARGIN_DECLINING: gross_margin trending down across recent quarters",
+      "MARGIN_DECLINING: operating_margin trending down across recent quarters"
+    ],
+    "valuation": {
+      "diluted_eps": 1.47,
+      "annualized_eps": 5.88,
+      "book_value_per_share": 21.06,
+      "note": "For market P/E, use graham_analysis(ticker) or get_valuation_snapshot()"
+    }
+  },
+  "analyze_commodity_outlook_crude_oil": {
+    "commodity": "crude_oil",
+    "timestamp": "2026-03-12",
+    "price_analysis": {
+      "indicator": "Crude Oil Futures",
+      "total_rows": 48,
+      "metrics": {
+        "crude_oil_price": {
+          "latest_value": 94.8,
+          "daily_change": 11.35,
+          "daily_change_pct": 13.6,
+          "wow_change": 20.14,
+          "wow_change_pct": 26.98,
+          "mom_change": 30.44,
+          "mom_change_pct": 47.3,
+          "3m_change_pct": null,
+          "z_score_20d": 2.08,
+          "52w_high": 94.8,
+          "52w_low": 55.99,
+          "pct_from_52w_high": 0.0,
+          "pct_from_52w_low": 69.32,
+          "flags": [
+            "NOTABLE_OIL_MOVE: Oil moved +13.60%",
+            "SIGNIFICANT_OIL_MOVE: Oil moved +13.60% \u2014 significant (geopolitics/OPEC?)",
+            "EXTREME_OIL_MOVE: Oil moved +13.60% \u2014 extreme daily move",
+            "WEEKLY_PCT_MOVE: +26.98% WoW",
+            "MONTHLY_PCT_MOVE: +47.30% MoM",
+            "OIL_ELEVATED: Oil above $80 \u2014 elevated; inflationary pressure",
+            "STATISTICAL_ANOMALY: crude_oil_price spike (z=2.08, 20-day)",
+            "AT_52W_HIGH: Within 1% of 52-week high (94.8)"
+          ]
+        }
+      }
+    },
+    "inventory_data": {
+      "as_of": "2026-03-12",
+      "wti": {
+        "latest_price": 94.8,
+        "date": "2026-03-11",
+        "daily_change": 11.35,
+        "daily_change_pct": 13.601,
+        "wow_change": 20.14,
+        "wow_change_pct": 26.9756
+      },
+      "brent": {
+        "latest_price": 94.35,
+        "date": "2026-03-09",
+        "daily_change": -1.39,
+        "daily_change_pct": -1.4518,
+        "wow_change": 17.11,
+        "wow_change_pct": 22.1517
+      },
+      "wti_brent_spread": {
+        "value": 0.45,
+        "interpretation": "WTI premium (unusual)"
+      },
+      "crude_inventories": {
+        "error": "Failed to fetch crude inventory data"
+      },
+      "gasoline_stocks": {
+        "error": "Failed to fetch gasoline stock data"
+      },
+      "distillate_stocks": {
+        "error": "Failed to fetch distillate stock data"
+      },
+      "gasoline_price": {
+        "latest_price_per_gallon": 3.015,
+        "date": "2026-03-02"
+      }
+    },
+    "seasonal_pattern": {
+      "status": "insufficient_history",
+      "days_available": 70
+    },
+    "support_resistance": {
+      "supports": [
+        59.27,
+        62.23,
+        55.99
+      ],
+      "resistances": [
+        65.06,
+        58.32,
+        62.02
+      ],
+      "current_price": 94.8
+    },
+    "correlations": {
+      "dxy_20d_correlation": 0.51,
+      "interpretation": "moderate positive"
+    },
+    "energy_etf_divergence": {
+      "xle": {
+        "ticker": "XLE",
+        "latest_price": 56.98,
+        "price_1w_ago": 56.19,
+        "pct_change_1w": 1.41,
+        "price_1m_ago": 53.64,
+        "pct_change_1m": 6.23
+      },
+      "xop": {
+        "ticker": "XOP",
+        "latest_price": 164.69,
+        "price_1w_ago": 160.77,
+        "pct_change_1w": 2.44,
+        "price_1m_ago": 146.49,
+        "pct_change_1m": 12.42
+      },
+      "spread_1w_pp": 1.03,
+      "spread_1m_pp": 6.19,
+      "interpretation": "XLE +1.4%, XOP +2.4% \u2014 modest divergence, no strong signal."
+    },
+    "signals": [
+      "DXY_HEADWIND"
+    ],
+    "summary": "Crude Oil at $94.80. near 52-week high. up 27.0% WoW. signals: DXY_HEADWIND."
+  },
+  "analyze_equity_drivers_both": {
+    "timestamp": "2026-03-12",
+    "index": "both",
+    "equity_risk_premium": {
+      "status": "data_unavailable"
+    },
+    "erp_pct": null,
+    "real_yield_impact": {
+      "real_yield_10y": 1.8,
+      "trend": "rising",
+      "daily_change_bps": -2.0,
+      "interpretation": "Real yields at 1.8% \u2014 moderate level"
+    },
+    "credit_equity_link": {
+      "hy_oas_pct": 3.13,
+      "hy_oas_bps": 313,
+      "spread_direction": "widening",
+      "wow_change_bps": 1.0,
+      "stress_level": "elevated",
+      "interpretation": "HY spread at 313bps \u2014 above average \u2014 watchful (73th pctile, 1Y)"
+    },
+    "dxy_impact": {
+      "latest_dxy": 99.5,
+      "wow_change_pct": 0.74,
+      "interpretation": "Weak dollar \u2014 tailwind for multinationals, EM"
+    },
+    "inflation_rotation": {
+      "cpi_yoy_pct": -1.46,
+      "cpi_trend": "flat",
+      "rotation_signal": "No strong rotation signal"
+    },
+    "volatility_regime": {
+      "vix": 24.2,
+      "move": 78.6,
+      "tier": 3,
+      "regime": "Elevated caution \u2014 protection costs rising"
+    },
+    "rolling_correlations": {
+      "sp500": {
+        "dxy": {
+          "latest_20d": -0.12,
+          "avg_60d": -0.12,
+          "interpretation": "weak inverse"
+        },
+        "10y_yield": {
+          "latest_20d": 0.4,
+          "avg_60d": 0.4,
+          "interpretation": "moderate positive"
+        },
+        "2y_yield": {
+          "latest_20d": 0.37,
+          "avg_60d": 0.37,
+          "interpretation": "moderate positive"
+        },
+        "vix": {
+          "latest_20d": -0.86,
+          "avg_60d": -0.86,
+          "interpretation": "strong inverse"
+        },
+        "move": {
+          "latest_20d": -0.8,
+          "avg_60d": -0.8,
+          "interpretation": "strong inverse"
+        },
+        "gold": {
+          "latest_20d": 0.22,
+          "avg_60d": 0.22,
+          "interpretation": "weak positive"
+        },
+        "crude_oil": {
+          "latest_20d": -0.29,
+          "avg_60d": -0.29,
+          "interpretation": "weak inverse"
+        },
+        "copper": {
+          "latest_20d": 0.64,
+          "avg_60d": 0.64,
+          "interpretation": "strong positive"
+        }
+      },
+      "russell_2000": {
+        "dxy": {
+          "latest_20d": -0.11,
+          "avg_60d": -0.11,
+          "interpretation": "weak inverse"
+        },
+        "10y_yield": {
+          "latest_20d": 0.26,
+          "avg_60d": 0.26,
+          "interpretation": "weak positive"
+        },
+        "2y_yield": {
+          "latest_20d": 0.22,
+          "avg_60d": 0.22,
+          "interpretation": "weak positive"
+        },
+        "vix": {
+          "latest_20d": -0.69,
+          "avg_60d": -0.69,
+          "interpretation": "strong inverse"
+        },
+        "move": {
+          "latest_20d": -0.69,
+          "avg_60d": -0.69,
+          "interpretation": "strong inverse"
+        },
+        "gold": {
+          "latest_20d": 0.23,
+          "avg_60d": 0.23,
+          "interpretation": "weak positive"
+        },
+        "crude_oil": {
+          "latest_20d": -0.44,
+          "avg_60d": -0.44,
+          "interpretation": "moderate inverse"
+        },
+        "copper": {
+          "latest_20d": 0.45,
+          "avg_60d": 0.45,
+          "interpretation": "moderate positive"
+        }
+      }
+    },
+    "signals": [],
+    "summary": "10Y real yield 1.8%. HY spreads 313bps. DXY at 99.5."
+  }
+}

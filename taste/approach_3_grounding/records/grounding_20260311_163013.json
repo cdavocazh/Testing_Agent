@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-03-11T16:30:13.241955",
+  "summary": {
+    "total_claims": 10,
+    "grounded": 4,
+    "ungrounded": 6,
+    "grounding_rate": "40.0%"
+  },
+  "ungrounded_claims": [
+    {
+      "source_tool": "analyze_bond_market",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'tight' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "tight",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'tight'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "interpretation",
+      "claim_text": "Narrative says credit is 'tight' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "tight",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'tight'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "interpretation",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_consumer_health",
+      "source_field": "consumer_health_level",
+      "claim_text": "Consumer health: 'stable', score = 3.1",
+      "metric_name": "consumer_health_score",
+      "asserted_label": "stable",
+      "actual_value": 3.13,
+      "actual_label": "stressed",
+      "grounded": false,
+      "explanation": "Score 3.1 maps to 'stressed'. Label 'stable' may not match."
+    }
+  ],
+  "all_claims": [
+    {
+      "source_tool": "analyze_bond_market",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'tight' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "tight",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'tight'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "summary",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "interpretation",
+      "claim_text": "Narrative says credit is 'tight' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "tight",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'tight'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "interpretation",
+      "claim_text": "Narrative says credit is 'supportive' but HY OAS = 313bps",
+      "metric_name": "hy_oas_bps",
+      "asserted_label": "supportive",
+      "actual_value": 313,
+      "actual_label": "wide",
+      "grounded": false,
+      "explanation": "At 313bps, HY OAS is 'wide', not 'supportive'. Threshold: tight=<150bps, normal=150-300, wide=300-500."
+    },
+    {
+      "source_tool": "analyze_financial_stress",
+      "source_field": "stress_level",
+      "claim_text": "Stress labeled 'moderate', score = 3.8",
+      "metric_name": "stress_score",
+      "asserted_label": "moderate",
+      "actual_value": 3.79,
+      "actual_label": "moderate",
+      "grounded": true,
+      "explanation": "Stress level 'moderate' is consistent with score 3.8."
+    },
+    {
+      "source_tool": "analyze_macro_regime",
+      "source_field": "regimes.inflation",
+      "claim_text": "Inflation regime: 'cooling', CPI = 2.83%",
+      "metric_name": "cpi_yoy_pct",
+      "asserted_label": "cooling",
+      "actual_value": 2.8286797395498997,
+      "actual_label": "above_target",
+      "grounded": true,
+      "explanation": "CPI at 2.83% is classified as 'above_target'. Regime 'cooling' matches this level."
+    },
+    {
+      "source_tool": "detect_late_cycle_signals",
+      "source_field": "confidence_level",
+      "claim_text": "Confidence: 'early/mid cycle', count = 2/13",
+      "metric_name": "late_cycle_count",
+      "asserted_label": "early/mid cycle",
+      "actual_value": 2,
+      "actual_label": "early_cycle",
+      "grounded": true,
+      "explanation": "With 2 signals firing, the cycle stage is 'early_cycle'. Confidence 'early/mid cycle' matches."
+    },
+    {
+      "source_tool": "analyze_equity_drivers",
+      "source_field": "real_yield_impact.interpretation",
+      "claim_text": "Real yield described as 'moderate', actual = 1.8%",
+      "metric_name": "real_yield_10y_pct",
+      "asserted_label": "moderate",
+      "actual_value": 1.8,
+      "actual_label": "moderate",
+      "grounded": true,
+      "explanation": "Real yield at 1.8% is 'moderate'. 'moderate' range is 1.0-2.0%."
+    },
+    {
+      "source_tool": "analyze_consumer_health",
+      "source_field": "consumer_health_level",
+      "claim_text": "Consumer health: 'stable', score = 3.1",
+      "metric_name": "consumer_health_score",
+      "asserted_label": "stable",
+      "actual_value": 3.13,
+      "actual_label": "stressed",
+      "grounded": false,
+      "explanation": "Score 3.1 maps to 'stressed'. Label 'stable' may not match."
+    }
+  ]
+}

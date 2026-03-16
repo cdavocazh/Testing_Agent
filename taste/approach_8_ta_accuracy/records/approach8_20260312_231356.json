@@ -1,0 +1,766 @@
+{
+  "approach": "8_ta_accuracy",
+  "timestamp": "2026-03-12T23:13:56.464262",
+  "results": {
+    "summary": {
+      "total": 75,
+      "passed": 64,
+      "failed": 11,
+      "pass_rate": "85.3%",
+      "critical": 2,
+      "elapsed": "0.0s"
+    },
+    "all_checks": [
+      {
+        "check_id": "TA-01",
+        "asset": "btc",
+        "name": "RSI(14) matches recomputed",
+        "passed": "False",
+        "expected": "49.67 +/-1.5",
+        "actual": "54.51 (diff=4.84)",
+        "detail": "Recomputed RSI(14) vs tool output",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-02",
+        "asset": "btc",
+        "name": "RSI(7) matches recomputed",
+        "passed": "False",
+        "expected": "54.80 +/-2.0",
+        "actual": "43.16 (diff=11.64)",
+        "detail": "Recomputed RSI(7) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-03",
+        "asset": "btc",
+        "name": "RSI(21) matches recomputed",
+        "passed": "False",
+        "expected": "44.75 +/-2.0",
+        "actual": "53.94 (diff=9.19)",
+        "detail": "Recomputed RSI(21) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-04",
+        "asset": "btc",
+        "name": "RSI zone matches RSI value",
+        "passed": true,
+        "expected": "zone for RSI=54.51",
+        "actual": "bullish_momentum",
+        "detail": "Zone label should match RSI value range",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-05",
+        "asset": "btc",
+        "name": "MACD line matches recomputed",
+        "passed": "True",
+        "expected": "-577.3695 +/-695.31",
+        "actual": "-577.3695",
+        "detail": "Recomputed MACD line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-06",
+        "asset": "btc",
+        "name": "MACD signal line matches recomputed",
+        "passed": "True",
+        "expected": "-1202.5534 +/-695.31",
+        "actual": "-1202.7145",
+        "detail": "Recomputed signal line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-07",
+        "asset": "btc",
+        "name": "MACD histogram matches recomputed",
+        "passed": "True",
+        "expected": "625.1839 +/-695.31",
+        "actual": "625.3450",
+        "detail": "Recomputed histogram vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-08",
+        "asset": "btc",
+        "name": "MACD histogram sign matches crossover",
+        "passed": true,
+        "expected": "hist sign consistent with crossover",
+        "actual": "hist=625.3450, crossover=bullish",
+        "detail": "Histogram > 0 means MACD > signal (bullish)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-09",
+        "asset": "btc",
+        "name": "MACD centerline label correct",
+        "passed": true,
+        "expected": "below_zero",
+        "actual": "below_zero",
+        "detail": "Centerline label should match MACD line sign",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-10",
+        "asset": "btc",
+        "name": "Upper Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "72095.98 +/-347.65",
+        "actual": "72095.98",
+        "detail": "Upper BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-11",
+        "asset": "btc",
+        "name": "Lower Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "63697.91 +/-347.65",
+        "actual": "63697.91",
+        "detail": "Lower BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-12",
+        "asset": "btc",
+        "name": "Middle Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "67896.95 +/-347.65",
+        "actual": "67896.94",
+        "detail": "Middle BB (SMA20) vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-13",
+        "asset": "btc",
+        "name": "Bandwidth % matches recomputed",
+        "passed": "True",
+        "expected": "12.37 +/-1.0",
+        "actual": "12.37",
+        "detail": "Bandwidth % vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-14",
+        "asset": "btc",
+        "name": "%B matches recomputed",
+        "passed": "True",
+        "expected": "69.45 +/-3.0",
+        "actual": "69.45",
+        "detail": "%B vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-15",
+        "asset": "btc",
+        "name": "Fib 38.2% matches recomputed",
+        "passed": true,
+        "expected": "79202.11 +/-347.65",
+        "actual": "79202.11",
+        "detail": "Fib 38.2% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-16",
+        "asset": "btc",
+        "name": "Fib 61.8% matches recomputed",
+        "passed": true,
+        "expected": "71792.89 +/-347.65",
+        "actual": "71792.89",
+        "detail": "Fib 61.8% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-17",
+        "asset": "btc",
+        "name": "Fibonacci zone plausible",
+        "passed": true,
+        "expected": "non-empty zone description",
+        "actual": "Below 61.8% \u2014 deep correction or potential trend reversal",
+        "detail": "Fibonacci zone should be described",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-18",
+        "asset": "btc",
+        "name": "Stochastic %K matches recomputed",
+        "passed": true,
+        "expected": "59.19 +/-5.0",
+        "actual": "59.19",
+        "detail": "Stochastic %K vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-19",
+        "asset": "btc",
+        "name": "Stochastic %D matches recomputed",
+        "passed": "True",
+        "expected": "62.17 +/-5.0",
+        "actual": "62.17",
+        "detail": "Stochastic %D vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-20",
+        "asset": "btc",
+        "name": "Stochastic zone matches %K",
+        "passed": true,
+        "expected": "neutral",
+        "actual": "neutral",
+        "detail": "%K=59.2 -> zone should be neutral",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-21",
+        "asset": "btc",
+        "name": "Composite score = (bull-bear)/total",
+        "passed": true,
+        "expected": "0.375 +/-0.03",
+        "actual": "0.380",
+        "detail": "(4-1)/8 = 0.375",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-22",
+        "asset": "btc",
+        "name": "Bull+bear <= total indicators",
+        "passed": true,
+        "expected": "<= 8",
+        "actual": "4+1=5",
+        "detail": "Vote counts should not exceed total",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-23",
+        "asset": "btc",
+        "name": "Signal matches score thresholds",
+        "passed": true,
+        "expected": "BULLISH",
+        "actual": "BULLISH",
+        "detail": "score=0.38 -> BULLISH",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-24",
+        "asset": "btc",
+        "name": "Swing stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "6.39% +/-0.5",
+        "actual": "6.39%",
+        "detail": "(entry=69530.6 - level=65088.22)/entry * 100",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-25",
+        "asset": "btc",
+        "name": "ATR stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "7.32% +/-0.5",
+        "actual": "7.32%",
+        "detail": "(entry=69530.6 - level=64442.35)/entry * 100",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-01",
+        "asset": "gold",
+        "name": "RSI(14) matches recomputed",
+        "passed": "True",
+        "expected": "54.29 +/-1.5",
+        "actual": "54.42 (diff=0.13)",
+        "detail": "Recomputed RSI(14) vs tool output",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-02",
+        "asset": "gold",
+        "name": "RSI(7) matches recomputed",
+        "passed": "False",
+        "expected": "51.34 +/-2.0",
+        "actual": "54.80 (diff=3.46)",
+        "detail": "Recomputed RSI(7) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-03",
+        "asset": "gold",
+        "name": "RSI(21) matches recomputed",
+        "passed": "True",
+        "expected": "55.79 +/-2.0",
+        "actual": "54.36 (diff=1.43)",
+        "detail": "Recomputed RSI(21) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-04",
+        "asset": "gold",
+        "name": "RSI zone matches RSI value",
+        "passed": true,
+        "expected": "zone for RSI=54.42",
+        "actual": "bullish_momentum",
+        "detail": "Zone label should match RSI value range",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-05",
+        "asset": "gold",
+        "name": "MACD line matches recomputed",
+        "passed": "True",
+        "expected": "73.7124 +/-51.48",
+        "actual": "73.7124",
+        "detail": "Recomputed MACD line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-06",
+        "asset": "gold",
+        "name": "MACD signal line matches recomputed",
+        "passed": "True",
+        "expected": "88.5329 +/-51.48",
+        "actual": "88.5329",
+        "detail": "Recomputed signal line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-07",
+        "asset": "gold",
+        "name": "MACD histogram matches recomputed",
+        "passed": "True",
+        "expected": "-14.8205 +/-51.48",
+        "actual": "-14.8205",
+        "detail": "Recomputed histogram vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-08",
+        "asset": "gold",
+        "name": "MACD histogram sign matches crossover",
+        "passed": true,
+        "expected": "hist sign consistent with crossover",
+        "actual": "hist=-14.8205, crossover=bearish",
+        "detail": "Histogram > 0 means MACD > signal (bullish)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-09",
+        "asset": "gold",
+        "name": "MACD centerline label correct",
+        "passed": true,
+        "expected": "above_zero",
+        "actual": "above_zero",
+        "detail": "Centerline label should match MACD line sign",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-10",
+        "asset": "gold",
+        "name": "Upper Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "5327.81 +/-25.74",
+        "actual": "5327.81",
+        "detail": "Upper BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-11",
+        "asset": "gold",
+        "name": "Lower Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "4891.61 +/-25.74",
+        "actual": "4891.61",
+        "detail": "Lower BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-12",
+        "asset": "gold",
+        "name": "Middle Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "5109.71 +/-25.74",
+        "actual": "5109.71",
+        "detail": "Middle BB (SMA20) vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-13",
+        "asset": "gold",
+        "name": "Bandwidth % matches recomputed",
+        "passed": "True",
+        "expected": "8.54 +/-1.0",
+        "actual": "8.54",
+        "detail": "Bandwidth % vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-14",
+        "asset": "gold",
+        "name": "%B matches recomputed",
+        "passed": "True",
+        "expected": "58.78 +/-3.0",
+        "actual": "58.78",
+        "detail": "%B vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-15",
+        "asset": "gold",
+        "name": "Fib 38.2% matches recomputed",
+        "passed": false,
+        "expected": "4794.79 +/-25.74",
+        "actual": "4931.09",
+        "detail": "Fib 38.2% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-16",
+        "asset": "gold",
+        "name": "Fib 61.8% matches recomputed",
+        "passed": false,
+        "expected": "4471.31 +/-25.74",
+        "actual": "4691.81",
+        "detail": "Fib 61.8% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-17",
+        "asset": "gold",
+        "name": "Fibonacci zone plausible",
+        "passed": true,
+        "expected": "non-empty zone description",
+        "actual": "Above 23.6% \u2014 strong uptrend or near swing high",
+        "detail": "Fibonacci zone should be described",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-18",
+        "asset": "gold",
+        "name": "Stochastic (synthesised OHLC)",
+        "passed": true,
+        "expected": "skip (synth)",
+        "actual": "N/A",
+        "detail": "Stochastic degenerate with synthesised OHLC",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-19",
+        "asset": "gold",
+        "name": "Stochastic (synthesised OHLC)",
+        "passed": true,
+        "expected": "skip (synth)",
+        "actual": "N/A",
+        "detail": "Stochastic degenerate with synthesised OHLC",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-20",
+        "asset": "gold",
+        "name": "Stochastic (synthesised OHLC)",
+        "passed": true,
+        "expected": "skip (synth)",
+        "actual": "N/A",
+        "detail": "Stochastic degenerate with synthesised OHLC",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-21",
+        "asset": "gold",
+        "name": "Composite score = (bull-bear)/total",
+        "passed": true,
+        "expected": "0.125 +/-0.03",
+        "actual": "0.120",
+        "detail": "(3-2)/8 = 0.125",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-22",
+        "asset": "gold",
+        "name": "Bull+bear <= total indicators",
+        "passed": true,
+        "expected": "<= 8",
+        "actual": "3+2=5",
+        "detail": "Vote counts should not exceed total",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-23",
+        "asset": "gold",
+        "name": "Signal matches score thresholds",
+        "passed": true,
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL",
+        "detail": "score=0.12 -> NEUTRAL",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-24",
+        "asset": "gold",
+        "name": "Swing stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "1.05% +/-0.5",
+        "actual": "1.05%",
+        "detail": "(entry=5148.0 - level=5093.7)/entry * 100",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-25",
+        "asset": "gold",
+        "name": "ATR stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "2.09% +/-0.5",
+        "actual": "2.09%",
+        "detail": "(entry=5148.0 - level=5040.57)/entry * 100",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-01",
+        "asset": "AAPL",
+        "name": "RSI(14) matches recomputed",
+        "passed": "False",
+        "expected": "38.80 +/-1.5",
+        "actual": "36.68 (diff=2.12)",
+        "detail": "Recomputed RSI(14) vs tool output",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-02",
+        "asset": "AAPL",
+        "name": "RSI(7) matches recomputed",
+        "passed": "False",
+        "expected": "29.03 +/-2.0",
+        "actual": "21.38 (diff=7.65)",
+        "detail": "Recomputed RSI(7) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-03",
+        "asset": "AAPL",
+        "name": "RSI(21) matches recomputed",
+        "passed": "False",
+        "expected": "42.14 +/-2.0",
+        "actual": "37.34 (diff=4.80)",
+        "detail": "Recomputed RSI(21) vs tool output",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-04",
+        "asset": "AAPL",
+        "name": "RSI zone matches RSI value",
+        "passed": true,
+        "expected": "zone for RSI=36.68",
+        "actual": "bearish_momentum",
+        "detail": "Zone label should match RSI value range",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-05",
+        "asset": "AAPL",
+        "name": "MACD line matches recomputed",
+        "passed": "True",
+        "expected": "-1.8712 +/-2.55",
+        "actual": "-1.8712",
+        "detail": "Recomputed MACD line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-06",
+        "asset": "AAPL",
+        "name": "MACD signal line matches recomputed",
+        "passed": "True",
+        "expected": "-0.7592 +/-2.55",
+        "actual": "-0.7592",
+        "detail": "Recomputed signal line vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-07",
+        "asset": "AAPL",
+        "name": "MACD histogram matches recomputed",
+        "passed": "True",
+        "expected": "-1.1120 +/-2.55",
+        "actual": "-1.1120",
+        "detail": "Recomputed histogram vs tool",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-08",
+        "asset": "AAPL",
+        "name": "MACD histogram sign matches crossover",
+        "passed": true,
+        "expected": "hist sign consistent with crossover",
+        "actual": "hist=-1.1120, crossover=bearish",
+        "detail": "Histogram > 0 means MACD > signal (bullish)",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-09",
+        "asset": "AAPL",
+        "name": "MACD centerline label correct",
+        "passed": true,
+        "expected": "below_zero",
+        "actual": "below_zero",
+        "detail": "Centerline label should match MACD line sign",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-10",
+        "asset": "AAPL",
+        "name": "Upper Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "273.67 +/-1.27",
+        "actual": "273.67",
+        "detail": "Upper BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-11",
+        "asset": "AAPL",
+        "name": "Lower Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "252.89 +/-1.27",
+        "actual": "252.89",
+        "detail": "Lower BB vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-12",
+        "asset": "AAPL",
+        "name": "Middle Bollinger matches recomputed",
+        "passed": "True",
+        "expected": "263.28 +/-1.27",
+        "actual": "263.28",
+        "detail": "Middle BB (SMA20) vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-13",
+        "asset": "AAPL",
+        "name": "Bandwidth % matches recomputed",
+        "passed": "True",
+        "expected": "7.89 +/-1.0",
+        "actual": "7.89",
+        "detail": "Bandwidth % vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-14",
+        "asset": "AAPL",
+        "name": "%B matches recomputed",
+        "passed": "True",
+        "expected": "8.86 +/-3.0",
+        "actual": "8.86",
+        "detail": "%B vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-15",
+        "asset": "AAPL",
+        "name": "Fib 38.2% matches recomputed",
+        "passed": false,
+        "expected": "271.10 +/-1.27",
+        "actual": "266.34",
+        "detail": "Fib 38.2% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-16",
+        "asset": "AAPL",
+        "name": "Fib 61.8% matches recomputed",
+        "passed": false,
+        "expected": "260.44 +/-1.27",
+        "actual": "257.5",
+        "detail": "Fib 61.8% retracement vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-17",
+        "asset": "AAPL",
+        "name": "Fibonacci zone plausible",
+        "passed": true,
+        "expected": "non-empty zone description",
+        "actual": "Below 61.8% \u2014 deep correction or potential trend reversal",
+        "detail": "Fibonacci zone should be described",
+        "severity": "low"
+      },
+      {
+        "check_id": "TA-18",
+        "asset": "AAPL",
+        "name": "Stochastic %K matches recomputed",
+        "passed": true,
+        "expected": "4.68 +/-5.0",
+        "actual": "4.68",
+        "detail": "Stochastic %K vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-19",
+        "asset": "AAPL",
+        "name": "Stochastic %D matches recomputed",
+        "passed": "True",
+        "expected": "22.78 +/-5.0",
+        "actual": "22.78",
+        "detail": "Stochastic %D vs recomputed",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-20",
+        "asset": "AAPL",
+        "name": "Stochastic zone matches %K",
+        "passed": true,
+        "expected": "oversold",
+        "actual": "oversold",
+        "detail": "%K=4.7 -> zone should be oversold",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-21",
+        "asset": "AAPL",
+        "name": "Composite score = (bull-bear)/total",
+        "passed": true,
+        "expected": "-0.750 +/-0.03",
+        "actual": "-0.750",
+        "detail": "(1-7)/8 = -0.750",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-22",
+        "asset": "AAPL",
+        "name": "Bull+bear <= total indicators",
+        "passed": true,
+        "expected": "<= 8",
+        "actual": "1+7=8",
+        "detail": "Vote counts should not exceed total",
+        "severity": "medium"
+      },
+      {
+        "check_id": "TA-23",
+        "asset": "AAPL",
+        "name": "Signal matches score thresholds",
+        "passed": true,
+        "expected": "BEARISH",
+        "actual": "BEARISH",
+        "detail": "score=-0.75 -> BEARISH",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-24",
+        "asset": "AAPL",
+        "name": "Swing stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "4.76% +/-0.5",
+        "actual": "4.76%",
+        "detail": "(entry=254.73 - level=242.6)/entry * 100",
+        "severity": "high"
+      },
+      {
+        "check_id": "TA-25",
+        "asset": "AAPL",
+        "name": "ATR stop risk_pct arithmetic",
+        "passed": true,
+        "expected": "3.52% +/-0.5",
+        "actual": "3.52%",
+        "detail": "(entry=254.73 - level=245.76)/entry * 100",
+        "severity": "high"
+      }
+    ]
+  }
+}

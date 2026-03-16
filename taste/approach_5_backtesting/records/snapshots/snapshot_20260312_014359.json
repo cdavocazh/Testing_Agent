@@ -1,0 +1,228 @@
+{
+  "timestamp": "2026-03-12T01:43:59.896550",
+  "snapshot_date": "2026-03-12",
+  "signals": [
+    {
+      "signal": "INFLATION_COOLING",
+      "source_tool": "analyze_macro_regime",
+      "category": "inflation",
+      "direction": "down",
+      "description": "Inflation is cooling toward target",
+      "known_signal": true,
+      "verification_horizons": [
+        4,
+        12
+      ]
+    },
+    {
+      "signal": "JOLTS_OPENINGS_DECLINING",
+      "source_tool": "analyze_macro_regime",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "JOLTS_OPENINGS_DECLINING",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "LABOR_MODERATE",
+      "source_tool": "analyze_macro_regime",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "LABOR_MODERATE",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "ISM_CONTRACTION",
+      "source_tool": "analyze_macro_regime",
+      "category": "growth",
+      "direction": "down",
+      "description": "ISM Manufacturing below 50",
+      "known_signal": true,
+      "verification_horizons": [
+        4
+      ]
+    },
+    {
+      "signal": "GROWTH_CONTRACTION",
+      "source_tool": "analyze_macro_regime",
+      "category": "growth",
+      "direction": "down",
+      "description": "ISM in contraction territory (<50)",
+      "known_signal": true,
+      "verification_horizons": [
+        4,
+        12
+      ]
+    },
+    {
+      "signal": "FED_EASING",
+      "source_tool": "analyze_macro_regime",
+      "category": "fed_policy",
+      "direction": "dovish",
+      "description": "Fed in easing mode",
+      "known_signal": true,
+      "verification_horizons": [
+        4,
+        12
+      ]
+    },
+    {
+      "signal": "CREDIT_TIGHT",
+      "source_tool": "analyze_macro_regime",
+      "category": "credit",
+      "direction": "tight",
+      "description": "Credit conditions tightening",
+      "known_signal": true,
+      "verification_horizons": [
+        4,
+        12
+      ]
+    },
+    {
+      "signal": "EXISTING_SALES_PLUNGING",
+      "source_tool": "analyze_macro_regime",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "EXISTING_SALES_PLUNGING",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "CURVE_STEEPENING",
+      "source_tool": "analyze_bond_market",
+      "category": "rates",
+      "direction": "steepening",
+      "description": "Yield curve steepening",
+      "known_signal": true,
+      "verification_horizons": [
+        4,
+        12
+      ]
+    },
+    {
+      "signal": "BREAKEVEN_RISING",
+      "source_tool": "analyze_bond_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "BREAKEVEN_RISING",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "BREAKEVEN_MIXED",
+      "source_tool": "analyze_bond_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "BREAKEVEN_MIXED",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "GLOBAL_DISCOUNT_RATE_ADJUSTMENT",
+      "source_tool": "analyze_bond_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "GLOBAL_DISCOUNT_RATE_ADJUSTMENT",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "STRESS_MODERATE",
+      "source_tool": "analyze_financial_stress",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "STRESS_MODERATE",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "BANK_SYSTEMIC_STRESS",
+      "source_tool": "analyze_financial_stress",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "BANK_SYSTEMIC_STRESS",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "CONSUMER_STABLE",
+      "source_tool": "analyze_consumer_health",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "CONSUMER_STABLE",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "SAVINGS_RATE_LOW",
+      "source_tool": "analyze_consumer_health",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "SAVINGS_RATE_LOW",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "SALES_PLUNGING",
+      "source_tool": "analyze_housing_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "SALES_PLUNGING",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "AFFORDABILITY_STRESSED",
+      "source_tool": "analyze_housing_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "AFFORDABILITY_STRESSED",
+      "known_signal": false,
+      "verification_horizons": []
+    },
+    {
+      "signal": "EXISTING_SALES_PLUNGING",
+      "source_tool": "analyze_housing_market",
+      "category": "unknown",
+      "direction": "unknown",
+      "description": "EXISTING_SALES_PLUNGING",
+      "known_signal": false,
+      "verification_horizons": []
+    }
+  ],
+  "key_metrics": {
+    "stress_score": 3.9,
+    "stress_level": "moderate",
+    "vix": 24.6,
+    "late_cycle_count": 3,
+    "late_cycle_confidence": "late-early warning",
+    "hy_oas_bps": 313,
+    "real_yield_10y": 1.8,
+    "cpi_yoy": 2.8287,
+    "consumer_health_score": 3.13,
+    "regime_inflation": "cooling",
+    "regime_employment": "moderate",
+    "regime_growth": "contraction",
+    "regime_rates": "easing",
+    "regime_credit": "elevated",
+    "regime_housing": "data_unavailable",
+    "price_gold": 5178.7,
+    "price_crude_oil": 86.95,
+    "price_es_futures": 6778.75
+  },
+  "verification_status": "pending",
+  "summary": {
+    "total_signals": 19,
+    "known_signals": 6,
+    "unknown_signals": 13,
+    "categories": {
+      "credit": 1,
+      "fed_policy": 1,
+      "growth": 2,
+      "inflation": 1,
+      "rates": 1,
+      "unknown": 13
+    }
+  }
+}
